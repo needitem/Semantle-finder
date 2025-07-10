@@ -385,32 +385,187 @@ def maintain_data_size():
 2. **워밍업 기간**: 10-20게임 후 평균 시도 횟수가 20-30회로 감소
 3. **성숙 상태**: 광범위한 학습 후 평균 10-20회 시도 예상
 
-## 8. 구현 세부사항
+## 8. 모듈 구조
 
-### 8.1 시스템 요구사항
+본 프로젝트는 확장성과 유지보수성을 위해 기능별로 모듈화되어 있습니다.
+
+### 8.1 핵심 모듈
+
+#### 📊 models.py - 데이터 구조 모듈
+```python
+from models import GuessResult, GameSession, WordPairData
+```
+- **GuessResult**: 추측 결과 데이터 클래스 (단어, 유사도, 순위, 시도번호)
+- **WordPairData**: 단어 쌍 간 유사도 차이 데이터 저장
+- **SuccessPattern**: 성공한 게임의 패턴 정보 저장
+- **WordFrequencyData**: 단어 사용 빈도 및 효과성 통계
+- **GameSession**: 현재 게임 세션 상태 관리 (추측 목록, 전략 이력 등)
+
+#### 🧠 strategy_engine.py - 전략 엔진 모듈
+```python
+from strategy_engine import StrategyEngine, SearchStrategy
+```
+- **SearchStrategy**: 모든 탐색 전략의 추상 기본 클래스
+- **WideSemanticExploration**: 1단계 넓은 의미 탐색 (유사도 < 0.1)
+- **SemanticGradientSearch**: 2단계 의미적 경사 탐색 (유사도 < 0.25)
+- **FocusedSemanticSearch**: 3단계 집중 의미 탐색 (유사도 < 0.5)
+- **PrecisionSemanticSearch**: 4단계 정밀 의미 탐색 (유사도 ≥ 0.5)
+- **StrategyEngine**: 상황에 따른 전략 선택 및 실행
+
+#### 📚 learning_engine.py - 학습 엔진 모듈
+```python
+from learning_engine import LearningEngine
+```
+- **실시간 관계 학습**: 단어 간 유사도 차이 패턴 학습
+- **성공 패턴 인식**: 성공한 게임의 전략 순서 및 핵심 단어 저장
+- **효과성 점수 계산**: 단어별 역사적 성능 기반 점수 산출
+- **지속적 데이터 저장**: JSON 형식으로 학습 결과 영구 보존
+- **전략 분석**: 전략별 효과성 통계 및 최적 패턴 식별
+
+#### 🌐 web_automation.py - 웹 자동화 모듈
+```python
+from web_automation import WebAutomation, WebAutomationConfig
+```
+- **WebAutomationConfig**: 브라우저 설정 및 타이밍 구성
+- **WebAutomation**: 셀레니움 기반 게임 자동화
+- **최적화된 파싱**: `last-input` 클래스 활용한 빠른 결과 추출
+- **초고속 처리**: 총 0.01초 대기시간으로 실시간 플레이
+- **견고한 오류 처리**: 파싱 실패시 자동 복구 및 단어 제거
+
+#### 🚀 semantic_solver.py - 메인 솔버 모듈
+```python
+from semantic_solver import SemanticSolver
+```
+- **SemanticSolver**: 모든 구성요소를 통합한 완전한 솔버
+- **게임 실행 로직**: 초기화부터 완료까지 전체 프로세스 관리
+- **학습 통계 제공**: 현재 학습 상태 및 성과 분석
+- **수동 입력 지원**: 디버깅 및 테스트용 수동 단어 입력
+- **추천 시스템**: 현재 상황에 최적화된 후보 단어 제안
+
+### 8.2 사용법
+
+#### 기본 실행
+```bash
+python semantic_solver.py
+```
+
+#### 기존 호환성 (래퍼)
+```bash
+python simple_solver.py
+```
+
+#### 모듈별 사용 예시
+```python
+# 솔버 초기화 및 실행
+from semantic_solver import SemanticSolver
+from web_automation import WebAutomationConfig
+
+# 설정 커스터마이징
+config = WebAutomationConfig(
+    headless=False,  # 브라우저 창 표시
+    submit_delay=0.01,  # 더 긴 대기 시간
+    window_size=(1600, 900)
+)
+
+# 솔버 생성 및 실행
+solver = SemanticSolver(web_config=config)
+result = solver.solve_game(max_attempts=100)
+```
+
+#### 수동 테스트
+```python
+# 개별 단어 테스트
+solver = SemanticSolver()
+result = solver.manual_word_input("사랑")
+print(f"결과: {result.similarity}")
+
+# 추천 단어 확인
+recommendations = solver.get_word_recommendations(5)
+print(f"추천: {recommendations}")
+```
+
+### 8.3 시스템 요구사항
 
 - **Python 3.8+**
-- **Selenium WebDriver**
 - **Chrome/Chromium 브라우저**
-- **필수 라이브러리**: `selenium`, `numpy`, `json`, `pickle`
+- **ChromeDriver** (PATH에 등록 또는 프로젝트 폴더에 위치)
 
-### 8.2 설정 매개변수
+### 8.4 패키지 설치
 
-```python
-# 전략 전환 임계값
-WIDE_EXPLORATION_THRESHOLD = 0.1
-GRADIENT_SEARCH_THRESHOLD = 0.25
-FOCUSED_SEARCH_THRESHOLD = 0.5
-
-# 학습 매개변수
-MAX_SIMILARITY_HISTORY = 100
-STAGNATION_WINDOW = 3
-STAGNATION_THRESHOLD = 0.01
-
-# 성능 매개변수
-SUBMIT_DELAY = 0.005
-PARSE_DELAY = 0.005
+```bash
+pip install -r requirements.txt
 ```
+
+필수 패키지:
+- `selenium>=4.0.0`: 웹 브라우저 자동화
+- `numpy>=1.21.0`: 수치 계산 (기존 호환성)
+
+### 8.5 프로젝트 파일 구조
+
+```
+autosemantle/
+├── 📊 models.py              # 데이터 구조 및 클래스 정의
+├── 🧠 strategy_engine.py     # 4단계 적응형 탐색 전략
+├── 📚 learning_engine.py     # 실시간 학습 및 패턴 인식
+├── 🌐 web_automation.py      # 셀레니움 기반 웹 자동화
+├── 🚀 semantic_solver.py     # 메인 솔버 (모든 모듈 통합)
+├── 🔗 simple_solver.py       # 기존 호환성 래퍼
+├── 📋 requirements.txt       # 필수 패키지 목록
+├── 📖 README.md             # 프로젝트 문서
+├── 📝 words.txt             # 한국어 어휘 목록 (170,000+ 단어)
+├── 🧠 kkomantle_learning.json # 학습 데이터 (게임 통계, 성공 패턴)
+└── 🔗 word_pairs.json       # 단어 쌍 유사도 관계 데이터
+```
+
+### 8.6 빠른 시작 가이드
+
+1. **저장소 클론 및 이동**
+```bash
+git clone https://github.com/needitem/Semantle-finder.git
+cd Semantle-finder
+```
+
+2. **필수 패키지 설치**
+```bash
+pip install -r requirements.txt
+```
+
+3. **ChromeDriver 설치**
+   - [ChromeDriver 다운로드](https://chromedriver.chromium.org/)
+   - PATH에 등록하거나 프로젝트 폴더에 위치
+
+4. **솔버 실행**
+```bash
+python semantic_solver.py
+```
+
+### 8.7 설정 옵션
+
+#### 웹 자동화 설정
+```python
+from web_automation import WebAutomationConfig
+
+config = WebAutomationConfig(
+    game_url="https://semantle-ko.newsjel.ly/",
+    headless=False,              # 브라우저 창 표시 여부
+    window_size=(1200, 800),     # 브라우저 창 크기
+    submit_delay=0.005,          # 단어 제출 후 대기 시간
+    parse_delay=0.005,           # 결과 파싱 전 대기 시간
+    page_load_timeout=30         # 페이지 로드 최대 대기 시간
+)
+```
+
+#### 전략 임계값 설정
+- **넓은 탐색**: 유사도 < 0.1 (다양한 의미 영역 탐색)
+- **경사 탐색**: 유사도 < 0.25 (의미적 방향성 추적)
+- **집중 탐색**: 유사도 < 0.5 (고유사도 영역 집중)
+- **정밀 탐색**: 유사도 ≥ 0.5 (형태론적 미세 조정)
+
+#### 학습 매개변수
+- **정체 감지 윈도우**: 최근 3회 시도
+- **정체 임계값**: 0.01 (유사도 개선 최소값)
+- **단어 쌍 기록 한계**: 100개 (메모리 절약)
+- **성공 패턴 보존**: 최대 100개
 
 ### 8.3 오류 처리 및 견고성
 
