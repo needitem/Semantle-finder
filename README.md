@@ -1,619 +1,231 @@
-# 꼬맨틀용 적응형 의미 탐색 솔버
+# 의미 기반 지능형 꼬맨틀 솔버 (Semantic Korean Wordle Solver)
 
-## 개요
+한국어 워들 게임인 꼬맨틀(Semantle)을 자동으로 해결하는 지능형 솔버입니다. 의미 기반 탐색 전략과 실시간 학습을 통해 정답을 찾아냅니다.
 
-본 프로젝트는 실시간 유사도 학습을 기반으로 한 다단계 지능형 탐색 전략을 사용하는 꼬맨틀 적응형 의미 탐색 솔버를 제시한다. 기존의 사전 훈련된 언어 모델에 의존하는 접근법과 달리, 우리 시스템은 실제 게임 상호작용을 통해 단어 관계를 동적으로 학습하여 시간이 지남에 따라 성능이 향상되는 의미 연관 지식 베이스를 구축한다.
+## 주요 특징
 
-## 1. 서론
+- **4단계 적응형 탐색 전략**: 게임 진행 상황에 따라 자동으로 전략 전환
+- **실시간 학습**: 단어 간 관계를 학습하여 점진적으로 성능 향상
+- **웹 자동화**: Selenium을 사용한 완전 자동 플레이
+- **상세한 로깅**: 모든 게임 과정을 기록하고 분석 가능
 
-한국어 꼬맨틀은 플레이어가 추측한 단어에 대해 유사도 점수를 받아 목표 단어를 찾는 단어 추측 게임이다. 이 게임의 핵심 과제는 최소한의 시도로 정답에 수렴하기 위해 의미 공간을 효율적으로 탐색하는 것이다.
+## 설치 방법
 
-### 1.1 문제 정의
+### 1. 필수 요구사항
+- Python 3.7 이상
+- Google Chrome 브라우저
+- ChromeDriver (Chrome 버전과 일치해야 함)
 
-목표 단어 `w_target`과 어휘 `V = {w_1, w_2, ..., w_n}`가 주어졌을 때, 각 추측 `g_i`가 유사도 점수 `s_i = sim(g_i, w_target)`을 반환하는 추측 집합 `G = {g_1, g_2, ..., g_k}`의 크기를 최소화하여 `w_target`을 찾는 것이 목표이다.
-
-### 1.2 주요 과제
-
-1. **의미 공간 탐색**: 고차원 의미 공간의 효율적 탐색
-2. **실시간 적응**: 사전 훈련 없이 즉각적인 피드백으로부터 학습
-3. **다중 전략**: 현재 진행 상황에 따른 탐색 전략 적응
-4. **지식 지속성**: 여러 게임 세션에 걸친 통찰력 축적
-
-## 2. 시스템 아키텍처
-
-### 2.1 핵심 구성요소
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    SemanticSolver                           │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
-│  │   전략 엔진      │  │   학습 엔진      │  │   지식 베이스   │ │
-│  │                 │  │                 │  │                 │ │
-│  │ • 넓은 탐색     │  │ • 관계 학습     │  │ • 단어 쌍       │ │
-│  │ • 경사 탐색     │  │ • 패턴 인식     │  │ • 성공 패턴     │ │
-│  │ • 집중 탐색     │  │ • 효과성 평가   │  │ • 효과성 점수   │ │
-│  │ • 정밀 탐색     │  │ • 정체 감지     │  │ • 빈도 데이터   │ │
-│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
-└─────────────────────────────────────────────────────────────┘
-```
-
-### 2.2 데이터 구조
-
-#### 2.2.1 추측 결과 클래스
-```python
-@dataclass
-class GuessResult:
-    word: str           # 추측한 단어
-    similarity: float   # 유사도 점수 [0.0, 1.0]
-    rank: str          # 순위 정보
-    attempt: int       # 시도 번호
-```
-
-#### 2.2.2 학습 데이터 구조
-```json
-{
-  "games_played": int,
-  "successful_patterns": [
-    {
-      "answer": str,
-      "attempts": int,
-      "key_words": [str],
-      "timestamp": str
-    }
-  ],
-  "word_frequency": {
-    "word": {
-      "count": int,
-      "avg_similarity": float,
-      "best_similarity": float
-    }
-  }
-}
-```
-
-#### 2.2.3 단어 쌍 구조
-```json
-{
-  "word1|word2": {
-    "similarity_diffs": [float],
-    "co_occurrence_count": int
-  }
-}
-```
-
-## 3. 다단계 적응형 탐색 알고리즘
-
-### 3.1 전략 선택 함수
-
-핵심 알고리즘은 현재 성능 지표를 기반으로 한 4단계 적응형 탐색 전략을 사용한다:
-
-```python
-def select_strategy(best_similarity: float, is_stuck: bool) -> Strategy:
-    if best_similarity < 0.1:
-        return WideSemanticExploration()    # 넓은 의미 탐색
-    elif best_similarity < 0.25 or is_stuck:
-        return SemanticGradientSearch()     # 의미적 경사 탐색
-    elif best_similarity < 0.5:
-        return FocusedSemanticSearch()      # 집중 의미 탐색
-    else:
-        return PrecisionSemanticSearch()    # 정밀 의미 탐색
-```
-
-### 3.2 1단계: 넓은 의미 탐색
-
-**목표**: 초기 앵커 포인트 설정을 위한 다양한 의미 영역 탐색
-
-**알고리즘**:
-```
-입력: 이전 추측 G, 의미 씨앗 S
-출력: 다음 단어 w_next
-
-1. 시도한 의미 범주 식별 C_tried = {c | ∃g ∈ G, g ∈ c}
-2. 미시도 범주 선택 C_untried = S \ C_tried
-3. C_untried ≠ ∅ 이면:
-   - 범주 c ∈ C_untried를 임의로 선택
-   - c에서 임의의 단어 반환
-4. 그렇지 않으면:
-   - 파생어 탐색 수행
-```
-
-**의미 범주**:
-- **추상 개념**: {생각, 마음, 정신, 의식, 감정, 느낌}
-- **물리적 객체**: {사물, 물건, 물체, 존재, 실체, 형태}
-- **관계**: {관계, 연결, 결합, 만남, 소통, 교류}
-- **과정**: {변화, 과정, 발전, 성장, 진행, 흐름}
-- **공간**: {공간, 장소, 위치, 지역, 영역, 범위}
-- **시간**: {시간, 순간, 시기, 때, 기간, 순서}
-- **행동**: {행동, 활동, 움직임, 작업, 노력, 실행}
-- **상태**: {상태, 조건, 상황, 환경, 분위기, 기분}
-
-### 3.3 2단계: 의미적 경사 탐색
-
-**목표**: 고성능 앵커 단어를 기반으로 한 의미적 경사 추적
-
-**알고리즘**:
-```
-입력: 상위 추측 G_top, 유사도 점수 S
-출력: 다음 단어 w_next
-
-1. 각 g ∈ G_top에 대해:
-   - 의미적 확장 E_g = expand(g) 생성
-   - 의미적 연관 A_g = associate(g) 생성
-   - 문맥적 관계 R_g = relate(g) 생성
-   
-2. 후보 결합 C = ∪(E_g ∪ A_g ∪ R_g)
-3. 미시도 단어 필터링 C' = C \ tried_words
-4. 학습된 효과성 점수로 정렬
-5. 최고 점수 후보 반환
-```
-
-**의미적 확장 함수**:
-
-1. **어근 기반 확장**: `expand_root(word) = {w ∈ V | w가 word와 어근 공유}`
-2. **범주적 확장**: `expand_category(word) = {w ∈ V | w ∈ same_category(word)}`
-3. **형태론적 확장**: `expand_morph(word) = {w ∈ V | morphologically_related(w, word)}`
-
-### 3.4 3단계: 집중 의미 탐색
-
-**목표**: 다층 연관을 사용한 고유사도 영역 집중 탐색
-
-**알고리즘**:
-```
-입력: 최고 추측 g_best, 유사도 임계값 θ
-출력: 다음 단어 w_next
-
-1. 공통 의미 영역 식별:
-   - 상위 추측들의 의미적 교집합 찾기
-   - 영역별 후보 생성
-   
-2. 다층 연관:
-   - 1층: g_best의 직접 연관어
-   - 2층: 1층 단어들의 연관어
-   - 후보 결합 및 필터링
-   
-3. 학습된 효과성 점수 적용
-4. 최적 후보 반환
-```
-
-**공통 의미 영역 감지**:
-```python
-def find_common_field(words: List[str]) -> List[str]:
-    semantic_fields = {
-        "정치사회": ["정치", "사회", "국가", "정부", "국민", "시민"],
-        "교육학습": ["교육", "학습", "공부", "지식", "학문", "연구"],
-        "감정심리": ["감정", "마음", "기분", "느낌", "정서", "심리"],
-        "시공간": ["시간", "공간", "장소", "위치", "때", "순간"],
-        "행동활동": ["행동", "활동", "움직임", "작업", "실행", "진행"]
-    }
-    
-    for field, field_words in semantic_fields.items():
-        if all(word_belongs_to_field(w, field_words) for w in words):
-            return [w for w in field_words if w not in words]
-    return []
-```
-
-### 3.5 4단계: 정밀 의미 탐색
-
-**목표**: 형태론적 분석을 사용한 고유사도 시나리오 세부 조정
-
-**알고리즘**:
-```
-입력: 최고 추측 g_best, 학습된 단어 쌍 P
-출력: 다음 단어 w_next
-
-1. 형태론적 변형:
-   - 접두사/접미사 변형 생성
-   - 일반적인 한국어 형태론 규칙 적용
-   
-2. 초근접 단어 감지:
-   - similarity_diff < 0.03인 학습 쌍 쿼리
-   - 역사적 효과성으로 순위 매기기
-   
-3. 정밀 후보 선택:
-   - 형태론적 및 학습된 후보 결합
-   - 세밀한 유사도 추정 적용
-   
-4. 최고 순위 후보 반환
-```
-
-**형태론적 규칙**:
-```python
-def generate_morphological_variants(word: str) -> List[str]:
-    variants = []
-    if len(word) > 2:
-        root = word[:-1]
-        suffixes = ['다', '하다', '되다', '이다', '적', '의', '로', '을', '를']
-        variants = [root + suffix for suffix in suffixes]
-    return variants
-```
-
-## 4. 학습 및 적응 메커니즘
-
-### 4.1 실시간 관계 학습
-
-**목표**: 실제 유사도 차이를 기반으로 한 동적 단어 관계 맵 구축
-
-**알고리즘**:
-```python
-def learn_word_relationships(word: str, similarity: float):
-    for previous_guess in guesses:
-        sim_diff = abs(similarity - previous_guess.similarity)
-        pair_key = f"{min(word, previous_guess.word)}|{max(word, previous_guess.word)}"
-        
-        if pair_key not in word_pairs:
-            word_pairs[pair_key] = {
-                'similarity_diffs': [],
-                'co_occurrence_count': 0
-            }
-        
-        word_pairs[pair_key]['similarity_diffs'].append(sim_diff)
-        word_pairs[pair_key]['co_occurrence_count'] += 1
-        
-        # 최근 관찰의 슬라이딩 윈도우 유지
-        if len(word_pairs[pair_key]['similarity_diffs']) > 100:
-            word_pairs[pair_key]['similarity_diffs'] = 
-                word_pairs[pair_key]['similarity_diffs'][-50:]
-```
-
-### 4.2 효과성 점수 계산
-
-**목표**: 역사적 성능을 기반으로 한 후보 단어 순위 매기기
-
-**점수 함수**:
-```python
-def calculate_effectiveness_score(word: str) -> float:
-    if word in word_frequency:
-        freq_data = word_frequency[word]
-        base_score = freq_data['avg_similarity'] * freq_data['count']
-        best_bonus = freq_data['best_similarity'] * 0.5
-        return base_score + best_bonus
-    return 0.0
-```
-
-### 4.3 정체 감지
-
-**목표**: 현재 전략이 비효율적임을 식별하고 전략 전환 유발
-
-**알고리즘**:
-```python
-def detect_stagnation(recent_guesses: List[GuessResult], 
-                     best_similarity: float, 
-                     window_size: int = 3) -> bool:
-    if len(recent_guesses) < window_size:
-        return False
-    
-    recent_max = max(g.similarity for g in recent_guesses[-window_size:])
-    improvement_threshold = 0.01
-    
-    return recent_max <= best_similarity + improvement_threshold
-```
-
-## 5. 지식 지속성 및 전이
-
-### 5.1 세션 간 학습
-
-시스템은 두 가지 주요 메커니즘을 통해 게임 세션 간 지속적 지식을 유지한다:
-
-1. **단어 쌍 지식**: 단어 쌍 간 유사도 차이 누적
-2. **성공 패턴 인식**: 성공적인 결과로 이어진 전략 및 단어 순서
-
-### 5.2 데이터 지속성 형식
-
-**학습 데이터 구조**:
-```json
-{
-  "games_played": 42,
-  "successful_patterns": [
-    {
-      "answer": "사랑",
-      "attempts": 15,
-      "key_words": ["감정", "마음", "인간", "관계", "사랑"],
-      "timestamp": "2024-01-15T10:30:00"
-    }
-  ],
-  "word_frequency": {
-    "사랑": {
-      "count": 8,
-      "avg_similarity": 0.342,
-      "best_similarity": 0.891
-    }
-  }
-}
-```
-
-### 5.3 지식 전이 메커니즘
-
-1. **의미적 프라이밍**: 성공적인 단어 순서를 사용하여 향후 탐색 준비
-2. **부정적 학습**: 역사적으로 성능이 낮은 단어 조합 회피
-3. **적응적 임계값**: 역사적 성공률을 기반으로 한 전략 전환 임계값 조정
-
-## 6. 성능 최적화
-
-### 6.1 웹 자동화 효율성
-
-**파싱 최적화**:
-```javascript
-// last-input 클래스를 대상으로 한 최적화된 파싱 스크립트
-var lastInputRow = table.querySelector('tbody tr.last-input');
-if (lastInputRow) {
-    var cells = lastInputRow.querySelectorAll('td');
-    return {
-        word: cells[1].textContent.trim(),
-        similarity: cells[2].textContent.trim(),
-        rank: cells[3].textContent.trim()
-    };
-}
-```
-
-**타이밍 최적화**:
-- 제출 지연: 0.005초
-- 파싱 지연: 0.005초
-- 단어당 총 오버헤드: ~0.01초
-
-### 6.2 메모리 관리
-
-**슬라이딩 윈도우 접근법**:
-```python
-def maintain_data_size():
-    # 메모리 팽창 방지를 위한 유사도 차이 제한
-    if len(similarity_diffs) > 100:
-        similarity_diffs = similarity_diffs[-50:]
-    
-    # 성공 패턴 제한
-    if len(successful_patterns) > 100:
-        successful_patterns = successful_patterns[-50:]
-```
-
-## 7. 실험 분석
-
-### 7.1 성능 지표
-
-1. **수렴률**: 해답 도달까지의 평균 시도 횟수
-2. **학습 효율성**: 게임 세션 간 개선율
-3. **전략 효과성**: 전략 유형별 성공률
-4. **지식 보존**: 학습된 관계의 지속성
-
-### 7.2 이론적 복잡도
-
-**시간 복잡도**: 단어 선택당 O(n log n), 여기서 n은 어휘 크기
-**공간 복잡도**: 단어 쌍 저장에 O(k²), 여기서 k는 만난 고유 단어 수
-
-### 7.3 예상 성능 특성
-
-1. **콜드 스타트**: 초기 게임은 30-50회 시도 필요
-2. **워밍업 기간**: 10-20게임 후 평균 시도 횟수가 20-30회로 감소
-3. **성숙 상태**: 광범위한 학습 후 평균 10-20회 시도 예상
-
-## 8. 모듈 구조
-
-본 프로젝트는 확장성과 유지보수성을 위해 기능별로 모듈화되어 있습니다.
-
-### 8.1 핵심 모듈
-
-#### 📊 models.py - 데이터 구조 모듈
-```python
-from models import GuessResult, GameSession, WordPairData
-```
-- **GuessResult**: 추측 결과 데이터 클래스 (단어, 유사도, 순위, 시도번호)
-- **WordPairData**: 단어 쌍 간 유사도 차이 데이터 저장
-- **SuccessPattern**: 성공한 게임의 패턴 정보 저장
-- **WordFrequencyData**: 단어 사용 빈도 및 효과성 통계
-- **GameSession**: 현재 게임 세션 상태 관리 (추측 목록, 전략 이력 등)
-
-#### 🧠 strategy_engine.py - 전략 엔진 모듈
-```python
-from strategy_engine import StrategyEngine, SearchStrategy
-```
-- **SearchStrategy**: 모든 탐색 전략의 추상 기본 클래스
-- **WideSemanticExploration**: 1단계 넓은 의미 탐색 (유사도 < 0.1)
-- **SemanticGradientSearch**: 2단계 의미적 경사 탐색 (유사도 < 0.25)
-- **FocusedSemanticSearch**: 3단계 집중 의미 탐색 (유사도 < 0.5)
-- **PrecisionSemanticSearch**: 4단계 정밀 의미 탐색 (유사도 ≥ 0.5)
-- **StrategyEngine**: 상황에 따른 전략 선택 및 실행
-
-#### 📚 learning_engine.py - 학습 엔진 모듈
-```python
-from learning_engine import LearningEngine
-```
-- **실시간 관계 학습**: 단어 간 유사도 차이 패턴 학습
-- **성공 패턴 인식**: 성공한 게임의 전략 순서 및 핵심 단어 저장
-- **효과성 점수 계산**: 단어별 역사적 성능 기반 점수 산출
-- **지속적 데이터 저장**: JSON 형식으로 학습 결과 영구 보존
-- **전략 분석**: 전략별 효과성 통계 및 최적 패턴 식별
-
-#### 🌐 web_automation.py - 웹 자동화 모듈
-```python
-from web_automation import WebAutomation, WebAutomationConfig
-```
-- **WebAutomationConfig**: 브라우저 설정 및 타이밍 구성
-- **WebAutomation**: 셀레니움 기반 게임 자동화
-- **최적화된 파싱**: `last-input` 클래스 활용한 빠른 결과 추출
-- **초고속 처리**: 총 0.01초 대기시간으로 실시간 플레이
-- **견고한 오류 처리**: 파싱 실패시 자동 복구 및 단어 제거
-
-#### 🚀 semantic_solver.py - 메인 솔버 모듈
-```python
-from semantic_solver import SemanticSolver
-```
-- **SemanticSolver**: 모든 구성요소를 통합한 완전한 솔버
-- **게임 실행 로직**: 초기화부터 완료까지 전체 프로세스 관리
-- **학습 통계 제공**: 현재 학습 상태 및 성과 분석
-- **수동 입력 지원**: 디버깅 및 테스트용 수동 단어 입력
-- **추천 시스템**: 현재 상황에 최적화된 후보 단어 제안
-
-### 8.2 사용법
-
-#### 기본 실행
-```bash
-python semantic_solver.py
-```
-
-#### 기존 호환성 (래퍼)
-```bash
-python simple_solver.py
-```
-
-#### 모듈별 사용 예시
-```python
-# 솔버 초기화 및 실행
-from semantic_solver import SemanticSolver
-from web_automation import WebAutomationConfig
-
-# 설정 커스터마이징
-config = WebAutomationConfig(
-    headless=False,  # 브라우저 창 표시
-    submit_delay=0.01,  # 더 긴 대기 시간
-    window_size=(1600, 900)
-)
-
-# 솔버 생성 및 실행
-solver = SemanticSolver(web_config=config)
-result = solver.solve_game(max_attempts=100)
-```
-
-#### 수동 테스트
-```python
-# 개별 단어 테스트
-solver = SemanticSolver()
-result = solver.manual_word_input("사랑")
-print(f"결과: {result.similarity}")
-
-# 추천 단어 확인
-recommendations = solver.get_word_recommendations(5)
-print(f"추천: {recommendations}")
-```
-
-### 8.3 시스템 요구사항
-
-- **Python 3.8+**
-- **Chrome/Chromium 브라우저**
-- **ChromeDriver** (PATH에 등록 또는 프로젝트 폴더에 위치)
-
-### 8.4 패키지 설치
-
+### 2. 라이브러리 설치
 ```bash
 pip install -r requirements.txt
 ```
 
-필수 패키지:
-- `selenium>=4.0.0`: 웹 브라우저 자동화
-- `numpy>=1.21.0`: 수치 계산 (기존 호환성)
+### 3. ChromeDriver 설치
+- [ChromeDriver 다운로드](https://chromedriver.chromium.org/)
+- Chrome 버전 확인: Chrome 설정 → Chrome 정보
+- 해당 버전의 ChromeDriver 다운로드 후 PATH에 추가
 
-### 8.5 프로젝트 파일 구조
+## 사용 방법
+
+### 기본 실행
+```bash
+python semantic_solver.py
+```
+
+### 실시간 모니터링
+두 개의 터미널을 열어서 실행:
+
+**터미널 1 (게임 실행):**
+```bash
+python semantic_solver.py
+```
+
+**터미널 2 (실시간 모니터링):**
+```bash
+python monitor_game.py
+```
+
+### 로그 분석
+게임 종료 후 분석:
+```bash
+# 기본 통계 분석
+python analyze_logs.py
+
+# 상세 분석 및 시각화
+python view_detailed_log.py
+```
+
+## 전략 시스템
+
+### 1. 넓은 의미 탐색 (Wide Semantic Exploration)
+- **사용 시점**: 초기 단계 (유사도 < 10%)
+- **목적**: 다양한 의미 영역 탐색
+- **특징**: 8개 의미 범주에서 균형있게 선택
+
+### 2. 의미적 경사 탐색 (Semantic Gradient Search)
+- **사용 시점**: 초기-중간 단계 (유사도 10-30%)
+- **목적**: 고성능 단어 주변 탐색
+- **특징**: 언어학적 연관어 및 문맥적 관련어 활용
+
+### 3. 집중 의미 탐색 (Focused Semantic Search)
+- **사용 시점**: 중간-후반 단계 (유사도 30-60%)
+- **목적**: 고유사도 영역 집중 탐색
+- **특징**: 다층 연관 관계 분석
+
+### 4. 정밀 의미 탐색 (Precision Semantic Search)
+- **사용 시점**: 후반 단계 (유사도 60% 이상)
+- **목적**: 정답 근처에서 정밀 탐색
+- **특징**: 형태론적 변형 및 초근접 단어 활용
+
+## 프로젝트 구조
 
 ```
 autosemantle/
-├── 📊 models.py              # 데이터 구조 및 클래스 정의
-├── 🧠 strategy_engine.py     # 4단계 적응형 탐색 전략
-├── 📚 learning_engine.py     # 실시간 학습 및 패턴 인식
-├── 🌐 web_automation.py      # 셀레니움 기반 웹 자동화
-├── 🚀 semantic_solver.py     # 메인 솔버 (모든 모듈 통합)
-├── 🔗 simple_solver.py       # 기존 호환성 래퍼
-├── 📋 requirements.txt       # 필수 패키지 목록
-├── 📖 README.md             # 프로젝트 문서
-├── 📝 words.txt             # 한국어 어휘 목록 (170,000+ 단어)
-├── 🧠 kkomantle_learning.json # 학습 데이터 (게임 통계, 성공 패턴)
-└── 🔗 word_pairs.json       # 단어 쌍 유사도 관계 데이터
+├── semantic_solver.py      # 메인 실행 파일
+├── requirements.txt        # 필수 패키지 목록
+├── README.md              # 프로젝트 문서
+├── words.xls              # 한국어 어휘 목록
+├── analyze_logs.py        # 로그 분석 도구
+├── view_detailed_log.py   # 상세 분석 도구
+├── monitor_game.py        # 실시간 모니터링
+├── test_improved_algorithm.py  # 알고리즘 테스트
+└── modules/               # 핵심 모듈
+    ├── models.py          # 데이터 구조 정의
+    ├── strategy_engine.py # 4단계 적응형 탐색 전략
+    ├── learning_engine.py # 실시간 학습 엔진
+    ├── web_automation.py  # 웹 자동화
+    └── strategy_logger.py # 전략 로깅 시스템
 ```
 
-### 8.6 빠른 시작 가이드
+## 핵심 모듈 설명
 
-1. **저장소 클론 및 이동**
-```bash
-git clone https://github.com/needitem/Semantle-finder.git
-cd Semantle-finder
+### models.py - 데이터 구조 모듈
+- `GuessResult`: 추측 결과 (단어, 유사도, 순위)
+- `GameSession`: 게임 세션 상태 관리
+- `WordPairData`: 단어 쌍 관계 데이터
+- `WordFrequencyData`: 단어 효과성 통계
+
+### strategy_engine.py - 전략 엔진
+- 4가지 탐색 전략 구현
+- 상황별 자동 전략 전환
+- 학습 데이터 기반 단어 선택
+
+### learning_engine.py - 학습 엔진
+- 실시간 단어 관계 학습
+- 성공 패턴 저장 및 분석
+- 효과성 점수 계산
+
+### web_automation.py - 웹 자동화
+- Selenium 기반 자동 플레이
+- 최적화된 결과 파싱
+- 견고한 오류 처리
+
+### strategy_logger.py - 로깅 시스템
+- 모든 게임 과정 기록
+- 전략 변경 추적
+- 성능 분석 데이터 생성
+
+## 학습 시스템
+
+### 단어 관계 학습
+- 모든 단어 쌍의 유사도 차이를 기록
+- 성공한 게임의 패턴 분석
+- 효과적인 단어 식별 및 우선순위 부여
+
+### 학습 데이터 파일
+- `kkomantle_learning.json`: 게임 통계 및 성공 패턴
+- `word_pairs.json`: 단어 쌍 관계 데이터
+- `strategy_logs.json`: 상세 게임 로그
+
+## 분석 도구
+
+### 1. analyze_logs.py
+- 전략별 효과성 분석
+- 성공적인 단어 패턴 식별
+- 개선 추천사항 생성
+
+### 2. view_detailed_log.py
+- 게임 진행 과정 시각화
+- 단어별 효과성 점수
+- 고득점 시퀀스 분석
+- CSV 파일 내보내기
+
+### 3. monitor_game.py
+- 실시간 게임 진행 모니터링
+- 유사도 변화 시각화
+- 전략 변경 알림
+
+## 개선된 기능 (최신 업데이트)
+
+### 1. 고영향 단어 우선 선택
+- 로그 분석을 통해 발견된 효과적인 단어들을 우선 시도
+- "사례", "실패", "기원" 등 높은 유사도 증가를 보인 단어
+
+### 2. 동적 전략 전환
+- 20회 이상 같은 전략으로 정체 시 강제 전환
+- 유사도 증가 속도에 따른 적응적 전환
+- 순환 전략 패턴으로 다양성 확보
+
+### 3. 학습 데이터 활용 강화
+- 평균 유사도 30% 이상인 검증된 단어 우선 선택
+- 단어 쌍 관계를 활용한 지능적 추천
+
+## 성능 최적화
+
+### 웹 자동화 최적화
+- 단어당 총 처리 시간: ~0.01초
+- 최적화된 JavaScript 파싱
+- 비동기 처리로 빠른 응답
+
+### 메모리 관리
+- 슬라이딩 윈도우로 데이터 크기 제한
+- 효율적인 데이터 구조 사용
+
+## 문제 해결
+
+### Chrome Driver 오류
 ```
-
-2. **필수 패키지 설치**
-```bash
-pip install -r requirements.txt
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH
 ```
+**해결책**: ChromeDriver를 다운로드하고 시스템 PATH에 추가
 
-3. **ChromeDriver 설치**
-   - [ChromeDriver 다운로드](https://chromedriver.chromium.org/)
-   - PATH에 등록하거나 프로젝트 폴더에 위치
-
-4. **솔버 실행**
-```bash
-python semantic_solver.py
+### 페이지 로딩 실패
 ```
-
-### 8.7 설정 옵션
-
-#### 웹 자동화 설정
-```python
-from web_automation import WebAutomationConfig
-
-config = WebAutomationConfig(
-    game_url="https://semantle-ko.newsjel.ly/",
-    headless=False,              # 브라우저 창 표시 여부
-    window_size=(1200, 800),     # 브라우저 창 크기
-    submit_delay=0.005,          # 단어 제출 후 대기 시간
-    parse_delay=0.005,           # 결과 파싱 전 대기 시간
-    page_load_timeout=30         # 페이지 로드 최대 대기 시간
-)
+❌ 게임 사이트 접속 실패
 ```
+**해결책**: 
+1. 인터넷 연결 확인
+2. 게임 사이트 URL 확인 (https://semantle-ko.newsjel.ly/)
+3. 방화벽/프록시 설정 확인
 
-#### 전략 임계값 설정
-- **넓은 탐색**: 유사도 < 0.1 (다양한 의미 영역 탐색)
-- **경사 탐색**: 유사도 < 0.25 (의미적 방향성 추적)
-- **집중 탐색**: 유사도 < 0.5 (고유사도 영역 집중)
-- **정밀 탐색**: 유사도 ≥ 0.5 (형태론적 미세 조정)
+### 단어 결과 파싱 실패
+```
+⚠️ 단어 '...' 결과를 찾을 수 없음
+```
+**해결책**: 게임 사이트의 HTML 구조가 변경되었을 수 있음. 이슈 제보 필요
 
-#### 학습 매개변수
-- **정체 감지 윈도우**: 최근 3회 시도
-- **정체 임계값**: 0.01 (유사도 개선 최소값)
-- **단어 쌍 기록 한계**: 100개 (메모리 절약)
-- **성공 패턴 보존**: 최대 100개
+## 기여 방법
 
-### 8.3 오류 처리 및 견고성
+1. Fork 후 개선사항 구현
+2. 테스트 실행 및 로그 확인
+3. Pull Request 제출
 
-1. **우아한 성능 저하**: 부분 실패 시에도 시스템 작동 지속
-2. **자동 복구**: 실패한 단어는 어휘에서 제거하여 반복 실패 방지
-3. **데이터 무결성**: 지속적 저장을 위한 오류 처리가 포함된 JSON 직렬화
+## 라이선스
 
-## 9. 향후 개선사항
+MIT License
 
-### 9.1 고급 학습 메커니즘
+## 주의사항
 
-1. **의미적 임베딩**: 사전 훈련된 한국어 언어 모델과의 통합
-2. **강화학습**: 전략 선택 최적화를 위한 Q-learning
-3. **전이 학습**: 다른 단어 게임 간 도메인 간 지식 전이
+- 이 프로그램은 교육 및 연구 목적으로 제작되었습니다
+- 게임 서버에 부담을 주지 않도록 적절한 딜레이가 설정되어 있습니다
+- 과도한 사용은 자제해 주세요
 
-### 9.2 성능 개선
+## 작성자
 
-1. **병렬 처리**: 동시 후보 평가
-2. **캐싱**: 비용이 많이 드는 의미적 연산의 메모화
-3. **배치 학습**: 관계 학습을 위한 효율적인 배치 업데이트
-
-### 9.3 분석 및 모니터링
-
-1. **성능 대시보드**: 학습 진행 상황의 실시간 시각화
-2. **전략 분석**: 전략 효과성의 상세 분석
-3. **의미적 시각화**: 학습된 단어 관계의 그래프 기반 표현
-
-## 10. 결론
-
-적응형 의미 탐색 솔버는 동적 학습과 다단계 적응형 탐색을 통해 한국어 꼬맨틀을 해결하는 새로운 접근법을 제시한다. 실시간 관계 학습과 전략적 탐색 알고리즘을 결합함으로써, 시스템은 사전 훈련된 지식에만 의존하지 않고 경험을 통해 개선되는 지능형 게임 플레이 에이전트의 잠재력을 보여준다.
-
-세션 간 지식을 지속하고 성능 피드백을 기반으로 전략을 적응시키는 시스템의 능력은 해답 공간이 크고 동적인 개방형 문제 영역에 특히 적합하다. 모듈식 아키텍처는 다양한 단어 추측 게임 변형에 대한 쉬운 확장 및 사용자 정의를 허용한다.
-
-## 참고문헌
-
-1. 자연어 처리에서의 의미적 유사성
-2. 인공지능의 적응형 탐색 알고리즘
-3. 게임 플레이를 위한 강화학습
-4. 한국어 처리 및 형태론적 분석
-5. 웹 자동화 및 실시간 데이터 처리
+- 개발 및 문서화 지원: Claude (Anthropic)
+- 프로젝트 관리: 사용자
 
 ---
 
-**키워드**: 의미적 탐색, 적응형 알고리즘, 한국어 자연어처리, 게임 AI, 기계학습, 웹 자동화
-
-**소스 코드**: `/mnt/c/Users/th072/Desktop/autosemantle/simple_solver.py`에서 확인 가능
-
-**데이터 파일**: 
-- `kkomantle_learning.json` - 학습 데이터 및 성공 패턴
-- `word_pairs.json` - 단어 관계 매핑
-- `words.txt` - 한국어 어휘 말뭉치
+더 자세한 기술적 내용은 프로젝트 소스 코드의 주석을 참고하세요.

@@ -1,1192 +1,4511 @@
 {
-  "games_played": 2,
+  "games_played": 1,
   "successful_patterns": [
     {
-      "answer": "고궁",
-      "attempts": 234,
-      "strategy_sequence": [],
+      "answer": "성공",
+      "attempts": 349,
       "key_words": [
-        "고궁",
-        "체험",
-        "주거",
-        "한식",
-        "정원"
+        "성공",
+        "사례",
+        "성장",
+        "기원",
+        "만족"
       ],
-      "timestamp": "2025-07-10T19:16:22.734625"
+      "strategy_sequence": [
+        "넓은의미탐색",
+        "집중의미탐색",
+        "의미적경사탐색"
+      ],
+      "timestamp": "2025-07-11T23:14:00.827085",
+      "final_similarity_scores": [
+        100.0,
+        48.34,
+        42.71,
+        41.06,
+        39.62
+      ],
+      "session_duration": 128.678841
     }
   ],
   "category_effectiveness": {},
   "word_frequency": {
     "사람": {
       "count": 1,
-      "avg_similarity": 0.1833,
-      "best_similarity": 0.1833
-    },
-    "정신": {
-      "count": 1,
-      "avg_similarity": 0.1942,
-      "best_similarity": 0.1942
-    },
-    "형태": {
-      "count": 1,
-      "avg_similarity": 0.17559999999999998,
-      "best_similarity": 0.17559999999999998
-    },
-    "움직임": {
-      "count": 1,
-      "avg_similarity": 0.062400000000000004,
-      "best_similarity": 0.062400000000000004
-    },
-    "연결": {
-      "count": 1,
-      "avg_similarity": 0.1308,
-      "best_similarity": 0.1308
-    },
-    "연간": {
-      "count": 1,
-      "avg_similarity": 0.23739999999999997,
-      "best_similarity": 0.23739999999999997
-    },
-    "연구": {
-      "count": 1,
-      "avg_similarity": 0.1784,
-      "best_similarity": 0.1784
-    },
-    "연극": {
-      "count": 1,
-      "avg_similarity": 0.2909,
-      "best_similarity": 0.2909
-    },
-    "연인": {
-      "count": 1,
-      "avg_similarity": 0.2693,
-      "best_similarity": 0.2693
-    },
-    "움직이다": {
-      "count": 1,
-      "avg_similarity": 0.0109,
-      "best_similarity": 0.0109
-    },
-    "형식": {
-      "count": 1,
-      "avg_similarity": 0.2009,
-      "best_similarity": 0.2009
-    },
-    "형편": {
-      "count": 1,
-      "avg_similarity": 0.15109999999999998,
-      "best_similarity": 0.15109999999999998
-    },
-    "사무실": {
-      "count": 1,
-      "avg_similarity": 0.11289999999999999,
-      "best_similarity": 0.11289999999999999
-    },
-    "사무직": {
-      "count": 1,
-      "avg_similarity": 0.07690000000000001,
-      "best_similarity": 0.07690000000000001
-    },
-    "사슴": {
-      "count": 1,
-      "avg_similarity": 0.2619,
-      "best_similarity": 0.2619
-    },
-    "사십": {
-      "count": 1,
-      "avg_similarity": 0.23870000000000002,
-      "best_similarity": 0.23870000000000002
-    },
-    "사업자": {
-      "count": 1,
-      "avg_similarity": 0.061799999999999994,
-      "best_similarity": 0.061799999999999994
-    },
-    "사용": {
-      "count": 1,
-      "avg_similarity": 0.20190000000000002,
-      "best_similarity": 0.20190000000000002
-    },
-    "사용하다": {
-      "count": 1,
-      "avg_similarity": 0.1306,
-      "best_similarity": 0.1306
-    },
-    "사촌": {
-      "count": 1,
-      "avg_similarity": 0.13119999999999998,
-      "best_similarity": 0.13119999999999998
-    },
-    "사회": {
-      "count": 1,
-      "avg_similarity": 0.2434,
-      "best_similarity": 0.2434
-    },
-    "사회적": {
-      "count": 1,
-      "avg_similarity": 0.0781,
-      "best_similarity": 0.0781
-    },
-    "사회주의": {
-      "count": 1,
-      "avg_similarity": 0.1099,
-      "best_similarity": 0.1099
-    },
-    "정기": {
-      "count": 1,
-      "avg_similarity": 0.2401,
-      "best_similarity": 0.2401
-    },
-    "정기적": {
-      "count": 1,
-      "avg_similarity": 0.17620000000000002,
-      "best_similarity": 0.17620000000000002
-    },
-    "정답": {
-      "count": 1,
-      "avg_similarity": 0.158,
-      "best_similarity": 0.158
-    },
-    "정당": {
-      "count": 1,
-      "avg_similarity": 0.2299,
-      "best_similarity": 0.2299
-    },
-    "정도": {
-      "count": 1,
-      "avg_similarity": 0.1079,
-      "best_similarity": 0.1079
-    },
-    "정류장": {
-      "count": 1,
-      "avg_similarity": 0.2125,
-      "best_similarity": 0.2125
-    },
-    "정리": {
-      "count": 1,
-      "avg_similarity": 0.2173,
-      "best_similarity": 0.2173
-    },
-    "정리하다": {
-      "count": 1,
-      "avg_similarity": 0.11109999999999999,
-      "best_similarity": 0.11109999999999999
-    },
-    "정면": {
-      "count": 1,
-      "avg_similarity": 0.1354,
-      "best_similarity": 0.1354
-    },
-    "정문": {
-      "count": 1,
-      "avg_similarity": 0.3432,
-      "best_similarity": 0.3432
-    },
-    "정반대": {
-      "count": 1,
-      "avg_similarity": 0.023700000000000002,
-      "best_similarity": 0.023700000000000002
-    },
-    "정보": {
-      "count": 1,
-      "avg_similarity": 0.20079999999999998,
-      "best_similarity": 0.20079999999999998
-    },
-    "정상적": {
-      "count": 1,
-      "avg_similarity": 0.07730000000000001,
-      "best_similarity": 0.07730000000000001
-    },
-    "정성": {
-      "count": 1,
-      "avg_similarity": 0.2336,
-      "best_similarity": 0.2336
-    },
-    "정식": {
-      "count": 1,
-      "avg_similarity": 0.2309,
-      "best_similarity": 0.2309
-    },
-    "정신적": {
-      "count": 1,
-      "avg_similarity": 0.11359999999999999,
-      "best_similarity": 0.11359999999999999
-    },
-    "정오": {
-      "count": 1,
-      "avg_similarity": 0.1826,
-      "best_similarity": 0.1826
-    },
-    "정원": {
-      "count": 1,
-      "avg_similarity": 0.3605,
-      "best_similarity": 0.3605
-    },
-    "정장": {
-      "count": 1,
-      "avg_similarity": 0.2688,
-      "best_similarity": 0.2688
-    },
-    "정지": {
-      "count": 1,
-      "avg_similarity": 0.1696,
-      "best_similarity": 0.1696
-    },
-    "정치권": {
-      "count": 1,
-      "avg_similarity": 0.1537,
-      "best_similarity": 0.1537
-    },
-    "정치인": {
-      "count": 1,
-      "avg_similarity": 0.0321,
-      "best_similarity": 0.0321
-    },
-    "정치적": {
-      "count": 1,
-      "avg_similarity": 0.11220000000000001,
-      "best_similarity": 0.11220000000000001
-    },
-    "정치학": {
-      "count": 1,
-      "avg_similarity": 0.1244,
-      "best_similarity": 0.1244
-    },
-    "정하다": {
-      "count": 1,
-      "avg_similarity": 0.032799999999999996,
-      "best_similarity": 0.032799999999999996
-    },
-    "정확히": {
-      "count": 1,
-      "avg_similarity": -6.24,
-      "best_similarity": 0
-    },
-    "주제": {
-      "count": 1,
-      "avg_similarity": 0.28850000000000003,
-      "best_similarity": 0.28850000000000003
-    },
-    "주": {
-      "count": 1,
-      "avg_similarity": 0.1818,
-      "best_similarity": 0.1818
-    },
-    "주거": {
-      "count": 1,
-      "avg_similarity": 0.36729999999999996,
-      "best_similarity": 0.36729999999999996
-    },
-    "주년": {
-      "count": 1,
-      "avg_similarity": 0.2918,
-      "best_similarity": 0.2918
-    },
-    "주다": {
-      "count": 1,
-      "avg_similarity": 0.0692,
-      "best_similarity": 0.0692
-    },
-    "주로": {
-      "count": 1,
-      "avg_similarity": 0.11380000000000001,
-      "best_similarity": 0.11380000000000001
-    },
-    "주말": {
-      "count": 1,
-      "avg_similarity": 0.3072,
-      "best_similarity": 0.3072
-    },
-    "주머니": {
-      "count": 1,
-      "avg_similarity": 0.0805,
-      "best_similarity": 0.0805
-    },
-    "주문": {
-      "count": 1,
-      "avg_similarity": 0.195,
-      "best_similarity": 0.195
-    },
-    "주문하다": {
-      "count": 1,
-      "avg_similarity": 0.1309,
-      "best_similarity": 0.1309
-    },
-    "주민": {
-      "count": 1,
-      "avg_similarity": 0.1822,
-      "best_similarity": 0.1822
-    },
-    "주방": {
-      "count": 1,
-      "avg_similarity": 0.2369,
-      "best_similarity": 0.2369
-    },
-    "주부": {
-      "count": 1,
-      "avg_similarity": 0.1807,
-      "best_similarity": 0.1807
-    },
-    "주사": {
-      "count": 1,
-      "avg_similarity": 0.15810000000000002,
-      "best_similarity": 0.15810000000000002
-    },
-    "주식": {
-      "count": 1,
-      "avg_similarity": 0.2218,
-      "best_similarity": 0.2218
-    },
-    "주일": {
-      "count": 1,
-      "avg_similarity": 0.2022,
-      "best_similarity": 0.2022
-    },
-    "주장": {
-      "count": 1,
-      "avg_similarity": 0.1553,
-      "best_similarity": 0.1553
-    },
-    "주장하다": {
-      "count": 1,
-      "avg_similarity": -1.18,
-      "best_similarity": 0
-    },
-    "주택": {
-      "count": 1,
-      "avg_similarity": 0.2979,
-      "best_similarity": 0.2979
-    },
-    "통일하다": {
-      "count": 1,
-      "avg_similarity": 0.10369999999999999,
-      "best_similarity": 0.10369999999999999
-    },
-    "서쪽": {
-      "count": 1,
-      "avg_similarity": 0.2022,
-      "best_similarity": 0.2022
-    },
-    "서구": {
-      "count": 1,
-      "avg_similarity": 0.1739,
-      "best_similarity": 0.1739
-    },
-    "서다": {
-      "count": 1,
-      "avg_similarity": 0.15439999999999998,
-      "best_similarity": 0.15439999999999998
-    },
-    "서두르다": {
-      "count": 1,
-      "avg_similarity": -0.85,
-      "best_similarity": 0
-    },
-    "서랍": {
-      "count": 1,
-      "avg_similarity": 0.2757,
-      "best_similarity": 0.2757
-    },
-    "서로": {
-      "count": 1,
-      "avg_similarity": -0.84,
-      "best_similarity": 0
-    },
-    "서명": {
-      "count": 1,
-      "avg_similarity": 0.2284,
-      "best_similarity": 0.2284
-    },
-    "서명하다": {
-      "count": 1,
-      "avg_similarity": 0.0808,
-      "best_similarity": 0.0808
-    },
-    "서민": {
-      "count": 1,
-      "avg_similarity": 0.22870000000000001,
-      "best_similarity": 0.22870000000000001
-    },
-    "서서히": {
-      "count": 1,
-      "avg_similarity": 0.0554,
-      "best_similarity": 0.0554
-    },
-    "서양": {
-      "count": 1,
-      "avg_similarity": 0.2668,
-      "best_similarity": 0.2668
-    },
-    "서울역": {
-      "count": 1,
-      "avg_similarity": 0.1954,
-      "best_similarity": 0.1954
-    },
-    "서클": {
-      "count": 1,
-      "avg_similarity": 0.11599999999999999,
-      "best_similarity": 0.11599999999999999
-    },
-    "서투르다": {
-      "count": 1,
-      "avg_similarity": -0.94,
-      "best_similarity": 0
-    },
-    "서툴다": {
-      "count": 1,
-      "avg_similarity": -1.51,
-      "best_similarity": 0
-    },
-    "수도꼭지": {
-      "count": 1,
-      "avg_similarity": -1.54,
-      "best_similarity": 0
-    },
-    "한국": {
-      "count": 1,
-      "avg_similarity": 0.2763,
-      "best_similarity": 0.2763
-    },
-    "한가하다": {
-      "count": 1,
-      "avg_similarity": 0.0977,
-      "best_similarity": 0.0977
-    },
-    "한계": {
-      "count": 1,
-      "avg_similarity": 0.1056,
-      "best_similarity": 0.1056
-    },
-    "한구석": {
-      "count": 1,
-      "avg_similarity": 0.2159,
-      "best_similarity": 0.2159
-    },
-    "한국말": {
-      "count": 1,
-      "avg_similarity": 0.14279999999999998,
-      "best_similarity": 0.14279999999999998
-    },
-    "한국어": {
-      "count": 1,
-      "avg_similarity": 0.17329999999999998,
-      "best_similarity": 0.17329999999999998
-    },
-    "한국적": {
-      "count": 1,
-      "avg_similarity": 0.1263,
-      "best_similarity": 0.1263
-    },
-    "한글": {
-      "count": 1,
-      "avg_similarity": 0.34490000000000004,
-      "best_similarity": 0.34490000000000004
-    },
-    "한글날": {
-      "count": 1,
-      "avg_similarity": 0.2701,
-      "best_similarity": 0.2701
-    },
-    "한눈": {
-      "count": 1,
-      "avg_similarity": 0.1361,
-      "best_similarity": 0.1361
-    },
-    "한데": {
-      "count": 1,
-      "avg_similarity": 0.1067,
-      "best_similarity": 0.1067
-    },
-    "한동안": {
-      "count": 1,
-      "avg_similarity": 0.061799999999999994,
-      "best_similarity": 0.061799999999999994
-    },
-    "한두": {
-      "count": 1,
-      "avg_similarity": 0.19829999999999998,
-      "best_similarity": 0.19829999999999998
-    },
-    "한둘": {
-      "count": 1,
-      "avg_similarity": 0.155,
-      "best_similarity": 0.155
-    },
-    "한때": {
-      "count": 1,
-      "avg_similarity": 0.14,
-      "best_similarity": 0.14
-    },
-    "한마디": {
-      "count": 1,
-      "avg_similarity": -0.46,
-      "best_similarity": 0
-    },
-    "한문": {
-      "count": 1,
-      "avg_similarity": 0.34159999999999996,
-      "best_similarity": 0.34159999999999996
-    },
-    "한반도": {
-      "count": 1,
-      "avg_similarity": 0.1906,
-      "best_similarity": 0.1906
-    },
-    "한숨": {
-      "count": 1,
-      "avg_similarity": 0.2235,
-      "best_similarity": 0.2235
-    },
-    "한식": {
-      "count": 1,
-      "avg_similarity": 0.3642,
-      "best_similarity": 0.3642
-    },
-    "한잔": {
-      "count": 1,
-      "avg_similarity": 0.1592,
-      "best_similarity": 0.1592
-    },
-    "한쪽": {
-      "count": 1,
-      "avg_similarity": 0.14550000000000002,
-      "best_similarity": 0.14550000000000002
-    },
-    "한참": {
-      "count": 1,
-      "avg_similarity": 0.0867,
-      "best_similarity": 0.0867
-    },
-    "한창": {
-      "count": 1,
-      "avg_similarity": 0.1436,
-      "best_similarity": 0.1436
-    },
-    "바르다": {
-      "count": 1,
-      "avg_similarity": 0.0901,
-      "best_similarity": 0.0901
-    },
-    "회": {
-      "count": 1,
-      "avg_similarity": 0.2692,
-      "best_similarity": 0.2692
-    },
-    "매년": {
-      "count": 1,
-      "avg_similarity": 0.22769999999999999,
-      "best_similarity": 0.22769999999999999
-    },
-    "매": {
-      "count": 1,
-      "avg_similarity": 0.12390000000000001,
-      "best_similarity": 0.12390000000000001
-    },
-    "매너": {
-      "count": 1,
-      "avg_similarity": 0.2346,
-      "best_similarity": 0.2346
-    },
-    "매다": {
-      "count": 1,
-      "avg_similarity": 0.0958,
-      "best_similarity": 0.0958
-    },
-    "매달": {
-      "count": 1,
-      "avg_similarity": 0.17809999999999998,
-      "best_similarity": 0.17809999999999998
-    },
-    "매달다": {
-      "count": 1,
-      "avg_similarity": 0.20010000000000003,
-      "best_similarity": 0.20010000000000003
-    },
-    "매달리다": {
-      "count": 1,
-      "avg_similarity": 0.0265,
-      "best_similarity": 0.0265
-    },
-    "매력": {
-      "count": 1,
-      "avg_similarity": 0.2774,
-      "best_similarity": 0.2774
-    },
-    "매번": {
-      "count": 1,
-      "avg_similarity": 0.0634,
-      "best_similarity": 0.0634
-    },
-    "매우": {
-      "count": 1,
-      "avg_similarity": 0.0965,
-      "best_similarity": 0.0965
-    },
-    "매일": {
-      "count": 1,
-      "avg_similarity": 0.16469999999999999,
-      "best_similarity": 0.16469999999999999
-    },
-    "매장": {
-      "count": 1,
-      "avg_similarity": 0.2738,
-      "best_similarity": 0.2738
-    },
-    "매주": {
-      "count": 1,
-      "avg_similarity": 0.188,
-      "best_similarity": 0.188
-    },
-    "매체": {
-      "count": 1,
-      "avg_similarity": 0.213,
-      "best_similarity": 0.213
-    },
-    "자연적": {
-      "count": 1,
-      "avg_similarity": 0.0934,
-      "best_similarity": 0.0934
-    },
-    "자연스럽다": {
-      "count": 1,
-      "avg_similarity": -3.22,
-      "best_similarity": 0
-    },
-    "자연현상": {
-      "count": 1,
-      "avg_similarity": 0.20329999999999998,
-      "best_similarity": 0.20329999999999998
-    },
-    "자연환경": {
-      "count": 1,
-      "avg_similarity": 0.2353,
-      "best_similarity": 0.2353
-    },
-    "자연히": {
-      "count": 1,
-      "avg_similarity": 0.0218,
-      "best_similarity": 0.0218
-    },
-    "카운터": {
-      "count": 1,
-      "avg_similarity": 0.0717,
-      "best_similarity": 0.0717
-    },
-    "년생": {
-      "count": 1,
-      "avg_similarity": 0.15560000000000002,
-      "best_similarity": 0.15560000000000002
-    },
-    "년": {
-      "count": 1,
-      "avg_similarity": 0.1364,
-      "best_similarity": 0.1364
-    },
-    "년대": {
-      "count": 1,
-      "avg_similarity": 0.2366,
-      "best_similarity": 0.2366
-    },
-    "년도": {
-      "count": 1,
-      "avg_similarity": 0.15869999999999998,
-      "best_similarity": 0.15869999999999998
-    },
-    "색연필": {
-      "count": 1,
-      "avg_similarity": 0.1671,
-      "best_similarity": 0.1671
-    },
-    "담요": {
-      "count": 1,
-      "avg_similarity": 0.12119999999999999,
-      "best_similarity": 0.12119999999999999
-    },
-    "담": {
-      "count": 1,
-      "avg_similarity": 0.24059999999999998,
-      "best_similarity": 0.24059999999999998
-    },
-    "담그다": {
-      "count": 1,
-      "avg_similarity": 0.1975,
-      "best_similarity": 0.1975
-    },
-    "담당": {
-      "count": 1,
-      "avg_similarity": 0.1041,
-      "best_similarity": 0.1041
-    },
-    "담당하다": {
-      "count": 1,
-      "avg_similarity": 0.0271,
-      "best_similarity": 0.0271
-    },
-    "담배": {
-      "count": 1,
-      "avg_similarity": 0.17379999999999998,
-      "best_similarity": 0.17379999999999998
-    },
-    "담임": {
-      "count": 1,
-      "avg_similarity": 0.1301,
-      "best_similarity": 0.1301
-    },
-    "방송국": {
-      "count": 1,
-      "avg_similarity": 0.1467,
-      "best_similarity": 0.1467
-    },
-    "방송": {
-      "count": 1,
-      "avg_similarity": 0.26239999999999997,
-      "best_similarity": 0.26239999999999997
-    },
-    "방송사": {
-      "count": 1,
-      "avg_similarity": 0.1213,
-      "best_similarity": 0.1213
-    },
-    "방송하다": {
-      "count": 1,
-      "avg_similarity": 0.0679,
-      "best_similarity": 0.0679
-    },
-    "방": {
-      "count": 1,
-      "avg_similarity": 0.2702,
-      "best_similarity": 0.2702
-    },
-    "방면": {
-      "count": 1,
-      "avg_similarity": 0.1478,
-      "best_similarity": 0.1478
-    },
-    "방문": {
-      "count": 1,
-      "avg_similarity": 0.2248,
-      "best_similarity": 0.2248
-    },
-    "방문하다": {
-      "count": 1,
-      "avg_similarity": 0.1334,
-      "best_similarity": 0.1334
-    },
-    "방법": {
-      "count": 1,
-      "avg_similarity": 0.1804,
-      "best_similarity": 0.1804
+      "avg_similarity": 20.67,
+      "best_similarity": 20.67,
+      "total_similarity": 20.67,
+      "last_used": "2025-07-11T22:59:55.394601"
+    },
+    "순서": {
+      "count": 2,
+      "avg_similarity": 19.08,
+      "best_similarity": 19.08,
+      "total_similarity": 38.16,
+      "last_used": "2025-07-11T23:11:53.885425"
+    },
+    "공간": {
+      "count": 1,
+      "avg_similarity": 19.11,
+      "best_similarity": 19.11,
+      "total_similarity": 19.11,
+      "last_used": "2025-07-11T22:59:55.670294"
+    },
+    "범위": {
+      "count": 1,
+      "avg_similarity": 8.99,
+      "best_similarity": 8.99,
+      "total_similarity": 8.99,
+      "last_used": "2025-07-11T22:59:55.811092"
+    },
+    "지역": {
+      "count": 2,
+      "avg_similarity": 18.03,
+      "best_similarity": 18.03,
+      "total_similarity": 36.06,
+      "last_used": "2025-07-11T23:11:53.450890"
+    },
+    "영역": {
+      "count": 1,
+      "avg_similarity": 15.75,
+      "best_similarity": 15.75,
+      "total_similarity": 15.75,
+      "last_used": "2025-07-11T22:59:56.093665"
+    },
+    "위치": {
+      "count": 1,
+      "avg_similarity": 14.22,
+      "best_similarity": 14.22,
+      "total_similarity": 14.22,
+      "last_used": "2025-07-11T22:59:56.225491"
+    },
+    "과정": {
+      "count": 1,
+      "avg_similarity": 30.17,
+      "best_similarity": 30.17,
+      "total_similarity": 30.17,
+      "last_used": "2025-07-11T22:59:56.355270"
+    },
+    "절차": {
+      "count": 1,
+      "avg_similarity": 23.42,
+      "best_similarity": 23.42,
+      "total_similarity": 23.42,
+      "last_used": "2025-07-11T22:59:56.496504"
+    },
+    "수단": {
+      "count": 1,
+      "avg_similarity": 21.1,
+      "best_similarity": 21.1,
+      "total_similarity": 21.1,
+      "last_used": "2025-07-11T22:59:56.626221"
     },
     "방식": {
       "count": 1,
-      "avg_similarity": 0.152,
-      "best_similarity": 0.152
+      "avg_similarity": 23.47,
+      "best_similarity": 23.47,
+      "total_similarity": 23.47,
+      "last_used": "2025-07-11T22:59:56.758053"
+    },
+    "단계": {
+      "count": 1,
+      "avg_similarity": 25.11,
+      "best_similarity": 25.11,
+      "total_similarity": 25.11,
+      "last_used": "2025-07-11T22:59:56.889312"
+    },
+    "기법": {
+      "count": 2,
+      "avg_similarity": 29.87,
+      "best_similarity": 29.87,
+      "total_similarity": 59.74,
+      "last_used": "2025-07-11T23:12:30.464116"
+    },
+    "연결": {
+      "count": 1,
+      "avg_similarity": 22.39,
+      "best_similarity": 22.39,
+      "total_similarity": 22.39,
+      "last_used": "2025-07-11T22:59:57.157103"
+    },
+    "실체": {
+      "count": 1,
+      "avg_similarity": 20.17,
+      "best_similarity": 20.17,
+      "total_similarity": 20.17,
+      "last_used": "2025-07-11T22:59:57.296297"
+    },
+    "기분": {
+      "count": 2,
+      "avg_similarity": 21.5,
+      "best_similarity": 21.5,
+      "total_similarity": 43.0,
+      "last_used": "2025-07-11T23:11:52.596632"
+    },
+    "노력": {
+      "count": 2,
+      "avg_similarity": 32.33,
+      "best_similarity": 32.33,
+      "total_similarity": 64.66,
+      "last_used": "2025-07-11T23:11:53.597755"
+    },
+    "의식": {
+      "count": 2,
+      "avg_similarity": 28.42,
+      "best_similarity": 28.42,
+      "total_similarity": 56.84,
+      "last_used": "2025-07-11T23:11:52.734176"
+    },
+    "범인": {
+      "count": 1,
+      "avg_similarity": 7.88,
+      "best_similarity": 7.88,
+      "total_similarity": 7.88,
+      "last_used": "2025-07-11T22:59:57.827755"
+    },
+    "범죄": {
+      "count": 1,
+      "avg_similarity": 23.77,
+      "best_similarity": 23.77,
+      "total_similarity": 23.77,
+      "last_used": "2025-07-11T22:59:57.958984"
+    },
+    "위기": {
+      "count": 1,
+      "avg_similarity": 30.15,
+      "best_similarity": 30.15,
+      "total_similarity": 30.15,
+      "last_used": "2025-07-11T22:59:58.097800"
+    },
+    "위대하다": {
+      "count": 1,
+      "avg_similarity": 10.04,
+      "best_similarity": 10.04,
+      "total_similarity": 10.04,
+      "last_used": "2025-07-11T22:59:58.236049"
+    },
+    "위로": {
+      "count": 1,
+      "avg_similarity": 6.78,
+      "best_similarity": 6.78,
+      "total_similarity": 6.78,
+      "last_used": "2025-07-11T22:59:58.376396"
+    },
+    "위로하다": {
+      "count": 1,
+      "avg_similarity": 3.45,
+      "best_similarity": 3.45,
+      "total_similarity": 3.45,
+      "last_used": "2025-07-11T22:59:58.509547"
+    },
+    "위반": {
+      "count": 1,
+      "avg_similarity": 23.84,
+      "best_similarity": 23.84,
+      "total_similarity": 23.84,
+      "last_used": "2025-07-11T22:59:58.640894"
+    },
+    "위법": {
+      "count": 1,
+      "avg_similarity": 27.1,
+      "best_similarity": 27.1,
+      "total_similarity": 27.1,
+      "last_used": "2025-07-11T23:00:00.953715"
+    },
+    "위성": {
+      "count": 1,
+      "avg_similarity": 27.75,
+      "best_similarity": 27.75,
+      "total_similarity": 27.75,
+      "last_used": "2025-07-11T23:00:01.091963"
+    },
+    "위아래": {
+      "count": 1,
+      "avg_similarity": 4.89,
+      "best_similarity": 4.89,
+      "total_similarity": 4.89,
+      "last_used": "2025-07-11T23:00:01.227290"
+    },
+    "위원": {
+      "count": 1,
+      "avg_similarity": 10.73,
+      "best_similarity": 10.73,
+      "total_similarity": 10.73,
+      "last_used": "2025-07-11T23:00:01.362566"
+    },
+    "위주": {
+      "count": 1,
+      "avg_similarity": 28.87,
+      "best_similarity": 28.87,
+      "total_similarity": 28.87,
+      "last_used": "2025-07-11T23:00:01.646858"
+    },
+    "위쪽": {
+      "count": 1,
+      "avg_similarity": 18.36,
+      "best_similarity": 18.36,
+      "total_similarity": 18.36,
+      "last_used": "2025-07-11T23:00:01.803020"
+    },
+    "위층": {
+      "count": 1,
+      "avg_similarity": 11.66,
+      "best_similarity": 11.66,
+      "total_similarity": 11.66,
+      "last_used": "2025-07-11T23:00:01.943177"
+    },
+    "위험": {
+      "count": 1,
+      "avg_similarity": 27.3,
+      "best_similarity": 27.3,
+      "total_similarity": 27.3,
+      "last_used": "2025-07-11T23:00:04.397628"
+    },
+    "위험성": {
+      "count": 1,
+      "avg_similarity": 13.38,
+      "best_similarity": 13.38,
+      "total_similarity": 13.38,
+      "last_used": "2025-07-11T23:00:04.533484"
+    },
+    "위험하다": {
+      "count": 1,
+      "avg_similarity": 6.9,
+      "best_similarity": 6.9,
+      "total_similarity": 6.9,
+      "last_used": "2025-07-11T23:00:04.672502"
+    },
+    "위협": {
+      "count": 1,
+      "avg_similarity": 28.13,
+      "best_similarity": 28.13,
+      "total_similarity": 28.13,
+      "last_used": "2025-07-11T23:00:04.809410"
+    },
+    "영국": {
+      "count": 1,
+      "avg_similarity": 9.65,
+      "best_similarity": 9.65,
+      "total_similarity": 9.65,
+      "last_used": "2025-07-11T23:00:04.948442"
+    },
+    "영남": {
+      "count": 1,
+      "avg_similarity": 12.82,
+      "best_similarity": 12.82,
+      "total_similarity": 12.82,
+      "last_used": "2025-07-11T23:00:05.083124"
+    },
+    "영상": {
+      "count": 1,
+      "avg_similarity": 22.98,
+      "best_similarity": 22.98,
+      "total_similarity": 22.98,
+      "last_used": "2025-07-11T23:00:05.220961"
+    },
+    "영양": {
+      "count": 1,
+      "avg_similarity": 17.55,
+      "best_similarity": 17.55,
+      "total_similarity": 17.55,
+      "last_used": "2025-07-11T23:00:05.374107"
+    },
+    "영어": {
+      "count": 1,
+      "avg_similarity": 14.48,
+      "best_similarity": 14.48,
+      "total_similarity": 14.48,
+      "last_used": "2025-07-11T23:00:05.518288"
+    },
+    "영업": {
+      "count": 1,
+      "avg_similarity": 24.25,
+      "best_similarity": 24.25,
+      "total_similarity": 24.25,
+      "last_used": "2025-07-11T23:00:05.659739"
+    },
+    "영웅": {
+      "count": 1,
+      "avg_similarity": 25.44,
+      "best_similarity": 25.44,
+      "total_similarity": 25.44,
+      "last_used": "2025-07-11T23:00:05.800490"
+    },
+    "영원하다": {
+      "count": 1,
+      "avg_similarity": 7.97,
+      "best_similarity": 7.97,
+      "total_similarity": 7.97,
+      "last_used": "2025-07-11T23:00:05.941442"
+    },
+    "영원히": {
+      "count": 1,
+      "avg_similarity": 6.68,
+      "best_similarity": 6.68,
+      "total_similarity": 6.68,
+      "last_used": "2025-07-11T23:00:06.083910"
+    },
+    "영하": {
+      "count": 1,
+      "avg_similarity": 12.65,
+      "best_similarity": 12.65,
+      "total_similarity": 12.65,
+      "last_used": "2025-07-11T23:00:06.222974"
+    },
+    "영향": {
+      "count": 1,
+      "avg_similarity": 24.32,
+      "best_similarity": 24.32,
+      "total_similarity": 24.32,
+      "last_used": "2025-07-11T23:00:06.372798"
+    },
+    "영향력": {
+      "count": 1,
+      "avg_similarity": 17.89,
+      "best_similarity": 17.89,
+      "total_similarity": 17.89,
+      "last_used": "2025-07-11T23:00:06.516091"
+    },
+    "영혼": {
+      "count": 1,
+      "avg_similarity": 15.62,
+      "best_similarity": 15.62,
+      "total_similarity": 15.62,
+      "last_used": "2025-07-11T23:00:06.653334"
+    },
+    "영화": {
+      "count": 1,
+      "avg_similarity": 20.75,
+      "best_similarity": 20.75,
+      "total_similarity": 20.75,
+      "last_used": "2025-07-11T23:00:06.792747"
+    },
+    "영화관": {
+      "count": 1,
+      "avg_similarity": 3.66,
+      "best_similarity": 3.66,
+      "total_similarity": 3.66,
+      "last_used": "2025-07-11T23:00:06.930231"
+    },
+    "영화배우": {
+      "count": 1,
+      "avg_similarity": 7.94,
+      "best_similarity": 7.94,
+      "total_similarity": 7.94,
+      "last_used": "2025-07-11T23:00:07.070977"
+    },
+    "영화제": {
+      "count": 1,
+      "avg_similarity": 3.59,
+      "best_similarity": 3.59,
+      "total_similarity": 3.59,
+      "last_used": "2025-07-11T23:00:07.207325"
+    },
+    "지각": {
+      "count": 2,
+      "avg_similarity": 14.22,
+      "best_similarity": 14.22,
+      "total_similarity": 28.44,
+      "last_used": "2025-07-11T23:12:08.094625"
+    },
+    "지갑": {
+      "count": 2,
+      "avg_similarity": 18.9,
+      "best_similarity": 18.9,
+      "total_similarity": 37.8,
+      "last_used": "2025-07-11T23:12:08.265498"
+    },
+    "지겹다": {
+      "count": 2,
+      "avg_similarity": 13.51,
+      "best_similarity": 13.51,
+      "total_similarity": 27.02,
+      "last_used": "2025-07-11T23:12:08.442440"
+    },
+    "지경": {
+      "count": 2,
+      "avg_similarity": 15.78,
+      "best_similarity": 15.78,
+      "total_similarity": 31.56,
+      "last_used": "2025-07-11T23:12:08.598937"
+    },
+    "지구": {
+      "count": 2,
+      "avg_similarity": 18.06,
+      "best_similarity": 18.06,
+      "total_similarity": 36.12,
+      "last_used": "2025-07-11T23:12:08.765377"
+    },
+    "지금": {
+      "count": 2,
+      "avg_similarity": 7.91,
+      "best_similarity": 7.91,
+      "total_similarity": 15.82,
+      "last_used": "2025-07-11T23:12:09.116570"
+    },
+    "지급": {
+      "count": 2,
+      "avg_similarity": 17.75,
+      "best_similarity": 17.75,
+      "total_similarity": 35.5,
+      "last_used": "2025-07-11T23:12:09.457542"
+    },
+    "지급하다": {
+      "count": 2,
+      "avg_similarity": 5.82,
+      "best_similarity": 5.82,
+      "total_similarity": 11.64,
+      "last_used": "2025-07-11T23:12:09.627770"
+    },
+    "지나다": {
+      "count": 2,
+      "avg_similarity": 1.92,
+      "best_similarity": 1.92,
+      "total_similarity": 3.84,
+      "last_used": "2025-07-11T23:12:09.985753"
+    },
+    "지난날": {
+      "count": 2,
+      "avg_similarity": 1.25,
+      "best_similarity": 1.25,
+      "total_similarity": 2.5,
+      "last_used": "2025-07-11T23:12:10.333229"
+    },
+    "지난달": {
+      "count": 2,
+      "avg_similarity": 0.11,
+      "best_similarity": 0.11,
+      "total_similarity": 0.22,
+      "last_used": "2025-07-11T23:12:10.499641"
+    },
+    "지난번": {
+      "count": 2,
+      "avg_similarity": 8.91,
+      "best_similarity": 8.91,
+      "total_similarity": 17.82,
+      "last_used": "2025-07-11T23:12:10.661051"
+    },
+    "지난해": {
+      "count": 2,
+      "avg_similarity": 5.06,
+      "best_similarity": 5.06,
+      "total_similarity": 10.12,
+      "last_used": "2025-07-11T23:12:10.995630"
+    },
+    "지내다": {
+      "count": 2,
+      "avg_similarity": 4.46,
+      "best_similarity": 4.46,
+      "total_similarity": 8.92,
+      "last_used": "2025-07-11T23:12:11.164995"
+    },
+    "지능": {
+      "count": 2,
+      "avg_similarity": 25.15,
+      "best_similarity": 25.15,
+      "total_similarity": 50.3,
+      "last_used": "2025-07-11T23:12:11.323827"
+    },
+    "지니다": {
+      "count": 2,
+      "avg_similarity": 9.27,
+      "best_similarity": 9.27,
+      "total_similarity": 18.54,
+      "last_used": "2025-07-11T23:12:11.493004"
+    },
+    "지다": {
+      "count": 2,
+      "avg_similarity": 10.25,
+      "best_similarity": 10.25,
+      "total_similarity": 20.5,
+      "last_used": "2025-07-11T23:12:11.655117"
+    },
+    "지대": {
+      "count": 2,
+      "avg_similarity": 17.15,
+      "best_similarity": 17.15,
+      "total_similarity": 34.3,
+      "last_used": "2025-07-11T23:12:11.848060"
+    },
+    "지도": {
+      "count": 2,
+      "avg_similarity": 15.88,
+      "best_similarity": 15.88,
+      "total_similarity": 31.76,
+      "last_used": "2025-07-11T23:12:12.018933"
+    },
+    "지도자": {
+      "count": 2,
+      "avg_similarity": 12.01,
+      "best_similarity": 12.01,
+      "total_similarity": 24.02,
+      "last_used": "2025-07-11T23:12:12.176602"
+    },
+    "지도하다": {
+      "count": 2,
+      "avg_similarity": 13.03,
+      "best_similarity": 13.03,
+      "total_similarity": 26.06,
+      "last_used": "2025-07-11T23:12:12.343822"
+    },
+    "지루하다": {
+      "count": 2,
+      "avg_similarity": 3.35,
+      "best_similarity": 3.35,
+      "total_similarity": 6.7,
+      "last_used": "2025-07-11T23:12:12.505694"
+    },
+    "지르다": {
+      "count": 2,
+      "avg_similarity": 7.73,
+      "best_similarity": 7.73,
+      "total_similarity": 15.46,
+      "last_used": "2025-07-11T23:12:12.692905"
+    },
+    "지름길": {
+      "count": 2,
+      "avg_similarity": 27.46,
+      "best_similarity": 27.46,
+      "total_similarity": 54.92,
+      "last_used": "2025-07-11T23:12:12.853438"
+    },
+    "지리산": {
+      "count": 2,
+      "avg_similarity": 11.29,
+      "best_similarity": 11.29,
+      "total_similarity": 22.58,
+      "last_used": "2025-07-11T23:12:13.012244"
+    },
+    "지방": {
+      "count": 2,
+      "avg_similarity": 19.4,
+      "best_similarity": 19.4,
+      "total_similarity": 38.8,
+      "last_used": "2025-07-11T23:12:13.191295"
+    },
+    "지불하다": {
+      "count": 2,
+      "avg_similarity": 14.86,
+      "best_similarity": 14.86,
+      "total_similarity": 29.72,
+      "last_used": "2025-07-11T23:12:13.519296"
+    },
+    "지붕": {
+      "count": 2,
+      "avg_similarity": 9.33,
+      "best_similarity": 9.33,
+      "total_similarity": 18.66,
+      "last_used": "2025-07-11T23:12:13.677964"
+    },
+    "지속되다": {
+      "count": 2,
+      "avg_similarity": 5.75,
+      "best_similarity": 5.75,
+      "total_similarity": 11.5,
+      "last_used": "2025-07-11T23:12:13.840157"
+    },
+    "지속적": {
+      "count": 2,
+      "avg_similarity": 20.32,
+      "best_similarity": 20.32,
+      "total_similarity": 40.64,
+      "last_used": "2025-07-11T23:12:14.006648"
+    },
+    "지시": {
+      "count": 2,
+      "avg_similarity": 17.03,
+      "best_similarity": 17.03,
+      "total_similarity": 34.06,
+      "last_used": "2025-07-11T23:12:14.164186"
+    },
+    "지시하다": {
+      "count": 2,
+      "avg_similarity": 8.92,
+      "best_similarity": 8.92,
+      "total_similarity": 17.84,
+      "last_used": "2025-07-11T23:12:14.345219"
+    },
+    "지식": {
+      "count": 2,
+      "avg_similarity": 29.37,
+      "best_similarity": 29.37,
+      "total_similarity": 58.74,
+      "last_used": "2025-07-11T23:12:14.506290"
+    },
+    "지식인": {
+      "count": 2,
+      "avg_similarity": 4.85,
+      "best_similarity": 4.85,
+      "total_similarity": 9.7,
+      "last_used": "2025-07-11T23:12:14.665735"
+    },
+    "지우개": {
+      "count": 2,
+      "avg_similarity": 10.26,
+      "best_similarity": 10.26,
+      "total_similarity": 20.52,
+      "last_used": "2025-07-11T23:12:14.840642"
+    },
+    "지우다": {
+      "count": 2,
+      "avg_similarity": 10.28,
+      "best_similarity": 10.28,
+      "total_similarity": 20.56,
+      "last_used": "2025-07-11T23:12:15.029521"
+    },
+    "지원": {
+      "count": 2,
+      "avg_similarity": 25.81,
+      "best_similarity": 25.81,
+      "total_similarity": 51.62,
+      "last_used": "2025-07-11T23:12:17.394758"
+    },
+    "지위": {
+      "count": 2,
+      "avg_similarity": 19.34,
+      "best_similarity": 19.34,
+      "total_similarity": 38.68,
+      "last_used": "2025-07-11T23:12:17.728818"
+    },
+    "지적": {
+      "count": 2,
+      "avg_similarity": 17.53,
+      "best_similarity": 17.53,
+      "total_similarity": 35.06,
+      "last_used": "2025-07-11T23:12:17.893076"
+    },
+    "지적하다": {
+      "count": 2,
+      "avg_similarity": 4.53,
+      "best_similarity": 4.53,
+      "total_similarity": 9.06,
+      "last_used": "2025-07-11T23:12:20.258859"
+    },
+    "지점": {
+      "count": 2,
+      "avg_similarity": 16.73,
+      "best_similarity": 16.73,
+      "total_similarity": 33.46,
+      "last_used": "2025-07-11T23:12:20.421923"
+    },
+    "지지": {
+      "count": 2,
+      "avg_similarity": 20.48,
+      "best_similarity": 20.48,
+      "total_similarity": 40.96,
+      "last_used": "2025-07-11T23:12:20.583664"
+    },
+    "지진": {
+      "count": 2,
+      "avg_similarity": 18.61,
+      "best_similarity": 18.61,
+      "total_similarity": 37.22,
+      "last_used": "2025-07-11T23:12:20.765473"
+    },
+    "지출": {
+      "count": 2,
+      "avg_similarity": 21.43,
+      "best_similarity": 21.43,
+      "total_similarity": 42.86,
+      "last_used": "2025-07-11T23:12:20.927346"
+    },
+    "지치다": {
+      "count": 2,
+      "avg_similarity": 11.07,
+      "best_similarity": 11.07,
+      "total_similarity": 22.14,
+      "last_used": "2025-07-11T23:12:21.090165"
+    },
+    "지켜보다": {
+      "count": 2,
+      "avg_similarity": 1.87,
+      "best_similarity": 1.87,
+      "total_similarity": 3.74,
+      "last_used": "2025-07-11T23:12:21.253633"
+    },
+    "지키다": {
+      "count": 2,
+      "avg_similarity": 9.67,
+      "best_similarity": 9.67,
+      "total_similarity": 19.34,
+      "last_used": "2025-07-11T23:12:21.432747"
+    },
+    "지폐": {
+      "count": 2,
+      "avg_similarity": 21.92,
+      "best_similarity": 21.92,
+      "total_similarity": 43.84,
+      "last_used": "2025-07-11T23:12:21.601533"
+    },
+    "지하": {
+      "count": 2,
+      "avg_similarity": 11.52,
+      "best_similarity": 11.52,
+      "total_similarity": 23.04,
+      "last_used": "2025-07-11T23:12:21.792852"
+    },
+    "지하도": {
+      "count": 2,
+      "avg_similarity": 0.75,
+      "best_similarity": 0.75,
+      "total_similarity": 1.5,
+      "last_used": "2025-07-11T23:12:21.955485"
+    },
+    "지하철": {
+      "count": 2,
+      "avg_similarity": 10.63,
+      "best_similarity": 10.63,
+      "total_similarity": 21.26,
+      "last_used": "2025-07-11T23:12:22.118050"
+    },
+    "지혜": {
+      "count": 2,
+      "avg_similarity": 29.97,
+      "best_similarity": 29.97,
+      "total_similarity": 59.94,
+      "last_used": "2025-07-11T23:12:22.298843"
+    },
+    "순간": {
+      "count": 2,
+      "avg_similarity": 15.41,
+      "best_similarity": 15.41,
+      "total_similarity": 30.82,
+      "last_used": "2025-07-11T23:12:22.482541"
+    },
+    "순간적": {
+      "count": 2,
+      "avg_similarity": 16.33,
+      "best_similarity": 16.33,
+      "total_similarity": 32.66,
+      "last_used": "2025-07-11T23:12:22.665058"
+    },
+    "순수": {
+      "count": 2,
+      "avg_similarity": 14.82,
+      "best_similarity": 14.82,
+      "total_similarity": 29.64,
+      "last_used": "2025-07-11T23:12:22.829175"
+    },
+    "순수하다": {
+      "count": 2,
+      "avg_similarity": 4.53,
+      "best_similarity": 4.53,
+      "total_similarity": 9.06,
+      "last_used": "2025-07-11T23:12:23.015351"
+    },
+    "순식간": {
+      "count": 2,
+      "avg_similarity": 16.83,
+      "best_similarity": 16.83,
+      "total_similarity": 33.66,
+      "last_used": "2025-07-11T23:12:23.204056"
+    },
+    "순위": {
+      "count": 2,
+      "avg_similarity": 18.38,
+      "best_similarity": 18.38,
+      "total_similarity": 36.76,
+      "last_used": "2025-07-11T23:12:23.371054"
+    },
+    "순진하다": {
+      "count": 2,
+      "avg_similarity": 6.42,
+      "best_similarity": 6.42,
+      "total_similarity": 12.84,
+      "last_used": "2025-07-11T23:12:23.540654"
+    },
+    "순하다": {
+      "count": 2,
+      "avg_similarity": 4.51,
+      "best_similarity": 4.51,
+      "total_similarity": 9.02,
+      "last_used": "2025-07-11T23:12:23.712539"
+    },
+    "공개": {
+      "count": 1,
+      "avg_similarity": 25.27,
+      "best_similarity": 25.27,
+      "total_similarity": 25.27,
+      "last_used": "2025-07-11T23:00:22.062076"
+    },
+    "공개하다": {
+      "count": 1,
+      "avg_similarity": 25.26,
+      "best_similarity": 25.26,
+      "total_similarity": 25.26,
+      "last_used": "2025-07-11T23:00:22.224488"
+    },
+    "공격": {
+      "count": 1,
+      "avg_similarity": 27.2,
+      "best_similarity": 27.2,
+      "total_similarity": 27.2,
+      "last_used": "2025-07-11T23:00:22.403471"
+    },
+    "공격하다": {
+      "count": 1,
+      "avg_similarity": 11.41,
+      "best_similarity": 11.41,
+      "total_similarity": 11.41,
+      "last_used": "2025-07-11T23:00:22.577864"
+    },
+    "공공": {
+      "count": 1,
+      "avg_similarity": 18.49,
+      "best_similarity": 18.49,
+      "total_similarity": 18.49,
+      "last_used": "2025-07-11T23:00:22.728599"
+    },
+    "공군": {
+      "count": 1,
+      "avg_similarity": 14.15,
+      "best_similarity": 14.15,
+      "total_similarity": 14.15,
+      "last_used": "2025-07-11T23:00:22.879154"
+    },
+    "공급": {
+      "count": 1,
+      "avg_similarity": 21.34,
+      "best_similarity": 21.34,
+      "total_similarity": 21.34,
+      "last_used": "2025-07-11T23:00:23.033501"
+    },
+    "공기": {
+      "count": 1,
+      "avg_similarity": 12.61,
+      "best_similarity": 12.61,
+      "total_similarity": 12.61,
+      "last_used": "2025-07-11T23:00:23.204409"
+    },
+    "공동": {
+      "count": 1,
+      "avg_similarity": 16.54,
+      "best_similarity": 16.54,
+      "total_similarity": 16.54,
+      "last_used": "2025-07-11T23:00:23.372632"
+    },
+    "공무원": {
+      "count": 1,
+      "avg_similarity": 1.63,
+      "best_similarity": 1.63,
+      "total_similarity": 1.63,
+      "last_used": "2025-07-11T23:00:23.522014"
+    },
+    "공부": {
+      "count": 1,
+      "avg_similarity": 28.23,
+      "best_similarity": 28.23,
+      "total_similarity": 28.23,
+      "last_used": "2025-07-11T23:00:23.699285"
+    },
+    "공부하다": {
+      "count": 1,
+      "avg_similarity": 8.25,
+      "best_similarity": 8.25,
+      "total_similarity": 8.25,
+      "last_used": "2025-07-11T23:00:23.854211"
+    },
+    "공사": {
+      "count": 1,
+      "avg_similarity": 15.54,
+      "best_similarity": 15.54,
+      "total_similarity": 15.54,
+      "last_used": "2025-07-11T23:00:24.016997"
+    },
+    "공식": {
+      "count": 1,
+      "avg_similarity": 15.44,
+      "best_similarity": 15.44,
+      "total_similarity": 15.44,
+      "last_used": "2025-07-11T23:00:24.173710"
+    },
+    "공식적": {
+      "count": 1,
+      "avg_similarity": 6.54,
+      "best_similarity": 6.54,
+      "total_similarity": 6.54,
+      "last_used": "2025-07-11T23:00:24.345227"
+    },
+    "공업": {
+      "count": 1,
+      "avg_similarity": 14.92,
+      "best_similarity": 14.92,
+      "total_similarity": 14.92,
+      "last_used": "2025-07-11T23:00:24.525099"
+    },
+    "공연": {
+      "count": 1,
+      "avg_similarity": 24.82,
+      "best_similarity": 24.82,
+      "total_similarity": 24.82,
+      "last_used": "2025-07-11T23:00:24.681823"
+    },
+    "공연장": {
+      "count": 1,
+      "avg_similarity": 1.08,
+      "best_similarity": 1.08,
+      "total_similarity": 1.08,
+      "last_used": "2025-07-11T23:00:27.009525"
+    },
+    "공원": {
+      "count": 1,
+      "avg_similarity": 12.53,
+      "best_similarity": 12.53,
+      "total_similarity": 12.53,
+      "last_used": "2025-07-11T23:00:27.475168"
+    },
+    "공장": {
+      "count": 1,
+      "avg_similarity": 17.07,
+      "best_similarity": 17.07,
+      "total_similarity": 17.07,
+      "last_used": "2025-07-11T23:00:27.626286"
+    },
+    "공주": {
+      "count": 1,
+      "avg_similarity": 8.0,
+      "best_similarity": 8.0,
+      "total_similarity": 8.0,
+      "last_used": "2025-07-11T23:00:27.775763"
+    },
+    "공중": {
+      "count": 1,
+      "avg_similarity": 19.01,
+      "best_similarity": 19.01,
+      "total_similarity": 19.01,
+      "last_used": "2025-07-11T23:00:27.951244"
+    },
+    "공중전화": {
+      "count": 1,
+      "avg_similarity": 5.06,
+      "best_similarity": 5.06,
+      "total_similarity": 5.06,
+      "last_used": "2025-07-11T23:00:28.117108"
+    },
+    "공짜": {
+      "count": 1,
+      "avg_similarity": 19.59,
+      "best_similarity": 19.59,
+      "total_similarity": 19.59,
+      "last_used": "2025-07-11T23:00:28.294907"
+    },
+    "공책": {
+      "count": 1,
+      "avg_similarity": 16.3,
+      "best_similarity": 16.3,
+      "total_similarity": 16.3,
+      "last_used": "2025-07-11T23:00:28.473262"
+    },
+    "공통": {
+      "count": 1,
+      "avg_similarity": 22.08,
+      "best_similarity": 22.08,
+      "total_similarity": 22.08,
+      "last_used": "2025-07-11T23:00:28.628207"
+    },
+    "공통적": {
+      "count": 1,
+      "avg_similarity": 19.55,
+      "best_similarity": 19.55,
+      "total_similarity": 19.55,
+      "last_used": "2025-07-11T23:00:30.988664"
+    },
+    "공통점": {
+      "count": 1,
+      "avg_similarity": 21.25,
+      "best_similarity": 21.25,
+      "total_similarity": 21.25,
+      "last_used": "2025-07-11T23:00:31.144810"
+    },
+    "공포": {
+      "count": 1,
+      "avg_similarity": 17.29,
+      "best_similarity": 17.29,
+      "total_similarity": 17.29,
+      "last_used": "2025-07-11T23:00:31.312508"
+    },
+    "공항": {
+      "count": 1,
+      "avg_similarity": 15.92,
+      "best_similarity": 15.92,
+      "total_similarity": 15.92,
+      "last_used": "2025-07-11T23:00:31.471547"
+    },
+    "공항버스": {
+      "count": 1,
+      "avg_similarity": 7.75,
+      "best_similarity": 7.75,
+      "total_similarity": 7.75,
+      "last_used": "2025-07-11T23:00:31.647855"
+    },
+    "공해": {
+      "count": 1,
+      "avg_similarity": 14.15,
+      "best_similarity": 14.15,
+      "total_similarity": 14.15,
+      "last_used": "2025-07-11T23:00:31.813224"
+    },
+    "공휴일": {
+      "count": 1,
+      "avg_similarity": 7.75,
+      "best_similarity": 7.75,
+      "total_similarity": 7.75,
+      "last_used": "2025-07-11T23:00:31.966727"
+    },
+    "실감": {
+      "count": 1,
+      "avg_similarity": 19.89,
+      "best_similarity": 19.89,
+      "total_similarity": 19.89,
+      "last_used": "2025-07-11T23:00:32.128879"
+    },
+    "실내": {
+      "count": 1,
+      "avg_similarity": 17.85,
+      "best_similarity": 17.85,
+      "total_similarity": 17.85,
+      "last_used": "2025-07-11T23:00:32.288620"
+    },
+    "실력": {
+      "count": 1,
+      "avg_similarity": 25.37,
+      "best_similarity": 25.37,
+      "total_similarity": 25.37,
+      "last_used": "2025-07-11T23:00:32.439874"
+    },
+    "실례": {
+      "count": 1,
+      "avg_similarity": 23.69,
+      "best_similarity": 23.69,
+      "total_similarity": 23.69,
+      "last_used": "2025-07-11T23:00:32.594861"
+    },
+    "실로": {
+      "count": 1,
+      "avg_similarity": 8.93,
+      "best_similarity": 8.93,
+      "total_similarity": 8.93,
+      "last_used": "2025-07-11T23:00:34.948448"
+    },
+    "실리다": {
+      "count": 1,
+      "avg_similarity": 21.64,
+      "best_similarity": 21.64,
+      "total_similarity": 21.64,
+      "last_used": "2025-07-11T23:00:35.099730"
+    },
+    "실망": {
+      "count": 1,
+      "avg_similarity": 28.07,
+      "best_similarity": 28.07,
+      "total_similarity": 28.07,
+      "last_used": "2025-07-11T23:00:35.252980"
+    },
+    "실수": {
+      "count": 1,
+      "avg_similarity": 27.83,
+      "best_similarity": 27.83,
+      "total_similarity": 27.83,
+      "last_used": "2025-07-11T23:00:37.613983"
+    },
+    "실습": {
+      "count": 1,
+      "avg_similarity": 20.5,
+      "best_similarity": 20.5,
+      "total_similarity": 20.5,
+      "last_used": "2025-07-11T23:00:39.976180"
+    },
+    "실시": {
+      "count": 1,
+      "avg_similarity": 26.58,
+      "best_similarity": 26.58,
+      "total_similarity": 26.58,
+      "last_used": "2025-07-11T23:00:40.135502"
+    },
+    "실시되다": {
+      "count": 1,
+      "avg_similarity": 6.1,
+      "best_similarity": 6.1,
+      "total_similarity": 6.1,
+      "last_used": "2025-07-11T23:00:40.293810"
+    },
+    "실시하다": {
+      "count": 1,
+      "avg_similarity": 12.59,
+      "best_similarity": 12.59,
+      "total_similarity": 12.59,
+      "last_used": "2025-07-11T23:00:40.471879"
+    },
+    "실은": {
+      "count": 1,
+      "avg_similarity": 2.83,
+      "best_similarity": 2.83,
+      "total_similarity": 2.83,
+      "last_used": "2025-07-11T23:00:40.665854"
+    },
+    "실장": {
+      "count": 1,
+      "avg_similarity": 16.9,
+      "best_similarity": 16.9,
+      "total_similarity": 16.9,
+      "last_used": "2025-07-11T23:00:40.849735"
+    },
+    "실정": {
+      "count": 1,
+      "avg_similarity": 17.81,
+      "best_similarity": 17.81,
+      "total_similarity": 17.81,
+      "last_used": "2025-07-11T23:00:41.007874"
+    },
+    "실제": {
+      "count": 1,
+      "avg_similarity": 20.84,
+      "best_similarity": 20.84,
+      "total_similarity": 20.84,
+      "last_used": "2025-07-11T23:00:41.182301"
+    },
+    "실제로": {
+      "count": 1,
+      "avg_similarity": 5.1,
+      "best_similarity": 5.1,
+      "total_similarity": 5.1,
+      "last_used": "2025-07-11T23:00:41.367017"
+    },
+    "실질적": {
+      "count": 1,
+      "avg_similarity": 8.6,
+      "best_similarity": 8.6,
+      "total_similarity": 8.6,
+      "last_used": "2025-07-11T23:00:41.528785"
+    },
+    "실천": {
+      "count": 1,
+      "avg_similarity": 33.49,
+      "best_similarity": 33.49,
+      "total_similarity": 33.49,
+      "last_used": "2025-07-11T23:00:41.679764"
+    },
+    "실천하다": {
+      "count": 1,
+      "avg_similarity": 3.2,
+      "best_similarity": 3.2,
+      "total_similarity": 3.2,
+      "last_used": "2025-07-11T23:00:41.834175"
+    },
+    "실컷": {
+      "count": 1,
+      "avg_similarity": 15.45,
+      "best_similarity": 15.45,
+      "total_similarity": 15.45,
+      "last_used": "2025-07-11T23:00:41.988999"
+    },
+    "실태": {
+      "count": 1,
+      "avg_similarity": 27.32,
+      "best_similarity": 27.32,
+      "total_similarity": 27.32,
+      "last_used": "2025-07-11T23:00:42.181466"
+    },
+    "실패": {
+      "count": 1,
+      "avg_similarity": 70.68,
+      "best_similarity": 70.68,
+      "total_similarity": 70.68,
+      "last_used": "2025-07-11T23:00:42.359081"
+    },
+    "실패하다": {
+      "count": 1,
+      "avg_similarity": 19.98,
+      "best_similarity": 19.98,
+      "total_similarity": 19.98,
+      "last_used": "2025-07-11T23:00:42.514013"
+    },
+    "실험": {
+      "count": 1,
+      "avg_similarity": 32.45,
+      "best_similarity": 32.45,
+      "total_similarity": 32.45,
+      "last_used": "2025-07-11T23:00:42.683729"
+    },
+    "실현": {
+      "count": 1,
+      "avg_similarity": 31.59,
+      "best_similarity": 31.59,
+      "total_similarity": 31.59,
+      "last_used": "2025-07-11T23:00:42.844065"
+    },
+    "실현하다": {
+      "count": 1,
+      "avg_similarity": 14.27,
+      "best_similarity": 14.27,
+      "total_similarity": 14.27,
+      "last_used": "2025-07-11T23:00:45.183618"
+    },
+    "사건": {
+      "count": 1,
+      "avg_similarity": 22.35,
+      "best_similarity": 22.35,
+      "total_similarity": 22.35,
+      "last_used": "2025-07-11T23:00:45.369658"
+    },
+    "사계절": {
+      "count": 1,
+      "avg_similarity": 3.96,
+      "best_similarity": 3.96,
+      "total_similarity": 3.96,
+      "last_used": "2025-07-11T23:00:45.521903"
+    },
+    "사고": {
+      "count": 1,
+      "avg_similarity": 22.71,
+      "best_similarity": 22.71,
+      "total_similarity": 22.71,
+      "last_used": "2025-07-11T23:00:45.680389"
+    },
+    "사과": {
+      "count": 1,
+      "avg_similarity": 13.94,
+      "best_similarity": 13.94,
+      "total_similarity": 13.94,
+      "last_used": "2025-07-11T23:00:45.891668"
+    },
+    "사기": {
+      "count": 1,
+      "avg_similarity": 23.79,
+      "best_similarity": 23.79,
+      "total_similarity": 23.79,
+      "last_used": "2025-07-11T23:00:48.454306"
+    },
+    "사나이": {
+      "count": 1,
+      "avg_similarity": 8.81,
+      "best_similarity": 8.81,
+      "total_similarity": 8.81,
+      "last_used": "2025-07-11T23:00:48.634623"
+    },
+    "사냥": {
+      "count": 1,
+      "avg_similarity": 23.66,
+      "best_similarity": 23.66,
+      "total_similarity": 23.66,
+      "last_used": "2025-07-11T23:00:48.813187"
+    },
+    "사다": {
+      "count": 1,
+      "avg_similarity": 7.8,
+      "best_similarity": 7.8,
+      "total_similarity": 7.8,
+      "last_used": "2025-07-11T23:00:48.968099"
+    },
+    "사라지다": {
+      "count": 1,
+      "avg_similarity": 3.14,
+      "best_similarity": 3.14,
+      "total_similarity": 3.14,
+      "last_used": "2025-07-11T23:00:51.314147"
+    },
+    "사랑": {
+      "count": 1,
+      "avg_similarity": 28.11,
+      "best_similarity": 28.11,
+      "total_similarity": 28.11,
+      "last_used": "2025-07-11T23:00:51.475056"
+    },
+    "사랑하다": {
+      "count": 1,
+      "avg_similarity": 3.33,
+      "best_similarity": 3.33,
+      "total_similarity": 3.33,
+      "last_used": "2025-07-11T23:00:51.636921"
+    },
+    "사례": {
+      "count": 2,
+      "avg_similarity": 48.34,
+      "best_similarity": 48.34,
+      "total_similarity": 96.68,
+      "last_used": "2025-07-11T23:11:52.282520"
+    },
+    "사립": {
+      "count": 1,
+      "avg_similarity": 12.2,
+      "best_similarity": 12.2,
+      "total_similarity": 12.2,
+      "last_used": "2025-07-11T23:00:51.988745"
+    },
+    "사망": {
+      "count": 1,
+      "avg_similarity": 23.3,
+      "best_similarity": 23.3,
+      "total_similarity": 23.3,
+      "last_used": "2025-07-11T23:00:52.176401"
+    },
+    "사망하다": {
+      "count": 1,
+      "avg_similarity": 5.18,
+      "best_similarity": 5.18,
+      "total_similarity": 5.18,
+      "last_used": "2025-07-11T23:00:52.349530"
+    },
+    "사모님": {
+      "count": 1,
+      "avg_similarity": 12.84,
+      "best_similarity": 12.84,
+      "total_similarity": 12.84,
+      "last_used": "2025-07-11T23:00:52.533426"
+    },
+    "사무": {
+      "count": 1,
+      "avg_similarity": 14.66,
+      "best_similarity": 14.66,
+      "total_similarity": 14.66,
+      "last_used": "2025-07-11T23:00:52.697428"
+    },
+    "사무소": {
+      "count": 1,
+      "avg_similarity": 2.1,
+      "best_similarity": 2.1,
+      "total_similarity": 2.1,
+      "last_used": "2025-07-11T23:00:52.858130"
+    },
+    "사무직": {
+      "count": 1,
+      "avg_similarity": 1.57,
+      "best_similarity": 1.57,
+      "total_similarity": 1.57,
+      "last_used": "2025-07-11T23:00:53.198358"
+    },
+    "사물": {
+      "count": 1,
+      "avg_similarity": 14.35,
+      "best_similarity": 14.35,
+      "total_similarity": 14.35,
+      "last_used": "2025-07-11T23:00:53.353551"
+    },
+    "사방": {
+      "count": 1,
+      "avg_similarity": 13.47,
+      "best_similarity": 13.47,
+      "total_similarity": 13.47,
+      "last_used": "2025-07-11T23:00:53.540802"
+    },
+    "사상": {
+      "count": 1,
+      "avg_similarity": 23.17,
+      "best_similarity": 23.17,
+      "total_similarity": 23.17,
+      "last_used": "2025-07-11T23:00:53.697666"
+    },
+    "사생활": {
+      "count": 1,
+      "avg_similarity": 10.04,
+      "best_similarity": 10.04,
+      "total_similarity": 10.04,
+      "last_used": "2025-07-11T23:00:53.855204"
+    },
+    "사설": {
+      "count": 1,
+      "avg_similarity": 21.16,
+      "best_similarity": 21.16,
+      "total_similarity": 21.16,
+      "last_used": "2025-07-11T23:00:54.014051"
+    },
+    "사소하다": {
+      "count": 1,
+      "avg_similarity": 7.06,
+      "best_similarity": 7.06,
+      "total_similarity": 7.06,
+      "last_used": "2025-07-11T23:00:54.183034"
+    },
+    "사슴": {
+      "count": 1,
+      "avg_similarity": 9.39,
+      "best_similarity": 9.39,
+      "total_similarity": 9.39,
+      "last_used": "2025-07-11T23:00:54.342146"
+    },
+    "사실": {
+      "count": 1,
+      "avg_similarity": 18.41,
+      "best_similarity": 18.41,
+      "total_similarity": 18.41,
+      "last_used": "2025-07-11T23:00:54.501608"
+    },
+    "사실상": {
+      "count": 1,
+      "avg_similarity": 1.5,
+      "best_similarity": 1.5,
+      "total_similarity": 1.5,
+      "last_used": "2025-07-11T23:00:54.660024"
+    },
+    "사십": {
+      "count": 1,
+      "avg_similarity": 14.03,
+      "best_similarity": 14.03,
+      "total_similarity": 14.03,
+      "last_used": "2025-07-11T23:00:54.827442"
+    },
+    "사업": {
+      "count": 1,
+      "avg_similarity": 40.71,
+      "best_similarity": 40.71,
+      "total_similarity": 40.71,
+      "last_used": "2025-07-11T23:00:54.996020"
+    },
+    "사업가": {
+      "count": 1,
+      "avg_similarity": 21.39,
+      "best_similarity": 21.39,
+      "total_similarity": 21.39,
+      "last_used": "2025-07-11T23:00:55.164569"
+    },
+    "사업자": {
+      "count": 1,
+      "avg_similarity": 10.89,
+      "best_similarity": 10.89,
+      "total_similarity": 10.89,
+      "last_used": "2025-07-11T23:00:55.353324"
+    },
+    "사용": {
+      "count": 1,
+      "avg_similarity": 19.16,
+      "best_similarity": 19.16,
+      "total_similarity": 19.16,
+      "last_used": "2025-07-11T23:00:55.516485"
+    },
+    "사용되다": {
+      "count": 1,
+      "avg_similarity": 1.69,
+      "best_similarity": 1.69,
+      "total_similarity": 1.69,
+      "last_used": "2025-07-11T23:00:55.677318"
+    },
+    "사용자": {
+      "count": 1,
+      "avg_similarity": 11.0,
+      "best_similarity": 11.0,
+      "total_similarity": 11.0,
+      "last_used": "2025-07-11T23:00:55.848794"
+    },
+    "사용하다": {
+      "count": 1,
+      "avg_similarity": 1.76,
+      "best_similarity": 1.76,
+      "total_similarity": 1.76,
+      "last_used": "2025-07-11T23:00:56.015310"
+    },
+    "사원": {
+      "count": 1,
+      "avg_similarity": 12.2,
+      "best_similarity": 12.2,
+      "total_similarity": 12.2,
+      "last_used": "2025-07-11T23:00:56.175597"
+    },
+    "사월": {
+      "count": 1,
+      "avg_similarity": 15.88,
+      "best_similarity": 15.88,
+      "total_similarity": 15.88,
+      "last_used": "2025-07-11T23:00:56.335049"
+    },
+    "사위": {
+      "count": 1,
+      "avg_similarity": 16.61,
+      "best_similarity": 16.61,
+      "total_similarity": 16.61,
+      "last_used": "2025-07-11T23:00:56.498048"
+    },
+    "사이": {
+      "count": 1,
+      "avg_similarity": 5.1,
+      "best_similarity": 5.1,
+      "total_similarity": 5.1,
+      "last_used": "2025-07-11T23:00:56.662092"
+    },
+    "사이사이": {
+      "count": 1,
+      "avg_similarity": 1.14,
+      "best_similarity": 1.14,
+      "total_similarity": 1.14,
+      "last_used": "2025-07-11T23:00:56.820498"
+    },
+    "사자": {
+      "count": 1,
+      "avg_similarity": 10.69,
+      "best_similarity": 10.69,
+      "total_similarity": 10.69,
+      "last_used": "2025-07-11T23:00:59.242783"
+    },
+    "사장": {
+      "count": 1,
+      "avg_similarity": 22.11,
+      "best_similarity": 22.11,
+      "total_similarity": 22.11,
+      "last_used": "2025-07-11T23:00:59.422961"
+    },
+    "사전": {
+      "count": 1,
+      "avg_similarity": 17.63,
+      "best_similarity": 17.63,
+      "total_similarity": 17.63,
+      "last_used": "2025-07-11T23:00:59.590689"
+    },
+    "사정": {
+      "count": 1,
+      "avg_similarity": 13.23,
+      "best_similarity": 13.23,
+      "total_similarity": 13.23,
+      "last_used": "2025-07-11T23:00:59.778865"
+    },
+    "사진": {
+      "count": 1,
+      "avg_similarity": 15.8,
+      "best_similarity": 15.8,
+      "total_similarity": 15.8,
+      "last_used": "2025-07-11T23:00:59.945756"
+    },
+    "사진기": {
+      "count": 1,
+      "avg_similarity": 0.19,
+      "best_similarity": 0.19,
+      "total_similarity": 0.19,
+      "last_used": "2025-07-11T23:01:00.112004"
+    },
+    "사촌": {
+      "count": 1,
+      "avg_similarity": 13.16,
+      "best_similarity": 13.16,
+      "total_similarity": 13.16,
+      "last_used": "2025-07-11T23:01:00.325369"
+    },
+    "사춘기": {
+      "count": 1,
+      "avg_similarity": 5.95,
+      "best_similarity": 5.95,
+      "total_similarity": 5.95,
+      "last_used": "2025-07-11T23:01:00.490143"
+    },
+    "사탕": {
+      "count": 1,
+      "avg_similarity": 17.3,
+      "best_similarity": 17.3,
+      "total_similarity": 17.3,
+      "last_used": "2025-07-11T23:01:00.655919"
+    },
+    "사투리": {
+      "count": 1,
+      "avg_similarity": 6.73,
+      "best_similarity": 6.73,
+      "total_similarity": 6.73,
+      "last_used": "2025-07-11T23:01:00.826694"
+    },
+    "사표": {
+      "count": 1,
+      "avg_similarity": 19.99,
+      "best_similarity": 19.99,
+      "total_similarity": 19.99,
+      "last_used": "2025-07-11T23:01:00.998406"
+    },
+    "사회": {
+      "count": 1,
+      "avg_similarity": 21.97,
+      "best_similarity": 21.97,
+      "total_similarity": 21.97,
+      "last_used": "2025-07-11T23:01:01.162988"
+    },
+    "사회생활": {
+      "count": 1,
+      "avg_similarity": 18.17,
+      "best_similarity": 18.17,
+      "total_similarity": 18.17,
+      "last_used": "2025-07-11T23:01:01.330353"
+    },
+    "사회자": {
+      "count": 1,
+      "avg_similarity": 3.82,
+      "best_similarity": 3.82,
+      "total_similarity": 3.82,
+      "last_used": "2025-07-11T23:01:01.520763"
+    },
+    "사회적": {
+      "count": 1,
+      "avg_similarity": 18.06,
+      "best_similarity": 18.06,
+      "total_similarity": 18.06,
+      "last_used": "2025-07-11T23:01:01.684600"
+    },
+    "사회주의": {
+      "count": 1,
+      "avg_similarity": 8.47,
+      "best_similarity": 8.47,
+      "total_similarity": 8.47,
+      "last_used": "2025-07-11T23:01:01.846601"
+    },
+    "사회학": {
+      "count": 1,
+      "avg_similarity": 8.12,
+      "best_similarity": 8.12,
+      "total_similarity": 8.12,
+      "last_used": "2025-07-11T23:01:02.008453"
+    },
+    "사흘": {
+      "count": 1,
+      "avg_similarity": 14.7,
+      "best_similarity": 14.7,
+      "total_similarity": 14.7,
+      "last_used": "2025-07-11T23:01:02.180346"
+    },
+    "수건": {
+      "count": 1,
+      "avg_similarity": 19.96,
+      "best_similarity": 19.96,
+      "total_similarity": 19.96,
+      "last_used": "2025-07-11T23:01:02.342705"
+    },
+    "수고": {
+      "count": 1,
+      "avg_similarity": 22.18,
+      "best_similarity": 22.18,
+      "total_similarity": 22.18,
+      "last_used": "2025-07-11T23:01:02.501635"
+    },
+    "수년": {
+      "count": 1,
+      "avg_similarity": 12.02,
+      "best_similarity": 12.02,
+      "total_similarity": 12.02,
+      "last_used": "2025-07-11T23:01:04.897160"
+    },
+    "수도": {
+      "count": 1,
+      "avg_similarity": 16.15,
+      "best_similarity": 16.15,
+      "total_similarity": 16.15,
+      "last_used": "2025-07-11T23:01:05.067907"
+    },
+    "수도권": {
+      "count": 1,
+      "avg_similarity": 10.15,
+      "best_similarity": 10.15,
+      "total_similarity": 10.15,
+      "last_used": "2025-07-11T23:01:05.228084"
+    },
+    "수돗물": {
+      "count": 1,
+      "avg_similarity": 6.1,
+      "best_similarity": 6.1,
+      "total_similarity": 6.1,
+      "last_used": "2025-07-11T23:01:05.567298"
+    },
+    "수동적": {
+      "count": 1,
+      "avg_similarity": 6.28,
+      "best_similarity": 6.28,
+      "total_similarity": 6.28,
+      "last_used": "2025-07-11T23:01:05.733775"
+    },
+    "수리하다": {
+      "count": 1,
+      "avg_similarity": 2.71,
+      "best_similarity": 2.71,
+      "total_similarity": 2.71,
+      "last_used": "2025-07-11T23:01:05.906902"
+    },
+    "수만": {
+      "count": 1,
+      "avg_similarity": 20.7,
+      "best_similarity": 20.7,
+      "total_similarity": 20.7,
+      "last_used": "2025-07-11T23:01:06.079132"
+    },
+    "수면": {
+      "count": 1,
+      "avg_similarity": 15.06,
+      "best_similarity": 15.06,
+      "total_similarity": 15.06,
+      "last_used": "2025-07-11T23:01:08.442507"
+    },
+    "수명": {
+      "count": 1,
+      "avg_similarity": 21.64,
+      "best_similarity": 21.64,
+      "total_similarity": 21.64,
+      "last_used": "2025-07-11T23:01:08.609743"
+    },
+    "수박": {
+      "count": 1,
+      "avg_similarity": 19.24,
+      "best_similarity": 19.24,
+      "total_similarity": 19.24,
+      "last_used": "2025-07-11T23:01:08.771835"
+    },
+    "수백": {
+      "count": 1,
+      "avg_similarity": 13.5,
+      "best_similarity": 13.5,
+      "total_similarity": 13.5,
+      "last_used": "2025-07-11T23:01:08.935334"
+    },
+    "수상": {
+      "count": 1,
+      "avg_similarity": 23.96,
+      "best_similarity": 23.96,
+      "total_similarity": 23.96,
+      "last_used": "2025-07-11T23:01:09.099901"
+    },
+    "수석": {
+      "count": 1,
+      "avg_similarity": 16.89,
+      "best_similarity": 16.89,
+      "total_similarity": 16.89,
+      "last_used": "2025-07-11T23:01:09.278984"
+    },
+    "수술": {
+      "count": 1,
+      "avg_similarity": 30.6,
+      "best_similarity": 30.6,
+      "total_similarity": 30.6,
+      "last_used": "2025-07-11T23:01:09.456260"
+    },
+    "수십": {
+      "count": 1,
+      "avg_similarity": 10.77,
+      "best_similarity": 10.77,
+      "total_similarity": 10.77,
+      "last_used": "2025-07-11T23:01:09.832379"
+    },
+    "수업": {
+      "count": 1,
+      "avg_similarity": 26.83,
+      "best_similarity": 26.83,
+      "total_similarity": 26.83,
+      "last_used": "2025-07-11T23:01:09.998680"
+    },
+    "수없이": {
+      "count": 1,
+      "avg_similarity": 4.9,
+      "best_similarity": 4.9,
+      "total_similarity": 4.9,
+      "last_used": "2025-07-11T23:01:10.165648"
+    },
+    "수염": {
+      "count": 1,
+      "avg_similarity": 14.07,
+      "best_similarity": 14.07,
+      "total_similarity": 14.07,
+      "last_used": "2025-07-11T23:01:10.337774"
+    },
+    "수영": {
+      "count": 1,
+      "avg_similarity": 20.29,
+      "best_similarity": 20.29,
+      "total_similarity": 20.29,
+      "last_used": "2025-07-11T23:01:10.503155"
+    },
+    "수영장": {
+      "count": 1,
+      "avg_similarity": 3.93,
+      "best_similarity": 3.93,
+      "total_similarity": 3.93,
+      "last_used": "2025-07-11T23:01:10.671775"
+    },
+    "수요": {
+      "count": 1,
+      "avg_similarity": 22.41,
+      "best_similarity": 22.41,
+      "total_similarity": 22.41,
+      "last_used": "2025-07-11T23:01:10.882414"
+    },
+    "수요일": {
+      "count": 1,
+      "avg_similarity": 4.39,
+      "best_similarity": 4.39,
+      "total_similarity": 4.39,
+      "last_used": "2025-07-11T23:01:11.044777"
+    },
+    "수입": {
+      "count": 1,
+      "avg_similarity": 21.01,
+      "best_similarity": 21.01,
+      "total_similarity": 21.01,
+      "last_used": "2025-07-11T23:01:11.213944"
+    },
+    "수저": {
+      "count": 1,
+      "avg_similarity": 20.85,
+      "best_similarity": 20.85,
+      "total_similarity": 20.85,
+      "last_used": "2025-07-11T23:01:16.047413"
+    },
+    "수준": {
+      "count": 1,
+      "avg_similarity": 18.95,
+      "best_similarity": 18.95,
+      "total_similarity": 18.95,
+      "last_used": "2025-07-11T23:01:16.245197"
+    },
+    "수집": {
+      "count": 1,
+      "avg_similarity": 20.81,
+      "best_similarity": 20.81,
+      "total_similarity": 20.81,
+      "last_used": "2025-07-11T23:01:16.407852"
+    },
+    "수천": {
+      "count": 1,
+      "avg_similarity": 13.97,
+      "best_similarity": 13.97,
+      "total_similarity": 13.97,
+      "last_used": "2025-07-11T23:01:16.754302"
+    },
+    "수출": {
+      "count": 1,
+      "avg_similarity": 33.63,
+      "best_similarity": 33.63,
+      "total_similarity": 33.63,
+      "last_used": "2025-07-11T23:01:16.922781"
+    },
+    "수컷": {
+      "count": 1,
+      "avg_similarity": 22.12,
+      "best_similarity": 22.12,
+      "total_similarity": 22.12,
+      "last_used": "2025-07-11T23:01:19.314578"
+    },
+    "수표": {
+      "count": 1,
+      "avg_similarity": 17.08,
+      "best_similarity": 17.08,
+      "total_similarity": 17.08,
+      "last_used": "2025-07-11T23:01:19.487689"
+    },
+    "수필": {
+      "count": 1,
+      "avg_similarity": 11.46,
+      "best_similarity": 11.46,
+      "total_similarity": 11.46,
+      "last_used": "2025-07-11T23:01:19.656423"
+    },
+    "수학": {
+      "count": 1,
+      "avg_similarity": 17.09,
+      "best_similarity": 17.09,
+      "total_similarity": 17.09,
+      "last_used": "2025-07-11T23:01:19.822240"
+    },
+    "수행하다": {
+      "count": 1,
+      "avg_similarity": 7.01,
+      "best_similarity": 7.01,
+      "total_similarity": 7.01,
+      "last_used": "2025-07-11T23:01:19.991299"
+    },
+    "수험생": {
+      "count": 1,
+      "avg_similarity": 12.01,
+      "best_similarity": 12.01,
+      "total_similarity": 12.01,
+      "last_used": "2025-07-11T23:01:20.188541"
+    },
+    "수화기": {
+      "count": 1,
+      "avg_similarity": 5.93,
+      "best_similarity": 5.93,
+      "total_similarity": 5.93,
+      "last_used": "2025-07-11T23:01:20.355834"
+    },
+    "기간": {
+      "count": 2,
+      "avg_similarity": 16.3,
+      "best_similarity": 16.3,
+      "total_similarity": 32.6,
+      "last_used": "2025-07-11T23:12:23.881235"
+    },
+    "기계": {
+      "count": 2,
+      "avg_similarity": 13.01,
+      "best_similarity": 13.01,
+      "total_similarity": 26.02,
+      "last_used": "2025-07-11T23:12:24.043630"
+    },
+    "기관": {
+      "count": 2,
+      "avg_similarity": 15.47,
+      "best_similarity": 15.47,
+      "total_similarity": 30.94,
+      "last_used": "2025-07-11T23:12:24.230846"
+    },
+    "기구": {
+      "count": 2,
+      "avg_similarity": 13.48,
+      "best_similarity": 13.48,
+      "total_similarity": 26.96,
+      "last_used": "2025-07-11T23:12:24.406472"
+    },
+    "기기": {
+      "count": 2,
+      "avg_similarity": 15.9,
+      "best_similarity": 15.9,
+      "total_similarity": 31.8,
+      "last_used": "2025-07-11T23:12:24.578339"
+    },
+    "기념": {
+      "count": 2,
+      "avg_similarity": 26.93,
+      "best_similarity": 26.93,
+      "total_similarity": 53.86,
+      "last_used": "2025-07-11T23:12:24.751380"
+    },
+    "기념일": {
+      "count": 2,
+      "avg_similarity": 17.79,
+      "best_similarity": 17.79,
+      "total_similarity": 35.58,
+      "last_used": "2025-07-11T23:12:24.925354"
+    },
+    "기념품": {
+      "count": 2,
+      "avg_similarity": 11.86,
+      "best_similarity": 11.86,
+      "total_similarity": 23.72,
+      "last_used": "2025-07-11T23:12:25.091862"
+    },
+    "기념하다": {
+      "count": 2,
+      "avg_similarity": 13.31,
+      "best_similarity": 13.31,
+      "total_similarity": 26.62,
+      "last_used": "2025-07-11T23:12:25.297120"
+    },
+    "기능": {
+      "count": 2,
+      "avg_similarity": 20.85,
+      "best_similarity": 20.85,
+      "total_similarity": 41.7,
+      "last_used": "2025-07-11T23:12:25.470736"
+    },
+    "기다": {
+      "count": 2,
+      "avg_similarity": 10.78,
+      "best_similarity": 10.78,
+      "total_similarity": 21.56,
+      "last_used": "2025-07-11T23:12:25.641816"
+    },
+    "기다리다": {
+      "count": 2,
+      "avg_similarity": 0.45,
+      "best_similarity": 0.45,
+      "total_similarity": 0.9,
+      "last_used": "2025-07-11T23:12:25.811400"
+    },
+    "기대": {
+      "count": 2,
+      "avg_similarity": 25.21,
+      "best_similarity": 25.21,
+      "total_similarity": 50.42,
+      "last_used": "2025-07-11T23:12:25.977001"
+    },
+    "기대다": {
+      "count": 2,
+      "avg_similarity": 18.0,
+      "best_similarity": 18.0,
+      "total_similarity": 36.0,
+      "last_used": "2025-07-11T23:12:26.144765"
+    },
+    "기대하다": {
+      "count": 2,
+      "avg_similarity": 6.03,
+      "best_similarity": 6.03,
+      "total_similarity": 12.06,
+      "last_used": "2025-07-11T23:12:28.499798"
+    },
+    "기도": {
+      "count": 2,
+      "avg_similarity": 25.94,
+      "best_similarity": 25.94,
+      "total_similarity": 51.88,
+      "last_used": "2025-07-11T23:12:28.673601"
+    },
+    "기도하다": {
+      "count": 2,
+      "avg_similarity": 9.57,
+      "best_similarity": 9.57,
+      "total_similarity": 19.14,
+      "last_used": "2025-07-11T23:12:28.859768"
+    },
+    "기독교": {
+      "count": 2,
+      "avg_similarity": 9.16,
+      "best_similarity": 9.16,
+      "total_similarity": 18.32,
+      "last_used": "2025-07-11T23:12:29.035945"
+    },
+    "기둥": {
+      "count": 2,
+      "avg_similarity": 15.22,
+      "best_similarity": 15.22,
+      "total_similarity": 30.44,
+      "last_used": "2025-07-11T23:12:29.211911"
+    },
+    "기록": {
+      "count": 2,
+      "avg_similarity": 21.72,
+      "best_similarity": 21.72,
+      "total_similarity": 43.44,
+      "last_used": "2025-07-11T23:12:29.395096"
+    },
+    "기록되다": {
+      "count": 2,
+      "avg_similarity": 13.26,
+      "best_similarity": 13.26,
+      "total_similarity": 26.52,
+      "last_used": "2025-07-11T23:12:29.590676"
+    },
+    "기록하다": {
+      "count": 2,
+      "avg_similarity": 6.92,
+      "best_similarity": 6.92,
+      "total_similarity": 13.84,
+      "last_used": "2025-07-11T23:12:29.758628"
+    },
+    "기르다": {
+      "count": 2,
+      "avg_similarity": 9.92,
+      "best_similarity": 9.92,
+      "total_similarity": 19.84,
+      "last_used": "2025-07-11T23:12:29.932450"
+    },
+    "기름": {
+      "count": 2,
+      "avg_similarity": 7.91,
+      "best_similarity": 7.91,
+      "total_similarity": 15.82,
+      "last_used": "2025-07-11T23:12:30.104519"
+    },
+    "기막히다": {
+      "count": 2,
+      "avg_similarity": 6.94,
+      "best_similarity": 6.94,
+      "total_similarity": 13.88,
+      "last_used": "2025-07-11T23:12:30.272495"
+    },
+    "기본": {
+      "count": 2,
+      "avg_similarity": 20.46,
+      "best_similarity": 20.46,
+      "total_similarity": 40.92,
+      "last_used": "2025-07-11T23:12:30.649409"
+    },
+    "기본적": {
+      "count": 2,
+      "avg_similarity": 16.73,
+      "best_similarity": 16.73,
+      "total_similarity": 33.46,
+      "last_used": "2025-07-11T23:12:30.820744"
+    },
+    "기뻐하다": {
+      "count": 2,
+      "avg_similarity": 4.93,
+      "best_similarity": 4.93,
+      "total_similarity": 9.86,
+      "last_used": "2025-07-11T23:12:31.022255"
+    },
+    "기쁘다": {
+      "count": 2,
+      "avg_similarity": 7.76,
+      "best_similarity": 7.76,
+      "total_similarity": 15.52,
+      "last_used": "2025-07-11T23:12:31.199385"
+    },
+    "기쁨": {
+      "count": 2,
+      "avg_similarity": 27.8,
+      "best_similarity": 27.8,
+      "total_similarity": 55.6,
+      "last_used": "2025-07-11T23:12:31.408489"
+    },
+    "기사": {
+      "count": 2,
+      "avg_similarity": 15.59,
+      "best_similarity": 15.59,
+      "total_similarity": 31.18,
+      "last_used": "2025-07-11T23:12:31.585059"
+    },
+    "기성": {
+      "count": 2,
+      "avg_similarity": 11.72,
+      "best_similarity": 11.72,
+      "total_similarity": 23.44,
+      "last_used": "2025-07-11T23:12:31.763181"
+    },
+    "기성세대": {
+      "count": 2,
+      "avg_similarity": 7.83,
+      "best_similarity": 7.83,
+      "total_similarity": 15.66,
+      "last_used": "2025-07-11T23:12:31.935297"
+    },
+    "기숙사": {
+      "count": 2,
+      "avg_similarity": 2.09,
+      "best_similarity": 2.09,
+      "total_similarity": 4.18,
+      "last_used": "2025-07-11T23:12:32.111107"
+    },
+    "기술": {
+      "count": 2,
+      "avg_similarity": 28.25,
+      "best_similarity": 28.25,
+      "total_similarity": 56.5,
+      "last_used": "2025-07-11T23:12:32.323686"
+    },
+    "기술자": {
+      "count": 2,
+      "avg_similarity": 0.96,
+      "best_similarity": 0.96,
+      "total_similarity": 1.92,
+      "last_used": "2025-07-11T23:12:32.496113"
+    },
+    "기억": {
+      "count": 2,
+      "avg_similarity": 15.64,
+      "best_similarity": 15.64,
+      "total_similarity": 31.28,
+      "last_used": "2025-07-11T23:12:34.896461"
+    },
+    "기억하다": {
+      "count": 2,
+      "avg_similarity": 7.0,
+      "best_similarity": 7.0,
+      "total_similarity": 14.0,
+      "last_used": "2025-07-11T23:12:39.481741"
+    },
+    "기업": {
+      "count": 2,
+      "avg_similarity": 35.29,
+      "best_similarity": 35.29,
+      "total_similarity": 70.58,
+      "last_used": "2025-07-11T23:12:39.658236"
+    },
+    "기업인": {
+      "count": 2,
+      "avg_similarity": 16.93,
+      "best_similarity": 16.93,
+      "total_similarity": 33.86,
+      "last_used": "2025-07-11T23:12:39.838163"
+    },
+    "기여": {
+      "count": 2,
+      "avg_similarity": 32.25,
+      "best_similarity": 32.25,
+      "total_similarity": 64.5,
+      "last_used": "2025-07-11T23:12:40.033749"
+    },
+    "기여하다": {
+      "count": 2,
+      "avg_similarity": 5.02,
+      "best_similarity": 5.02,
+      "total_similarity": 10.04,
+      "last_used": "2025-07-11T23:12:40.208919"
+    },
+    "기온": {
+      "count": 2,
+      "avg_similarity": 6.91,
+      "best_similarity": 6.91,
+      "total_similarity": 13.82,
+      "last_used": "2025-07-11T23:12:40.382122"
+    },
+    "기운": {
+      "count": 2,
+      "avg_similarity": 9.23,
+      "best_similarity": 9.23,
+      "total_similarity": 18.46,
+      "last_used": "2025-07-11T23:12:40.551594"
+    },
+    "기울이다": {
+      "count": 2,
+      "avg_similarity": 7.14,
+      "best_similarity": 7.14,
+      "total_similarity": 14.28,
+      "last_used": "2025-07-11T23:12:40.922054"
+    },
+    "기원": {
+      "count": 2,
+      "avg_similarity": 41.06,
+      "best_similarity": 41.06,
+      "total_similarity": 82.12,
+      "last_used": "2025-07-11T23:12:41.130817"
+    },
+    "기원전": {
+      "count": 2,
+      "avg_similarity": 13.2,
+      "best_similarity": 13.2,
+      "total_similarity": 26.4,
+      "last_used": "2025-07-11T23:12:41.320496"
+    },
+    "기자": {
+      "count": 2,
+      "avg_similarity": 16.26,
+      "best_similarity": 16.26,
+      "total_similarity": 32.52,
+      "last_used": "2025-07-11T23:12:41.513734"
+    },
+    "기적": {
+      "count": 2,
+      "avg_similarity": 36.78,
+      "best_similarity": 36.78,
+      "total_similarity": 73.56,
+      "last_used": "2025-07-11T23:12:41.742246"
+    },
+    "기준": {
+      "count": 2,
+      "avg_similarity": 19.8,
+      "best_similarity": 19.8,
+      "total_similarity": 39.6,
+      "last_used": "2025-07-11T23:12:41.953728"
+    },
+    "기차": {
+      "count": 2,
+      "avg_similarity": 10.77,
+      "best_similarity": 10.77,
+      "total_similarity": 21.54,
+      "last_used": "2025-07-11T23:12:42.184776"
+    },
+    "기초": {
+      "count": 2,
+      "avg_similarity": 13.16,
+      "best_similarity": 13.16,
+      "total_similarity": 26.32,
+      "last_used": "2025-07-11T23:12:42.425204"
+    },
+    "기초적": {
+      "count": 2,
+      "avg_similarity": 16.52,
+      "best_similarity": 16.52,
+      "total_similarity": 33.04,
+      "last_used": "2025-07-11T23:12:42.641278"
+    },
+    "기침": {
+      "count": 2,
+      "avg_similarity": 16.3,
+      "best_similarity": 16.3,
+      "total_similarity": 32.6,
+      "last_used": "2025-07-11T23:12:45.021533"
+    },
+    "기타": {
+      "count": 2,
+      "avg_similarity": 13.45,
+      "best_similarity": 13.45,
+      "total_similarity": 26.9,
+      "last_used": "2025-07-11T23:12:45.226501"
+    },
+    "기호": {
+      "count": 2,
+      "avg_similarity": 12.45,
+      "best_similarity": 12.45,
+      "total_similarity": 24.9,
+      "last_used": "2025-07-11T23:12:45.438696"
+    },
+    "기혼": {
+      "count": 2,
+      "avg_similarity": 16.33,
+      "best_similarity": 16.33,
+      "total_similarity": 32.66,
+      "last_used": "2025-07-11T23:12:45.623059"
+    },
+    "기회": {
+      "count": 2,
+      "avg_similarity": 27.09,
+      "best_similarity": 27.09,
+      "total_similarity": 54.18,
+      "last_used": "2025-07-11T23:12:45.827955"
+    },
+    "기획": {
+      "count": 2,
+      "avg_similarity": 24.2,
+      "best_similarity": 24.2,
+      "total_similarity": 48.4,
+      "last_used": "2025-07-11T23:12:46.010433"
+    },
+    "기후": {
+      "count": 2,
+      "avg_similarity": 16.14,
+      "best_similarity": 16.14,
+      "total_similarity": 32.28,
+      "last_used": "2025-07-11T23:12:46.187641"
+    },
+    "연간": {
+      "count": 1,
+      "avg_similarity": 12.37,
+      "best_similarity": 12.37,
+      "total_similarity": 12.37,
+      "last_used": "2025-07-11T23:01:43.499536"
+    },
+    "연결되다": {
+      "count": 1,
+      "avg_similarity": 8.34,
+      "best_similarity": 8.34,
+      "total_similarity": 8.34,
+      "last_used": "2025-07-11T23:01:43.676620"
+    },
+    "연결하다": {
+      "count": 1,
+      "avg_similarity": 13.44,
+      "best_similarity": 13.44,
+      "total_similarity": 13.44,
+      "last_used": "2025-07-11T23:01:43.871301"
+    },
+    "연관": {
+      "count": 1,
+      "avg_similarity": 12.52,
+      "best_similarity": 12.52,
+      "total_similarity": 12.52,
+      "last_used": "2025-07-11T23:01:44.055777"
+    },
+    "연구": {
+      "count": 1,
+      "avg_similarity": 27.56,
+      "best_similarity": 27.56,
+      "total_similarity": 27.56,
+      "last_used": "2025-07-11T23:01:44.252769"
+    },
+    "연구소": {
+      "count": 1,
+      "avg_similarity": 11.42,
+      "best_similarity": 11.42,
+      "total_similarity": 11.42,
+      "last_used": "2025-07-11T23:01:44.439376"
+    },
+    "연구실": {
+      "count": 1,
+      "avg_similarity": 6.62,
+      "best_similarity": 6.62,
+      "total_similarity": 6.62,
+      "last_used": "2025-07-11T23:01:44.623213"
+    },
+    "연구원": {
+      "count": 1,
+      "avg_similarity": 2.85,
+      "best_similarity": 2.85,
+      "total_similarity": 2.85,
+      "last_used": "2025-07-11T23:01:44.835050"
+    },
+    "연구하다": {
+      "count": 1,
+      "avg_similarity": 0.75,
+      "best_similarity": 0.75,
+      "total_similarity": 0.75,
+      "last_used": "2025-07-11T23:01:45.261589"
+    },
+    "연극": {
+      "count": 1,
+      "avg_similarity": 17.1,
+      "best_similarity": 17.1,
+      "total_similarity": 17.1,
+      "last_used": "2025-07-11T23:01:45.453237"
+    },
+    "연기": {
+      "count": 1,
+      "avg_similarity": 17.29,
+      "best_similarity": 17.29,
+      "total_similarity": 17.29,
+      "last_used": "2025-07-11T23:01:45.631808"
+    },
+    "연기되다": {
+      "count": 1,
+      "avg_similarity": 7.19,
+      "best_similarity": 7.19,
+      "total_similarity": 7.19,
+      "last_used": "2025-07-11T23:01:45.814640"
+    },
+    "연기자": {
+      "count": 1,
+      "avg_similarity": 4.47,
+      "best_similarity": 4.47,
+      "total_similarity": 4.47,
+      "last_used": "2025-07-11T23:01:46.017344"
+    },
+    "연기하다": {
+      "count": 1,
+      "avg_similarity": 11.33,
+      "best_similarity": 11.33,
+      "total_similarity": 11.33,
+      "last_used": "2025-07-11T23:01:46.193985"
+    },
+    "연두색": {
+      "count": 1,
+      "avg_similarity": 2.22,
+      "best_similarity": 2.22,
+      "total_similarity": 2.22,
+      "last_used": "2025-07-11T23:01:46.376931"
+    },
+    "연락": {
+      "count": 1,
+      "avg_similarity": 14.21,
+      "best_similarity": 14.21,
+      "total_similarity": 14.21,
+      "last_used": "2025-07-11T23:01:46.554003"
+    },
+    "연락처": {
+      "count": 1,
+      "avg_similarity": 6.85,
+      "best_similarity": 6.85,
+      "total_similarity": 6.85,
+      "last_used": "2025-07-11T23:01:46.744604"
+    },
+    "연령": {
+      "count": 1,
+      "avg_similarity": 18.04,
+      "best_similarity": 18.04,
+      "total_similarity": 18.04,
+      "last_used": "2025-07-11T23:01:49.198454"
+    },
+    "연말": {
+      "count": 1,
+      "avg_similarity": 17.42,
+      "best_similarity": 17.42,
+      "total_similarity": 17.42,
+      "last_used": "2025-07-11T23:01:49.405481"
+    },
+    "연설": {
+      "count": 1,
+      "avg_similarity": 25.4,
+      "best_similarity": 25.4,
+      "total_similarity": 25.4,
+      "last_used": "2025-07-11T23:01:51.814067"
+    },
+    "연세": {
+      "count": 1,
+      "avg_similarity": 18.37,
+      "best_similarity": 18.37,
+      "total_similarity": 18.37,
+      "last_used": "2025-07-11T23:01:51.989732"
+    },
+    "연속": {
+      "count": 1,
+      "avg_similarity": 20.66,
+      "best_similarity": 20.66,
+      "total_similarity": 20.66,
+      "last_used": "2025-07-11T23:01:52.213807"
+    },
+    "연습": {
+      "count": 1,
+      "avg_similarity": 20.85,
+      "best_similarity": 20.85,
+      "total_similarity": 20.85,
+      "last_used": "2025-07-11T23:01:52.394212"
+    },
+    "연습하다": {
+      "count": 1,
+      "avg_similarity": 7.84,
+      "best_similarity": 7.84,
+      "total_similarity": 7.84,
+      "last_used": "2025-07-11T23:01:52.595990"
+    },
+    "연애": {
+      "count": 1,
+      "avg_similarity": 28.46,
+      "best_similarity": 28.46,
+      "total_similarity": 28.46,
+      "last_used": "2025-07-11T23:01:52.782227"
+    },
+    "연예인": {
+      "count": 1,
+      "avg_similarity": 5.1,
+      "best_similarity": 5.1,
+      "total_similarity": 5.1,
+      "last_used": "2025-07-11T23:01:52.961030"
+    },
+    "연인": {
+      "count": 1,
+      "avg_similarity": 19.88,
+      "best_similarity": 19.88,
+      "total_similarity": 19.88,
+      "last_used": "2025-07-11T23:01:53.169078"
+    },
+    "연장": {
+      "count": 1,
+      "avg_similarity": 19.0,
+      "best_similarity": 19.0,
+      "total_similarity": 19.0,
+      "last_used": "2025-07-11T23:01:53.388143"
+    },
+    "연주": {
+      "count": 1,
+      "avg_similarity": 19.46,
+      "best_similarity": 19.46,
+      "total_similarity": 19.46,
+      "last_used": "2025-07-11T23:01:53.570837"
+    },
+    "연출": {
+      "count": 1,
+      "avg_similarity": 18.28,
+      "best_similarity": 18.28,
+      "total_similarity": 18.28,
+      "last_used": "2025-07-11T23:01:53.794717"
+    },
+    "연필": {
+      "count": 1,
+      "avg_similarity": 12.08,
+      "best_similarity": 12.08,
+      "total_similarity": 12.08,
+      "last_used": "2025-07-11T23:01:56.212854"
+    },
+    "연하다": {
+      "count": 1,
+      "avg_similarity": 5.9,
+      "best_similarity": 5.9,
+      "total_similarity": 5.9,
+      "last_used": "2025-07-11T23:01:56.464676"
+    },
+    "연합": {
+      "count": 1,
+      "avg_similarity": 15.08,
+      "best_similarity": 15.08,
+      "total_similarity": 15.08,
+      "last_used": "2025-07-11T23:01:56.693594"
+    },
+    "연휴": {
+      "count": 1,
+      "avg_similarity": 13.94,
+      "best_similarity": 13.94,
+      "total_similarity": 13.94,
+      "last_used": "2025-07-11T23:01:56.926650"
+    },
+    "절대": {
+      "count": 1,
+      "avg_similarity": 21.3,
+      "best_similarity": 21.3,
+      "total_similarity": 21.3,
+      "last_used": "2025-07-11T23:01:57.109223"
+    },
+    "절대로": {
+      "count": 1,
+      "avg_similarity": 10.7,
+      "best_similarity": 10.7,
+      "total_similarity": 10.7,
+      "last_used": "2025-07-11T23:01:57.359903"
+    },
+    "절대적": {
+      "count": 1,
+      "avg_similarity": 13.74,
+      "best_similarity": 13.74,
+      "total_similarity": 13.74,
+      "last_used": "2025-07-11T23:01:57.552883"
+    },
+    "절망": {
+      "count": 1,
+      "avg_similarity": 23.27,
+      "best_similarity": 23.27,
+      "total_similarity": 23.27,
+      "last_used": "2025-07-11T23:01:57.740615"
+    },
+    "절반": {
+      "count": 1,
+      "avg_similarity": 18.8,
+      "best_similarity": 18.8,
+      "total_similarity": 18.8,
+      "last_used": "2025-07-11T23:01:57.920080"
+    },
+    "절약": {
+      "count": 1,
+      "avg_similarity": 22.91,
+      "best_similarity": 22.91,
+      "total_similarity": 22.91,
+      "last_used": "2025-07-11T23:01:58.113347"
+    },
+    "방금": {
+      "count": 1,
+      "avg_similarity": 8.38,
+      "best_similarity": 8.38,
+      "total_similarity": 8.38,
+      "last_used": "2025-07-11T23:02:00.554487"
+    },
+    "방면": {
+      "count": 1,
+      "avg_similarity": 17.21,
+      "best_similarity": 17.21,
+      "total_similarity": 17.21,
+      "last_used": "2025-07-11T23:02:00.780467"
+    },
+    "방문": {
+      "count": 1,
+      "avg_similarity": 22.16,
+      "best_similarity": 22.16,
+      "total_similarity": 22.16,
+      "last_used": "2025-07-11T23:02:00.968673"
+    },
+    "방문하다": {
+      "count": 1,
+      "avg_similarity": 17.09,
+      "best_similarity": 17.09,
+      "total_similarity": 17.09,
+      "last_used": "2025-07-11T23:02:01.202518"
+    },
+    "방바닥": {
+      "count": 1,
+      "avg_similarity": 2.67,
+      "best_similarity": 2.67,
+      "total_similarity": 2.67,
+      "last_used": "2025-07-11T23:02:01.439909"
+    },
+    "방법": {
+      "count": 1,
+      "avg_similarity": 33.98,
+      "best_similarity": 33.98,
+      "total_similarity": 33.98,
+      "last_used": "2025-07-11T23:02:01.691785"
+    },
+    "방송": {
+      "count": 1,
+      "avg_similarity": 23.16,
+      "best_similarity": 23.16,
+      "total_similarity": 23.16,
+      "last_used": "2025-07-11T23:02:01.879187"
+    },
+    "방송국": {
+      "count": 1,
+      "avg_similarity": 10.43,
+      "best_similarity": 10.43,
+      "total_similarity": 10.43,
+      "last_used": "2025-07-11T23:02:02.070848"
+    },
+    "방송사": {
+      "count": 1,
+      "avg_similarity": 8.59,
+      "best_similarity": 8.59,
+      "total_similarity": 8.59,
+      "last_used": "2025-07-11T23:02:02.298855"
+    },
+    "방송하다": {
+      "count": 1,
+      "avg_similarity": 5.38,
+      "best_similarity": 5.38,
+      "total_similarity": 5.38,
+      "last_used": "2025-07-11T23:02:02.493559"
     },
     "방안": {
       "count": 1,
-      "avg_similarity": 0.22039999999999998,
-      "best_similarity": 0.22039999999999998
+      "avg_similarity": 30.86,
+      "best_similarity": 30.86,
+      "total_similarity": 30.86,
+      "last_used": "2025-07-11T23:02:02.680433"
     },
     "방울": {
       "count": 1,
-      "avg_similarity": 0.23149999999999998,
-      "best_similarity": 0.23149999999999998
+      "avg_similarity": 11.81,
+      "best_similarity": 11.81,
+      "total_similarity": 11.81,
+      "last_used": "2025-07-11T23:02:02.874627"
     },
     "방지": {
       "count": 1,
-      "avg_similarity": 0.1746,
-      "best_similarity": 0.1746
+      "avg_similarity": 25.99,
+      "best_similarity": 25.99,
+      "total_similarity": 25.99,
+      "last_used": "2025-07-11T23:02:03.063351"
     },
     "방학": {
       "count": 1,
-      "avg_similarity": 0.3103,
-      "best_similarity": 0.3103
+      "avg_similarity": 10.61,
+      "best_similarity": 10.61,
+      "total_similarity": 10.61,
+      "last_used": "2025-07-11T23:02:05.540719"
     },
     "방해": {
       "count": 1,
-      "avg_similarity": 0.1424,
-      "best_similarity": 0.1424
+      "avg_similarity": 31.97,
+      "best_similarity": 31.97,
+      "total_similarity": 31.97,
+      "last_used": "2025-07-11T23:02:05.735309"
     },
-    "방해하다": {
+    "방향": {
       "count": 1,
-      "avg_similarity": -0.35,
-      "best_similarity": 0
+      "avg_similarity": 27.44,
+      "best_similarity": 27.44,
+      "total_similarity": 27.44,
+      "last_used": "2025-07-11T23:02:06.173390"
     },
-    "통과하다": {
+    "단골": {
       "count": 1,
-      "avg_similarity": 0.0408,
-      "best_similarity": 0.0408
+      "avg_similarity": 23.62,
+      "best_similarity": 23.62,
+      "total_similarity": 23.62,
+      "last_used": "2025-07-11T23:02:06.362846"
     },
-    "팩": {
+    "단단하다": {
       "count": 1,
-      "avg_similarity": 0.2662,
-      "best_similarity": 0.2662
+      "avg_similarity": 2.84,
+      "best_similarity": 2.84,
+      "total_similarity": 2.84,
+      "last_used": "2025-07-11T23:02:06.585790"
     },
-    "운행": {
+    "단독": {
       "count": 1,
-      "avg_similarity": 0.2477,
-      "best_similarity": 0.2477
+      "avg_similarity": 22.27,
+      "best_similarity": 22.27,
+      "total_similarity": 22.27,
+      "last_used": "2025-07-11T23:02:06.781509"
     },
-    "운동": {
+    "단맛": {
       "count": 1,
-      "avg_similarity": 0.2527,
-      "best_similarity": 0.2527
+      "avg_similarity": 28.86,
+      "best_similarity": 28.86,
+      "total_similarity": 28.86,
+      "last_used": "2025-07-11T23:02:06.982444"
     },
-    "운동복": {
+    "단순": {
+      "count": 1,
+      "avg_similarity": 14.31,
+      "best_similarity": 14.31,
+      "total_similarity": 14.31,
+      "last_used": "2025-07-11T23:02:07.214889"
+    },
+    "단순하다": {
+      "count": 1,
+      "avg_similarity": 9.11,
+      "best_similarity": 9.11,
+      "total_similarity": 9.11,
+      "last_used": "2025-07-11T23:02:07.407767"
+    },
+    "단어": {
+      "count": 1,
+      "avg_similarity": 11.68,
+      "best_similarity": 11.68,
+      "total_similarity": 11.68,
+      "last_used": "2025-07-11T23:02:07.850014"
+    },
+    "단위": {
+      "count": 1,
+      "avg_similarity": 15.91,
+      "best_similarity": 15.91,
+      "total_similarity": 15.91,
+      "last_used": "2025-07-11T23:02:08.039810"
+    },
+    "단점": {
+      "count": 1,
+      "avg_similarity": 22.28,
+      "best_similarity": 22.28,
+      "total_similarity": 22.28,
+      "last_used": "2025-07-11T23:02:08.317810"
+    },
+    "단지": {
+      "count": 1,
+      "avg_similarity": 7.7,
+      "best_similarity": 7.7,
+      "total_similarity": 7.7,
+      "last_used": "2025-07-11T23:02:08.544996"
+    },
+    "단체": {
+      "count": 1,
+      "avg_similarity": 15.5,
+      "best_similarity": 15.5,
+      "total_similarity": 15.5,
+      "last_used": "2025-07-11T23:02:08.784041"
+    },
+    "단추": {
+      "count": 1,
+      "avg_similarity": 21.95,
+      "best_similarity": 21.95,
+      "total_similarity": 21.95,
+      "last_used": "2025-07-11T23:02:08.966467"
+    },
+    "단편": {
+      "count": 1,
+      "avg_similarity": 16.54,
+      "best_similarity": 16.54,
+      "total_similarity": 16.54,
+      "last_used": "2025-07-11T23:02:09.149871"
+    },
+    "단풍": {
+      "count": 1,
+      "avg_similarity": 18.3,
+      "best_similarity": 18.3,
+      "total_similarity": 18.3,
+      "last_used": "2025-07-11T23:02:09.383793"
+    },
+    "의견": {
+      "count": 2,
+      "avg_similarity": 16.93,
+      "best_similarity": 16.93,
+      "total_similarity": 33.86,
+      "last_used": "2025-07-11T23:13:12.085997"
+    },
+    "의논": {
+      "count": 2,
+      "avg_similarity": 23.77,
+      "best_similarity": 23.77,
+      "total_similarity": 47.54,
+      "last_used": "2025-07-11T23:13:12.280103"
+    },
+    "의논하다": {
+      "count": 2,
+      "avg_similarity": 5.54,
+      "best_similarity": 5.54,
+      "total_similarity": 11.08,
+      "last_used": "2025-07-11T23:13:12.467880"
+    },
+    "의도": {
+      "count": 2,
+      "avg_similarity": 27.55,
+      "best_similarity": 27.55,
+      "total_similarity": 55.1,
+      "last_used": "2025-07-11T23:13:12.666419"
+    },
+    "의도적": {
+      "count": 2,
+      "avg_similarity": 14.34,
+      "best_similarity": 14.34,
+      "total_similarity": 28.68,
+      "last_used": "2025-07-11T23:13:12.893468"
+    },
+    "의류": {
+      "count": 2,
+      "avg_similarity": 21.06,
+      "best_similarity": 21.06,
+      "total_similarity": 42.12,
+      "last_used": "2025-07-11T23:13:13.081546"
+    },
+    "의무": {
+      "count": 2,
+      "avg_similarity": 11.42,
+      "best_similarity": 11.42,
+      "total_similarity": 22.84,
+      "last_used": "2025-07-11T23:13:13.275178"
+    },
+    "의문": {
+      "count": 2,
+      "avg_similarity": 21.9,
+      "best_similarity": 21.9,
+      "total_similarity": 43.8,
+      "last_used": "2025-07-11T23:13:13.466161"
+    },
+    "의미": {
+      "count": 2,
+      "avg_similarity": 27.37,
+      "best_similarity": 27.37,
+      "total_similarity": 54.74,
+      "last_used": "2025-07-11T23:13:13.660552"
+    },
+    "의미하다": {
+      "count": 2,
+      "avg_similarity": 0.03,
+      "best_similarity": 0.03,
+      "total_similarity": 0.06,
+      "last_used": "2025-07-11T23:13:13.849553"
+    },
+    "의복": {
+      "count": 2,
+      "avg_similarity": 7.44,
+      "best_similarity": 7.44,
+      "total_similarity": 14.88,
+      "last_used": "2025-07-11T23:13:14.045158"
+    },
+    "의사": {
+      "count": 2,
+      "avg_similarity": 14.36,
+      "best_similarity": 14.36,
+      "total_similarity": 28.72,
+      "last_used": "2025-07-11T23:13:14.283681"
+    },
+    "의심": {
+      "count": 2,
+      "avg_similarity": 19.48,
+      "best_similarity": 19.48,
+      "total_similarity": 38.96,
+      "last_used": "2025-07-11T23:13:16.691885"
+    },
+    "의외로": {
+      "count": 2,
+      "avg_similarity": 2.25,
+      "best_similarity": 2.25,
+      "total_similarity": 4.5,
+      "last_used": "2025-07-11T23:13:19.116633"
+    },
+    "의욕": {
+      "count": 2,
+      "avg_similarity": 25.43,
+      "best_similarity": 25.43,
+      "total_similarity": 50.86,
+      "last_used": "2025-07-11T23:13:19.341125"
+    },
+    "의원": {
+      "count": 2,
+      "avg_similarity": 17.47,
+      "best_similarity": 17.47,
+      "total_similarity": 34.94,
+      "last_used": "2025-07-11T23:13:19.534290"
+    },
+    "의자": {
+      "count": 2,
+      "avg_similarity": 9.93,
+      "best_similarity": 9.93,
+      "total_similarity": 19.86,
+      "last_used": "2025-07-11T23:13:19.766272"
+    },
+    "의존하다": {
+      "count": 2,
+      "avg_similarity": 2.04,
+      "best_similarity": 2.04,
+      "total_similarity": 4.08,
+      "last_used": "2025-07-11T23:13:19.984325"
+    },
+    "의지": {
+      "count": 2,
+      "avg_similarity": 26.69,
+      "best_similarity": 26.69,
+      "total_similarity": 53.38,
+      "last_used": "2025-07-11T23:13:20.173544"
+    },
+    "의지하다": {
+      "count": 2,
+      "avg_similarity": 12.0,
+      "best_similarity": 12.0,
+      "total_similarity": 24.0,
+      "last_used": "2025-07-11T23:13:20.368709"
+    },
+    "의학": {
+      "count": 2,
+      "avg_similarity": 20.12,
+      "best_similarity": 20.12,
+      "total_similarity": 40.24,
+      "last_used": "2025-07-11T23:13:22.792923"
+    },
+    "과거": {
+      "count": 1,
+      "avg_similarity": 10.81,
+      "best_similarity": 10.81,
+      "total_similarity": 10.81,
+      "last_used": "2025-07-11T23:02:20.709341"
+    },
+    "과목": {
+      "count": 1,
+      "avg_similarity": 15.15,
+      "best_similarity": 15.15,
+      "total_similarity": 15.15,
+      "last_used": "2025-07-11T23:02:20.958727"
+    },
+    "과연": {
+      "count": 1,
+      "avg_similarity": 22.49,
+      "best_similarity": 22.49,
+      "total_similarity": 22.49,
+      "last_used": "2025-07-11T23:02:21.156206"
+    },
+    "과외": {
+      "count": 1,
+      "avg_similarity": 19.43,
+      "best_similarity": 19.43,
+      "total_similarity": 19.43,
+      "last_used": "2025-07-11T23:02:21.388103"
+    },
+    "과일": {
+      "count": 1,
+      "avg_similarity": 20.93,
+      "best_similarity": 20.93,
+      "total_similarity": 20.93,
+      "last_used": "2025-07-11T23:02:21.579411"
+    },
+    "과자": {
+      "count": 1,
+      "avg_similarity": 20.67,
+      "best_similarity": 20.67,
+      "total_similarity": 20.67,
+      "last_used": "2025-07-11T23:02:21.817424"
+    },
+    "과장": {
+      "count": 1,
+      "avg_similarity": 15.51,
+      "best_similarity": 15.51,
+      "total_similarity": 15.51,
+      "last_used": "2025-07-11T23:02:22.014428"
+    },
+    "과제": {
+      "count": 1,
+      "avg_similarity": 27.59,
+      "best_similarity": 27.59,
+      "total_similarity": 27.59,
+      "last_used": "2025-07-11T23:02:22.254208"
+    },
+    "과학": {
+      "count": 1,
+      "avg_similarity": 19.57,
+      "best_similarity": 19.57,
+      "total_similarity": 19.57,
+      "last_used": "2025-07-11T23:02:22.452555"
+    },
+    "과학자": {
+      "count": 1,
+      "avg_similarity": 5.27,
+      "best_similarity": 5.27,
+      "total_similarity": 5.27,
+      "last_used": "2025-07-11T23:02:22.638886"
+    },
+    "과학적": {
+      "count": 1,
+      "avg_similarity": 14.59,
+      "best_similarity": 14.59,
+      "total_similarity": 14.59,
+      "last_used": "2025-07-11T23:02:22.825655"
+    },
+    "노동": {
+      "count": 2,
+      "avg_similarity": 23.63,
+      "best_similarity": 23.63,
+      "total_similarity": 47.26,
+      "last_used": "2025-07-11T23:13:42.540989"
+    },
+    "노동자": {
+      "count": 2,
+      "avg_similarity": 3.69,
+      "best_similarity": 3.69,
+      "total_similarity": 7.38,
+      "last_used": "2025-07-11T23:13:42.739967"
+    },
+    "노란색": {
+      "count": 2,
+      "avg_similarity": 7.56,
+      "best_similarity": 7.56,
+      "total_similarity": 15.12,
+      "last_used": "2025-07-11T23:13:42.954562"
+    },
+    "노랗다": {
+      "count": 2,
+      "avg_similarity": 6.36,
+      "best_similarity": 6.36,
+      "total_similarity": 12.72,
+      "last_used": "2025-07-11T23:13:43.161377"
+    },
+    "노래": {
+      "count": 2,
+      "avg_similarity": 15.62,
+      "best_similarity": 15.62,
+      "total_similarity": 31.24,
+      "last_used": "2025-07-11T23:13:43.396321"
+    },
+    "노래방": {
+      "count": 2,
+      "avg_similarity": 2.36,
+      "best_similarity": 2.36,
+      "total_similarity": 4.72,
+      "last_used": "2025-07-11T23:13:43.599098"
+    },
+    "노랫소리": {
+      "count": 2,
+      "avg_similarity": 9.65,
+      "best_similarity": 9.65,
+      "total_similarity": 19.3,
+      "last_used": "2025-07-11T23:13:44.017467"
+    },
+    "노력하다": {
+      "count": 2,
+      "avg_similarity": 13.5,
+      "best_similarity": 13.5,
+      "total_similarity": 27.0,
+      "last_used": "2025-07-11T23:13:44.223002"
+    },
+    "노선": {
+      "count": 2,
+      "avg_similarity": 15.82,
+      "best_similarity": 15.82,
+      "total_similarity": 31.64,
+      "last_used": "2025-07-11T23:13:44.507842"
+    },
+    "노인": {
+      "count": 2,
+      "avg_similarity": 16.99,
+      "best_similarity": 16.99,
+      "total_similarity": 33.98,
+      "last_used": "2025-07-11T23:13:44.767557"
+    },
+    "노트": {
+      "count": 2,
+      "avg_similarity": 17.35,
+      "best_similarity": 17.35,
+      "total_similarity": 34.7,
+      "last_used": "2025-07-11T23:13:44.978471"
+    },
+    "이런": {
+      "count": 1,
+      "avg_similarity": 22.64,
+      "best_similarity": 22.64,
+      "total_similarity": 22.64,
+      "last_used": "2025-07-11T23:02:25.676456"
+    },
+    "이같이": {
+      "count": 1,
+      "avg_similarity": 0.4,
+      "best_similarity": 0.4,
+      "total_similarity": 0.4,
+      "last_used": "2025-07-11T23:02:25.879531"
+    },
+    "이거": {
+      "count": 1,
+      "avg_similarity": 11.02,
+      "best_similarity": 11.02,
+      "total_similarity": 11.02,
+      "last_used": "2025-07-11T23:02:26.076859"
+    },
+    "이것": {
+      "count": 1,
+      "avg_similarity": 23.8,
+      "best_similarity": 23.8,
+      "total_similarity": 23.8,
+      "last_used": "2025-07-11T23:02:26.270461"
+    },
+    "이것저것": {
+      "count": 1,
+      "avg_similarity": 3.64,
+      "best_similarity": 3.64,
+      "total_similarity": 3.64,
+      "last_used": "2025-07-11T23:02:26.471655"
+    },
+    "분위기": {
+      "count": 1,
+      "avg_similarity": 10.12,
+      "best_similarity": 10.12,
+      "total_similarity": 10.12,
+      "last_used": "2025-07-11T23:11:52.458641"
+    },
+    "마음": {
+      "count": 1,
+      "avg_similarity": 17.49,
+      "best_similarity": 17.49,
+      "total_similarity": 17.49,
+      "last_used": "2025-07-11T23:11:52.864886"
+    },
+    "상황": {
+      "count": 1,
+      "avg_similarity": 22.11,
+      "best_similarity": 22.11,
+      "total_similarity": 22.11,
+      "last_used": "2025-07-11T23:11:53.002744"
+    },
+    "심리": {
+      "count": 1,
+      "avg_similarity": 26.9,
+      "best_similarity": 26.9,
+      "total_similarity": 26.9,
+      "last_used": "2025-07-11T23:11:53.154319"
+    },
+    "느낌": {
+      "count": 1,
+      "avg_similarity": 16.01,
+      "best_similarity": 16.01,
+      "total_similarity": 16.01,
+      "last_used": "2025-07-11T23:11:53.293268"
+    },
+    "존재": {
+      "count": 1,
+      "avg_similarity": 33.26,
+      "best_similarity": 33.26,
+      "total_similarity": 33.26,
+      "last_used": "2025-07-11T23:11:53.741671"
+    },
+    "만남": {
+      "count": 1,
+      "avg_similarity": 25.06,
+      "best_similarity": 25.06,
+      "total_similarity": 25.06,
+      "last_used": "2025-07-11T23:11:54.029351"
+    },
+    "발전": {
+      "count": 1,
+      "avg_similarity": 36.37,
+      "best_similarity": 36.37,
+      "total_similarity": 36.37,
+      "last_used": "2025-07-11T23:11:54.194330"
+    },
+    "성장": {
+      "count": 1,
+      "avg_similarity": 42.71,
+      "best_similarity": 42.71,
+      "total_similarity": 42.71,
+      "last_used": "2025-07-11T23:11:54.324966"
+    },
+    "전환": {
+      "count": 1,
+      "avg_similarity": 30.44,
+      "best_similarity": 30.44,
+      "total_similarity": 30.44,
+      "last_used": "2025-07-11T23:11:54.476345"
+    },
+    "개선": {
+      "count": 1,
+      "avg_similarity": 25.18,
+      "best_similarity": 25.18,
+      "total_similarity": 25.18,
+      "last_used": "2025-07-11T23:11:54.607111"
+    },
+    "느끼다": {
+      "count": 1,
+      "avg_similarity": 5.5,
+      "best_similarity": 5.5,
+      "total_similarity": 5.5,
+      "last_used": "2025-07-11T23:11:56.933369"
+    },
+    "느리다": {
+      "count": 1,
+      "avg_similarity": 0.65,
+      "best_similarity": 0.65,
+      "total_similarity": 0.65,
+      "last_used": "2025-07-11T23:11:57.089066"
+    },
+    "마구": {
+      "count": 1,
+      "avg_similarity": 5.95,
+      "best_similarity": 5.95,
+      "total_similarity": 5.95,
+      "last_used": "2025-07-11T23:11:57.247526"
+    },
+    "마누라": {
+      "count": 1,
+      "avg_similarity": 13.35,
+      "best_similarity": 13.35,
+      "total_similarity": 13.35,
+      "last_used": "2025-07-11T23:11:57.407372"
+    },
+    "마늘": {
+      "count": 1,
+      "avg_similarity": 20.12,
+      "best_similarity": 20.12,
+      "total_similarity": 20.12,
+      "last_used": "2025-07-11T23:11:57.567925"
+    },
+    "마당": {
+      "count": 1,
+      "avg_similarity": 12.12,
+      "best_similarity": 12.12,
+      "total_similarity": 12.12,
+      "last_used": "2025-07-11T23:11:57.725350"
+    },
+    "마디": {
+      "count": 1,
+      "avg_similarity": 8.91,
+      "best_similarity": 8.91,
+      "total_similarity": 8.91,
+      "last_used": "2025-07-11T23:11:57.875519"
+    },
+    "마땅하다": {
+      "count": 1,
+      "avg_similarity": 1.68,
+      "best_similarity": 1.68,
+      "total_similarity": 1.68,
+      "last_used": "2025-07-11T23:11:58.044705"
+    },
+    "마라톤": {
+      "count": 1,
+      "avg_similarity": 18.27,
+      "best_similarity": 18.27,
+      "total_similarity": 18.27,
+      "last_used": "2025-07-11T23:11:58.199396"
+    },
+    "마련": {
+      "count": 1,
+      "avg_similarity": 19.36,
+      "best_similarity": 19.36,
+      "total_similarity": 19.36,
+      "last_used": "2025-07-11T23:11:58.354554"
+    },
+    "마련하다": {
+      "count": 1,
+      "avg_similarity": 7.1,
+      "best_similarity": 7.1,
+      "total_similarity": 7.1,
+      "last_used": "2025-07-11T23:12:00.710420"
+    },
+    "마루": {
+      "count": 1,
+      "avg_similarity": 16.17,
+      "best_similarity": 16.17,
+      "total_similarity": 16.17,
+      "last_used": "2025-07-11T23:12:00.902839"
+    },
+    "마리": {
+      "count": 1,
+      "avg_similarity": 14.41,
+      "best_similarity": 14.41,
+      "total_similarity": 14.41,
+      "last_used": "2025-07-11T23:12:01.226197"
+    },
+    "마무리": {
+      "count": 1,
+      "avg_similarity": 10.91,
+      "best_similarity": 10.91,
+      "total_similarity": 10.91,
+      "last_used": "2025-07-11T23:12:01.446804"
+    },
+    "마사지": {
+      "count": 1,
+      "avg_similarity": 10.0,
+      "best_similarity": 10.0,
+      "total_similarity": 10.0,
+      "last_used": "2025-07-11T23:12:01.679052"
+    },
+    "마시다": {
+      "count": 1,
+      "avg_similarity": 7.39,
+      "best_similarity": 7.39,
+      "total_similarity": 7.39,
+      "last_used": "2025-07-11T23:12:01.852223"
+    },
+    "마약": {
+      "count": 1,
+      "avg_similarity": 15.25,
+      "best_similarity": 15.25,
+      "total_similarity": 15.25,
+      "last_used": "2025-07-11T23:12:02.002818"
+    },
+    "마요네즈": {
+      "count": 1,
+      "avg_similarity": 3.28,
+      "best_similarity": 3.28,
+      "total_similarity": 3.28,
+      "last_used": "2025-07-11T23:12:02.166619"
+    },
+    "마을": {
+      "count": 1,
+      "avg_similarity": 15.23,
+      "best_similarity": 15.23,
+      "total_similarity": 15.23,
+      "last_used": "2025-07-11T23:12:02.319103"
+    },
+    "마음가짐": {
+      "count": 1,
+      "avg_similarity": 20.34,
+      "best_similarity": 20.34,
+      "total_similarity": 20.34,
+      "last_used": "2025-07-11T23:12:02.484355"
+    },
+    "마음껏": {
+      "count": 1,
+      "avg_similarity": 2.61,
+      "best_similarity": 2.61,
+      "total_similarity": 2.61,
+      "last_used": "2025-07-11T23:12:02.636833"
+    },
+    "마음속": {
+      "count": 1,
+      "avg_similarity": 5.63,
+      "best_similarity": 5.63,
+      "total_similarity": 5.63,
+      "last_used": "2025-07-11T23:12:05.156354"
+    },
+    "마음씨": {
+      "count": 1,
+      "avg_similarity": 11.74,
+      "best_similarity": 11.74,
+      "total_similarity": 11.74,
+      "last_used": "2025-07-11T23:12:05.318769"
+    },
+    "마이크": {
+      "count": 1,
+      "avg_similarity": 3.02,
+      "best_similarity": 3.02,
+      "total_similarity": 3.02,
+      "last_used": "2025-07-11T23:12:05.480410"
+    },
+    "마주": {
+      "count": 1,
+      "avg_similarity": 5.99,
+      "best_similarity": 5.99,
+      "total_similarity": 5.99,
+      "last_used": "2025-07-11T23:12:05.669083"
+    },
+    "마주치다": {
+      "count": 1,
+      "avg_similarity": 8.29,
+      "best_similarity": 8.29,
+      "total_similarity": 8.29,
+      "last_used": "2025-07-11T23:12:05.835955"
+    },
+    "마중": {
+      "count": 1,
+      "avg_similarity": 12.99,
+      "best_similarity": 12.99,
+      "total_similarity": 12.99,
+      "last_used": "2025-07-11T23:12:06.000239"
+    },
+    "마지막": {
+      "count": 1,
+      "avg_similarity": 20.88,
+      "best_similarity": 20.88,
+      "total_similarity": 20.88,
+      "last_used": "2025-07-11T23:12:06.225402"
+    },
+    "마찬가지": {
+      "count": 1,
+      "avg_similarity": 14.1,
+      "best_similarity": 14.1,
+      "total_similarity": 14.1,
+      "last_used": "2025-07-11T23:12:06.464033"
+    },
+    "마찰": {
+      "count": 1,
+      "avg_similarity": 14.29,
+      "best_similarity": 14.29,
+      "total_similarity": 14.29,
+      "last_used": "2025-07-11T23:12:06.717328"
+    },
+    "마치다": {
+      "count": 1,
+      "avg_similarity": 0.44,
+      "best_similarity": 0.44,
+      "total_similarity": 0.44,
+      "last_used": "2025-07-11T23:12:07.214619"
+    },
+    "마침": {
+      "count": 1,
+      "avg_similarity": 10.29,
+      "best_similarity": 10.29,
+      "total_similarity": 10.29,
+      "last_used": "2025-07-11T23:12:07.442426"
+    },
+    "마침내": {
+      "count": 1,
+      "avg_similarity": 5.2,
+      "best_similarity": 5.2,
+      "total_similarity": 5.2,
+      "last_used": "2025-07-11T23:12:07.601994"
+    },
+    "마크": {
+      "count": 1,
+      "avg_similarity": 20.44,
+      "best_similarity": 20.44,
+      "total_similarity": 20.44,
+      "last_used": "2025-07-11T23:12:07.772848"
+    },
+    "마흔": {
+      "count": 1,
+      "avg_similarity": 23.56,
+      "best_similarity": 23.56,
+      "total_similarity": 23.56,
+      "last_used": "2025-07-11T23:12:07.938675"
+    },
+    "상관": {
+      "count": 1,
+      "avg_similarity": 11.06,
+      "best_similarity": 11.06,
+      "total_similarity": 11.06,
+      "last_used": "2025-07-11T23:12:46.376505"
+    },
+    "상관없다": {
+      "count": 1,
+      "avg_similarity": 10.83,
+      "best_similarity": 10.83,
+      "total_similarity": 10.83,
+      "last_used": "2025-07-11T23:12:46.557021"
+    },
+    "상관없이": {
+      "count": 1,
+      "avg_similarity": 0.27,
+      "best_similarity": 0.27,
+      "total_similarity": 0.27,
+      "last_used": "2025-07-11T23:12:46.765393"
+    },
+    "상금": {
+      "count": 1,
+      "avg_similarity": 17.2,
+      "best_similarity": 17.2,
+      "total_similarity": 17.2,
+      "last_used": "2025-07-11T23:12:46.948903"
+    },
+    "상담": {
+      "count": 1,
+      "avg_similarity": 24.05,
+      "best_similarity": 24.05,
+      "total_similarity": 24.05,
+      "last_used": "2025-07-11T23:12:47.135610"
+    },
+    "상당": {
+      "count": 1,
+      "avg_similarity": 13.44,
+      "best_similarity": 13.44,
+      "total_similarity": 13.44,
+      "last_used": "2025-07-11T23:12:47.317091"
+    },
+    "상당수": {
+      "count": 1,
+      "avg_similarity": 8.33,
+      "best_similarity": 8.33,
+      "total_similarity": 8.33,
+      "last_used": "2025-07-11T23:12:47.531696"
+    },
+    "상당히": {
+      "count": 1,
+      "avg_similarity": 3.23,
+      "best_similarity": 3.23,
+      "total_similarity": 3.23,
+      "last_used": "2025-07-11T23:12:47.898097"
+    },
+    "상대": {
+      "count": 1,
+      "avg_similarity": 13.51,
+      "best_similarity": 13.51,
+      "total_similarity": 13.51,
+      "last_used": "2025-07-11T23:12:48.081494"
+    },
+    "상대방": {
+      "count": 1,
+      "avg_similarity": 7.67,
+      "best_similarity": 7.67,
+      "total_similarity": 7.67,
+      "last_used": "2025-07-11T23:12:48.294221"
+    },
+    "상대성": {
+      "count": 1,
+      "avg_similarity": 9.44,
+      "best_similarity": 9.44,
+      "total_similarity": 9.44,
+      "last_used": "2025-07-11T23:12:48.513576"
+    },
+    "상대적": {
+      "count": 1,
+      "avg_similarity": 9.16,
+      "best_similarity": 9.16,
+      "total_similarity": 9.16,
+      "last_used": "2025-07-11T23:12:48.709902"
+    },
+    "상대편": {
+      "count": 1,
+      "avg_similarity": 1.94,
+      "best_similarity": 1.94,
+      "total_similarity": 1.94,
+      "last_used": "2025-07-11T23:12:48.886750"
+    },
+    "상류": {
+      "count": 1,
+      "avg_similarity": 8.95,
+      "best_similarity": 8.95,
+      "total_similarity": 8.95,
+      "last_used": "2025-07-11T23:12:49.065957"
+    },
+    "상반기": {
+      "count": 1,
+      "avg_similarity": 9.51,
+      "best_similarity": 9.51,
+      "total_similarity": 9.51,
+      "last_used": "2025-07-11T23:12:49.249970"
+    },
+    "상상": {
+      "count": 1,
+      "avg_similarity": 16.08,
+      "best_similarity": 16.08,
+      "total_similarity": 16.08,
+      "last_used": "2025-07-11T23:12:49.459168"
+    },
+    "상상력": {
+      "count": 1,
+      "avg_similarity": 14.4,
+      "best_similarity": 14.4,
+      "total_similarity": 14.4,
+      "last_used": "2025-07-11T23:12:49.678689"
+    },
+    "상상하다": {
       "count": 1,
-      "avg_similarity": 0.1061,
-      "best_similarity": 0.1061
+      "avg_similarity": 16.27,
+      "best_similarity": 16.27,
+      "total_similarity": 16.27,
+      "last_used": "2025-07-11T23:12:49.876394"
+    },
+    "상식": {
+      "count": 1,
+      "avg_similarity": 17.6,
+      "best_similarity": 17.6,
+      "total_similarity": 17.6,
+      "last_used": "2025-07-11T23:12:50.085770"
+    },
+    "상업": {
+      "count": 1,
+      "avg_similarity": 21.95,
+      "best_similarity": 21.95,
+      "total_similarity": 21.95,
+      "last_used": "2025-07-11T23:12:50.288508"
+    },
+    "상인": {
+      "count": 1,
+      "avg_similarity": 20.41,
+      "best_similarity": 20.41,
+      "total_similarity": 20.41,
+      "last_used": "2025-07-11T23:12:50.497114"
+    },
+    "상자": {
+      "count": 1,
+      "avg_similarity": 20.3,
+      "best_similarity": 20.3,
+      "total_similarity": 20.3,
+      "last_used": "2025-07-11T23:12:50.699314"
+    },
+    "상점": {
+      "count": 1,
+      "avg_similarity": 18.08,
+      "best_similarity": 18.08,
+      "total_similarity": 18.08,
+      "last_used": "2025-07-11T23:12:50.882734"
+    },
+    "상징적": {
+      "count": 1,
+      "avg_similarity": 11.62,
+      "best_similarity": 11.62,
+      "total_similarity": 11.62,
+      "last_used": "2025-07-11T23:12:51.092104"
+    },
+    "상처": {
+      "count": 1,
+      "avg_similarity": 15.9,
+      "best_similarity": 15.9,
+      "total_similarity": 15.9,
+      "last_used": "2025-07-11T23:12:53.545604"
+    },
+    "상추": {
+      "count": 1,
+      "avg_similarity": 14.92,
+      "best_similarity": 14.92,
+      "total_similarity": 14.92,
+      "last_used": "2025-07-11T23:12:53.727447"
+    },
+    "상쾌하다": {
+      "count": 1,
+      "avg_similarity": 5.2,
+      "best_similarity": 5.2,
+      "total_similarity": 5.2,
+      "last_used": "2025-07-11T23:12:53.942384"
+    },
+    "상태": {
+      "count": 1,
+      "avg_similarity": 16.99,
+      "best_similarity": 16.99,
+      "total_similarity": 16.99,
+      "last_used": "2025-07-11T23:12:54.133349"
+    },
+    "상표": {
+      "count": 1,
+      "avg_similarity": 22.58,
+      "best_similarity": 22.58,
+      "total_similarity": 22.58,
+      "last_used": "2025-07-11T23:12:54.316724"
+    },
+    "상품": {
+      "count": 1,
+      "avg_similarity": 23.11,
+      "best_similarity": 23.11,
+      "total_similarity": 23.11,
+      "last_used": "2025-07-11T23:12:54.495617"
+    },
+    "만나다": {
+      "count": 1,
+      "avg_similarity": 6.77,
+      "best_similarity": 6.77,
+      "total_similarity": 6.77,
+      "last_used": "2025-07-11T23:12:56.941329"
+    },
+    "만두": {
+      "count": 1,
+      "avg_similarity": 15.0,
+      "best_similarity": 15.0,
+      "total_similarity": 15.0,
+      "last_used": "2025-07-11T23:12:57.162437"
+    },
+    "만들다": {
+      "count": 1,
+      "avg_similarity": 9.22,
+      "best_similarity": 9.22,
+      "total_similarity": 9.22,
+      "last_used": "2025-07-11T23:12:57.350210"
+    },
+    "만들어지다": {
+      "count": 1,
+      "avg_similarity": 6.24,
+      "best_similarity": 6.24,
+      "total_similarity": 6.24,
+      "last_used": "2025-07-11T23:12:57.573565"
+    },
+    "만만하다": {
+      "count": 1,
+      "avg_similarity": 4.77,
+      "best_similarity": 4.77,
+      "total_similarity": 4.77,
+      "last_used": "2025-07-11T23:12:57.786905"
+    },
+    "만세": {
+      "count": 1,
+      "avg_similarity": 21.91,
+      "best_similarity": 21.91,
+      "total_similarity": 21.91,
+      "last_used": "2025-07-11T23:12:57.988803"
+    },
+    "만약": {
+      "count": 1,
+      "avg_similarity": 14.19,
+      "best_similarity": 14.19,
+      "total_similarity": 14.19,
+      "last_used": "2025-07-11T23:12:58.175221"
+    },
+    "만일": {
+      "count": 1,
+      "avg_similarity": 14.67,
+      "best_similarity": 14.67,
+      "total_similarity": 14.67,
+      "last_used": "2025-07-11T23:12:58.381724"
+    },
+    "만점": {
+      "count": 1,
+      "avg_similarity": 24.52,
+      "best_similarity": 24.52,
+      "total_similarity": 24.52,
+      "last_used": "2025-07-11T23:12:58.569900"
+    },
+    "만족": {
+      "count": 1,
+      "avg_similarity": 39.62,
+      "best_similarity": 39.62,
+      "total_similarity": 39.62,
+      "last_used": "2025-07-11T23:12:58.794438"
+    },
+    "만족하다": {
+      "count": 1,
+      "avg_similarity": 8.82,
+      "best_similarity": 8.82,
+      "total_similarity": 8.82,
+      "last_used": "2025-07-11T23:12:58.977046"
+    },
+    "만지다": {
+      "count": 1,
+      "avg_similarity": 4.59,
+      "best_similarity": 4.59,
+      "total_similarity": 4.59,
+      "last_used": "2025-07-11T23:12:59.186852"
+    },
+    "만큼": {
+      "count": 1,
+      "avg_similarity": 11.58,
+      "best_similarity": 11.58,
+      "total_similarity": 11.58,
+      "last_used": "2025-07-11T23:12:59.370565"
+    },
+    "만하다": {
+      "count": 1,
+      "avg_similarity": 9.01,
+      "best_similarity": 9.01,
+      "total_similarity": 9.01,
+      "last_used": "2025-07-11T23:12:59.595188"
+    },
+    "만화": {
+      "count": 1,
+      "avg_similarity": 12.36,
+      "best_similarity": 12.36,
+      "total_similarity": 12.36,
+      "last_used": "2025-07-11T23:12:59.776727"
+    },
+    "만화가": {
+      "count": 1,
+      "avg_similarity": 6.88,
+      "best_similarity": 6.88,
+      "total_similarity": 6.88,
+      "last_used": "2025-07-11T23:12:59.984839"
+    },
+    "개개인": {
+      "count": 1,
+      "avg_similarity": 6.84,
+      "best_similarity": 6.84,
+      "total_similarity": 6.84,
+      "last_used": "2025-07-11T23:13:00.174865"
+    },
+    "개구리": {
+      "count": 1,
+      "avg_similarity": 2.75,
+      "best_similarity": 2.75,
+      "total_similarity": 2.75,
+      "last_used": "2025-07-11T23:13:00.362162"
+    },
+    "개국": {
+      "count": 1,
+      "avg_similarity": 18.55,
+      "best_similarity": 18.55,
+      "total_similarity": 18.55,
+      "last_used": "2025-07-11T23:13:00.545773"
+    },
+    "개나리": {
+      "count": 1,
+      "avg_similarity": 1.36,
+      "best_similarity": 1.36,
+      "total_similarity": 1.36,
+      "last_used": "2025-07-11T23:13:00.739682"
+    },
+    "개다": {
+      "count": 1,
+      "avg_similarity": 11.9,
+      "best_similarity": 11.9,
+      "total_similarity": 11.9,
+      "last_used": "2025-07-11T23:13:00.922673"
+    },
+    "개미": {
+      "count": 1,
+      "avg_similarity": 16.36,
+      "best_similarity": 16.36,
+      "total_similarity": 16.36,
+      "last_used": "2025-07-11T23:13:01.137003"
+    },
+    "개발되다": {
+      "count": 1,
+      "avg_similarity": 10.91,
+      "best_similarity": 10.91,
+      "total_similarity": 10.91,
+      "last_used": "2025-07-11T23:13:01.345004"
+    },
+    "개발하다": {
+      "count": 1,
+      "avg_similarity": 12.43,
+      "best_similarity": 12.43,
+      "total_similarity": 12.43,
+      "last_used": "2025-07-11T23:13:01.542706"
+    },
+    "개방": {
+      "count": 1,
+      "avg_similarity": 21.65,
+      "best_similarity": 21.65,
+      "total_similarity": 21.65,
+      "last_used": "2025-07-11T23:13:01.730548"
+    },
+    "개별": {
+      "count": 1,
+      "avg_similarity": 11.76,
+      "best_similarity": 11.76,
+      "total_similarity": 11.76,
+      "last_used": "2025-07-11T23:13:06.375423"
+    },
+    "개성": {
+      "count": 1,
+      "avg_similarity": 16.41,
+      "best_similarity": 16.41,
+      "total_similarity": 16.41,
+      "last_used": "2025-07-11T23:13:08.997973"
+    },
+    "개월": {
+      "count": 1,
+      "avg_similarity": 11.91,
+      "best_similarity": 11.91,
+      "total_similarity": 11.91,
+      "last_used": "2025-07-11T23:13:09.192540"
+    },
+    "개인": {
+      "count": 1,
+      "avg_similarity": 19.59,
+      "best_similarity": 19.59,
+      "total_similarity": 19.59,
+      "last_used": "2025-07-11T23:13:09.379527"
+    },
+    "개인적": {
+      "count": 1,
+      "avg_similarity": 13.95,
+      "best_similarity": 13.95,
+      "total_similarity": 13.95,
+      "last_used": "2025-07-11T23:13:09.579165"
+    },
+    "심각하다": {
+      "count": 1,
+      "avg_similarity": 2.59,
+      "best_similarity": 2.59,
+      "total_similarity": 2.59,
+      "last_used": "2025-07-11T23:13:09.775239"
+    },
+    "심다": {
+      "count": 1,
+      "avg_similarity": 20.36,
+      "best_similarity": 20.36,
+      "total_similarity": 20.36,
+      "last_used": "2025-07-11T23:13:09.993812"
+    },
+    "심리적": {
+      "count": 1,
+      "avg_similarity": 10.37,
+      "best_similarity": 10.37,
+      "total_similarity": 10.37,
+      "last_used": "2025-07-11T23:13:10.185310"
+    },
+    "심부름": {
+      "count": 1,
+      "avg_similarity": 15.81,
+      "best_similarity": 15.81,
+      "total_similarity": 15.81,
+      "last_used": "2025-07-11T23:13:10.382256"
+    },
+    "심사": {
+      "count": 1,
+      "avg_similarity": 18.36,
+      "best_similarity": 18.36,
+      "total_similarity": 18.36,
+      "last_used": "2025-07-11T23:13:10.602644"
+    },
+    "심심하다": {
+      "count": 1,
+      "avg_similarity": 0.28,
+      "best_similarity": 0.28,
+      "total_similarity": 0.28,
+      "last_used": "2025-07-11T23:13:10.797166"
+    },
+    "심장": {
+      "count": 1,
+      "avg_similarity": 20.89,
+      "best_similarity": 20.89,
+      "total_similarity": 20.89,
+      "last_used": "2025-07-11T23:13:10.989747"
+    },
+    "심정": {
+      "count": 1,
+      "avg_similarity": 16.85,
+      "best_similarity": 16.85,
+      "total_similarity": 16.85,
+      "last_used": "2025-07-11T23:13:11.186903"
+    },
+    "심판": {
+      "count": 1,
+      "avg_similarity": 18.77,
+      "best_similarity": 18.77,
+      "total_similarity": 18.77,
+      "last_used": "2025-07-11T23:13:11.400575"
+    },
+    "전개": {
+      "count": 1,
+      "avg_similarity": 25.58,
+      "best_similarity": 25.58,
+      "total_similarity": 25.58,
+      "last_used": "2025-07-11T23:13:23.017073"
+    },
+    "전개하다": {
+      "count": 1,
+      "avg_similarity": 7.25,
+      "best_similarity": 7.25,
+      "total_similarity": 7.25,
+      "last_used": "2025-07-11T23:13:25.480346"
+    },
+    "전공": {
+      "count": 1,
+      "avg_similarity": 16.26,
+      "best_similarity": 16.26,
+      "total_similarity": 16.26,
+      "last_used": "2025-07-11T23:13:25.713627"
+    },
+    "전공하다": {
+      "count": 1,
+      "avg_similarity": 4.97,
+      "best_similarity": 4.97,
+      "total_similarity": 4.97,
+      "last_used": "2025-07-11T23:13:25.915865"
+    },
+    "전구": {
+      "count": 1,
+      "avg_similarity": 20.22,
+      "best_similarity": 20.22,
+      "total_similarity": 20.22,
+      "last_used": "2025-07-11T23:13:26.107539"
     },
-    "운동장": {
+    "전국": {
       "count": 1,
-      "avg_similarity": 0.175,
-      "best_similarity": 0.175
+      "avg_similarity": 9.11,
+      "best_similarity": 9.11,
+      "total_similarity": 9.11,
+      "last_used": "2025-07-11T23:13:26.357255"
     },
-    "운동화": {
+    "전국적": {
       "count": 1,
-      "avg_similarity": 0.0684,
-      "best_similarity": 0.0684
+      "avg_similarity": 9.1,
+      "best_similarity": 9.1,
+      "total_similarity": 9.1,
+      "last_used": "2025-07-11T23:13:26.556561"
     },
-    "운명": {
+    "전기": {
       "count": 1,
-      "avg_similarity": 0.1359,
-      "best_similarity": 0.1359
+      "avg_similarity": 5.15,
+      "best_similarity": 5.15,
+      "total_similarity": 5.15,
+      "last_used": "2025-07-11T23:13:26.783861"
     },
-    "운반": {
+    "전기밥솥": {
       "count": 1,
-      "avg_similarity": 0.1804,
-      "best_similarity": 0.1804
+      "avg_similarity": 9.25,
+      "best_similarity": 9.25,
+      "total_similarity": 9.25,
+      "last_used": "2025-07-11T23:13:26.977951"
     },
-    "운영하다": {
+    "전날": {
       "count": 1,
-      "avg_similarity": -0.49,
-      "best_similarity": 0
+      "avg_similarity": 18.23,
+      "best_similarity": 18.23,
+      "total_similarity": 18.23,
+      "last_used": "2025-07-11T23:13:27.197287"
     },
-    "운전": {
+    "전달": {
       "count": 1,
-      "avg_similarity": 0.2006,
-      "best_similarity": 0.2006
+      "avg_similarity": 18.32,
+      "best_similarity": 18.32,
+      "total_similarity": 18.32,
+      "last_used": "2025-07-11T23:13:27.392726"
     },
-    "운전기사": {
+    "전달하다": {
       "count": 1,
-      "avg_similarity": 0.0471,
-      "best_similarity": 0.0471
+      "avg_similarity": 2.48,
+      "best_similarity": 2.48,
+      "total_similarity": 2.48,
+      "last_used": "2025-07-11T23:13:29.856178"
     },
-    "운전사": {
+    "전라도": {
       "count": 1,
-      "avg_similarity": 0.095,
-      "best_similarity": 0.095
+      "avg_similarity": 5.86,
+      "best_similarity": 5.86,
+      "total_similarity": 5.86,
+      "last_used": "2025-07-11T23:13:30.093190"
     },
-    "운전자": {
+    "전망": {
       "count": 1,
-      "avg_similarity": 0.0873,
-      "best_similarity": 0.0873
+      "avg_similarity": 27.07,
+      "best_similarity": 27.07,
+      "total_similarity": 27.07,
+      "last_used": "2025-07-11T23:13:30.332504"
     },
-    "운전하다": {
+    "전망하다": {
       "count": 1,
-      "avg_similarity": 0.1052,
-      "best_similarity": 0.1052
+      "avg_similarity": 14.73,
+      "best_similarity": 14.73,
+      "total_similarity": 14.73,
+      "last_used": "2025-07-11T23:13:30.568594"
     },
-    "카레": {
+    "전문": {
       "count": 1,
-      "avg_similarity": 0.19010000000000002,
-      "best_similarity": 0.19010000000000002
+      "avg_similarity": 18.18,
+      "best_similarity": 18.18,
+      "total_similarity": 18.18,
+      "last_used": "2025-07-11T23:13:30.762318"
     },
-    "카드": {
+    "전문가": {
       "count": 1,
-      "avg_similarity": 0.2216,
-      "best_similarity": 0.2216
+      "avg_similarity": 8.85,
+      "best_similarity": 8.85,
+      "total_similarity": 8.85,
+      "last_used": "2025-07-11T23:13:30.964443"
     },
-    "카페": {
+    "전문적": {
       "count": 1,
-      "avg_similarity": 0.2851,
-      "best_similarity": 0.2851
+      "avg_similarity": 13.22,
+      "best_similarity": 13.22,
+      "total_similarity": 13.22,
+      "last_used": "2025-07-11T23:13:31.159203"
     },
-    "건물": {
+    "전문점": {
       "count": 1,
-      "avg_similarity": 0.34009999999999996,
-      "best_similarity": 0.34009999999999996
+      "avg_similarity": 13.79,
+      "best_similarity": 13.79,
+      "total_similarity": 13.79,
+      "last_used": "2025-07-11T23:13:31.364440"
     },
-    "건": {
+    "전문직": {
       "count": 1,
-      "avg_similarity": 0.1329,
-      "best_similarity": 0.1329
+      "avg_similarity": 14.28,
+      "best_similarity": 14.28,
+      "total_similarity": 14.28,
+      "last_used": "2025-07-11T23:13:31.562663"
     },
-    "건강": {
+    "전반": {
       "count": 1,
-      "avg_similarity": 0.24960000000000002,
-      "best_similarity": 0.24960000000000002
+      "avg_similarity": 15.41,
+      "best_similarity": 15.41,
+      "total_similarity": 15.41,
+      "last_used": "2025-07-11T23:13:31.764686"
     },
-    "건강하다": {
+    "전반적": {
       "count": 1,
-      "avg_similarity": -1.1,
-      "best_similarity": 0
+      "avg_similarity": 9.62,
+      "best_similarity": 9.62,
+      "total_similarity": 9.62,
+      "last_used": "2025-07-11T23:13:31.979050"
     },
-    "건너": {
+    "전부": {
       "count": 1,
-      "avg_similarity": 0.1577,
-      "best_similarity": 0.1577
+      "avg_similarity": 11.13,
+      "best_similarity": 11.13,
+      "total_similarity": 11.13,
+      "last_used": "2025-07-11T23:13:32.184938"
     },
-    "건너가다": {
+    "전선": {
       "count": 1,
-      "avg_similarity": 0.17,
-      "best_similarity": 0.17
+      "avg_similarity": 4.28,
+      "best_similarity": 4.28,
+      "total_similarity": 4.28,
+      "last_used": "2025-07-11T23:13:32.385145"
     },
-    "건너다": {
+    "전설": {
       "count": 1,
-      "avg_similarity": 0.1189,
-      "best_similarity": 0.1189
+      "avg_similarity": 25.7,
+      "best_similarity": 25.7,
+      "total_similarity": 25.7,
+      "last_used": "2025-07-11T23:13:32.579858"
     },
-    "건너편": {
+    "전세": {
       "count": 1,
-      "avg_similarity": 0.1096,
-      "best_similarity": 0.1096
+      "avg_similarity": 15.98,
+      "best_similarity": 15.98,
+      "total_similarity": 15.98,
+      "last_used": "2025-07-11T23:13:32.775168"
     },
-    "건넌방": {
+    "전시": {
       "count": 1,
-      "avg_similarity": 0.23929999999999998,
-      "best_similarity": 0.23929999999999998
+      "avg_similarity": 14.19,
+      "best_similarity": 14.19,
+      "total_similarity": 14.19,
+      "last_used": "2025-07-11T23:13:32.970962"
     },
-    "건네다": {
+    "전시장": {
       "count": 1,
-      "avg_similarity": 0.1245,
-      "best_similarity": 0.1245
+      "avg_similarity": 0.58,
+      "best_similarity": 0.58,
+      "total_similarity": 0.58,
+      "last_used": "2025-07-11T23:13:35.452859"
     },
-    "건드리다": {
+    "전시하다": {
       "count": 1,
-      "avg_similarity": -5.46,
-      "best_similarity": 0
+      "avg_similarity": 4.83,
+      "best_similarity": 4.83,
+      "total_similarity": 4.83,
+      "last_used": "2025-07-11T23:13:35.710661"
     },
-    "건설": {
+    "전시회": {
       "count": 1,
-      "avg_similarity": 0.2396,
-      "best_similarity": 0.2396
+      "avg_similarity": 10.9,
+      "best_similarity": 10.9,
+      "total_similarity": 10.9,
+      "last_used": "2025-07-11T23:13:35.952661"
     },
-    "건설되다": {
+    "전용": {
       "count": 1,
-      "avg_similarity": 0.24309999999999998,
-      "best_similarity": 0.24309999999999998
+      "avg_similarity": 16.76,
+      "best_similarity": 16.76,
+      "total_similarity": 16.76,
+      "last_used": "2025-07-11T23:13:36.193025"
     },
-    "건설하다": {
+    "전자": {
       "count": 1,
-      "avg_similarity": 0.0693,
-      "best_similarity": 0.0693
+      "avg_similarity": 11.99,
+      "best_similarity": 11.99,
+      "total_similarity": 11.99,
+      "last_used": "2025-07-11T23:13:36.388946"
     },
-    "건전하다": {
+    "전쟁": {
       "count": 1,
-      "avg_similarity": -13.31,
-      "best_similarity": 0
+      "avg_similarity": 23.19,
+      "best_similarity": 23.19,
+      "total_similarity": 23.19,
+      "last_used": "2025-07-11T23:13:36.597101"
     },
-    "건조": {
+    "전주": {
       "count": 1,
-      "avg_similarity": 0.1859,
-      "best_similarity": 0.1859
+      "avg_similarity": 15.35,
+      "best_similarity": 15.35,
+      "total_similarity": 15.35,
+      "last_used": "2025-07-11T23:13:36.792801"
     },
-    "건조하다": {
+    "전철": {
       "count": 1,
-      "avg_similarity": 0.0434,
-      "best_similarity": 0.0434
+      "avg_similarity": 16.62,
+      "best_similarity": 16.62,
+      "total_similarity": 16.62,
+      "last_used": "2025-07-11T23:13:37.000042"
     },
-    "부서지다": {
+    "전체": {
       "count": 1,
-      "avg_similarity": 0.0379,
-      "best_similarity": 0.0379
+      "avg_similarity": 14.18,
+      "best_similarity": 14.18,
+      "total_similarity": 14.18,
+      "last_used": "2025-07-11T23:13:37.235051"
     },
-    "홈페이지": {
+    "전체적": {
       "count": 1,
-      "avg_similarity": 0.156,
-      "best_similarity": 0.156
+      "avg_similarity": 4.73,
+      "best_similarity": 4.73,
+      "total_similarity": 4.73,
+      "last_used": "2025-07-11T23:13:37.476639"
     },
-    "적": {
+    "전통": {
       "count": 1,
-      "avg_similarity": 0.1191,
-      "best_similarity": 0.1191
+      "avg_similarity": 14.02,
+      "best_similarity": 14.02,
+      "total_similarity": 14.02,
+      "last_used": "2025-07-11T23:13:37.675629"
     },
-    "체조": {
+    "전통문화": {
       "count": 1,
-      "avg_similarity": 0.23010000000000003,
-      "best_similarity": 0.23010000000000003
+      "avg_similarity": 8.14,
+      "best_similarity": 8.14,
+      "total_similarity": 8.14,
+      "last_used": "2025-07-11T23:13:37.935093"
     },
-    "체계적": {
+    "전통적": {
       "count": 1,
-      "avg_similarity": 0.1273,
-      "best_similarity": 0.1273
+      "avg_similarity": 11.81,
+      "best_similarity": 11.81,
+      "total_similarity": 11.81,
+      "last_used": "2025-07-11T23:13:38.143174"
     },
-    "체력": {
+    "전하다": {
       "count": 1,
-      "avg_similarity": 0.2401,
-      "best_similarity": 0.2401
+      "avg_similarity": 15.99,
+      "best_similarity": 15.99,
+      "total_similarity": 15.99,
+      "last_used": "2025-07-11T23:13:38.387599"
     },
-    "체육": {
+    "전혀": {
       "count": 1,
-      "avg_similarity": 0.2824,
-      "best_similarity": 0.2824
+      "avg_similarity": 12.81,
+      "best_similarity": 12.81,
+      "total_similarity": 12.81,
+      "last_used": "2025-07-11T23:13:38.828956"
     },
-    "체육관": {
+    "전화": {
       "count": 1,
-      "avg_similarity": 0.19820000000000002,
-      "best_similarity": 0.19820000000000002
+      "avg_similarity": 17.47,
+      "best_similarity": 17.47,
+      "total_similarity": 17.47,
+      "last_used": "2025-07-11T23:13:39.073228"
     },
-    "체중": {
+    "전화기": {
       "count": 1,
-      "avg_similarity": 0.2028,
-      "best_similarity": 0.2028
+      "avg_similarity": 3.98,
+      "best_similarity": 3.98,
+      "total_similarity": 3.98,
+      "last_used": "2025-07-11T23:13:39.322532"
     },
-    "체험": {
+    "전화번호": {
       "count": 1,
-      "avg_similarity": 0.38630000000000003,
-      "best_similarity": 0.38630000000000003
+      "avg_similarity": 1.18,
+      "best_similarity": 1.18,
+      "total_similarity": 1.18,
+      "last_used": "2025-07-11T23:13:39.590693"
     },
-    "체험하다": {
+    "전환하다": {
       "count": 1,
-      "avg_similarity": 0.2078,
-      "best_similarity": 0.2078
+      "avg_similarity": 6.54,
+      "best_similarity": 6.54,
+      "total_similarity": 6.54,
+      "last_used": "2025-07-11T23:13:42.098616"
     },
-    "땀": {
+    "전후": {
       "count": 1,
-      "avg_similarity": 0.1726,
-      "best_similarity": 0.1726
+      "avg_similarity": 13.55,
+      "best_similarity": 13.55,
+      "total_similarity": 13.55,
+      "last_used": "2025-07-11T23:13:42.297791"
     },
-    "강도": {
+    "존경하다": {
       "count": 1,
-      "avg_similarity": 0.1589,
-      "best_similarity": 0.1589
+      "avg_similarity": 5.44,
+      "best_similarity": 5.44,
+      "total_similarity": 5.44,
+      "last_used": "2025-07-11T23:13:45.198036"
     },
-    "강": {
+    "존댓말": {
       "count": 1,
-      "avg_similarity": 0.2139,
-      "best_similarity": 0.2139
+      "avg_similarity": 6.15,
+      "best_similarity": 6.15,
+      "total_similarity": 6.15,
+      "last_used": "2025-07-11T23:13:45.450333"
     },
-    "강남": {
+    "발가락": {
       "count": 1,
-      "avg_similarity": 0.3025,
-      "best_similarity": 0.3025
+      "avg_similarity": 6.41,
+      "best_similarity": 6.41,
+      "total_similarity": 6.41,
+      "last_used": "2025-07-11T23:13:48.232015"
     },
-    "강당": {
+    "발걸음": {
       "count": 1,
-      "avg_similarity": 0.31989999999999996,
-      "best_similarity": 0.31989999999999996
+      "avg_similarity": 12.27,
+      "best_similarity": 12.27,
+      "total_similarity": 12.27,
+      "last_used": "2025-07-11T23:13:48.483237"
     },
-    "강물": {
+    "발견": {
       "count": 1,
-      "avg_similarity": 0.1555,
-      "best_similarity": 0.1555
+      "avg_similarity": 25.1,
+      "best_similarity": 25.1,
+      "total_similarity": 25.1,
+      "last_used": "2025-07-11T23:13:48.693901"
     },
-    "강변": {
+    "발견되다": {
       "count": 1,
-      "avg_similarity": 0.2681,
-      "best_similarity": 0.2681
+      "avg_similarity": 11.81,
+      "best_similarity": 11.81,
+      "total_similarity": 11.81,
+      "last_used": "2025-07-11T23:13:48.934846"
     },
-    "강북": {
+    "발견하다": {
       "count": 1,
-      "avg_similarity": 0.306,
-      "best_similarity": 0.306
+      "avg_similarity": 13.46,
+      "best_similarity": 13.46,
+      "total_similarity": 13.46,
+      "last_used": "2025-07-11T23:13:49.172604"
     },
-    "강사": {
+    "발길": {
       "count": 1,
-      "avg_similarity": 0.1888,
-      "best_similarity": 0.1888
+      "avg_similarity": 17.22,
+      "best_similarity": 17.22,
+      "total_similarity": 17.22,
+      "last_used": "2025-07-11T23:13:49.422382"
     },
-    "강수량": {
+    "발끝": {
       "count": 1,
-      "avg_similarity": 0.0803,
-      "best_similarity": 0.0803
+      "avg_similarity": 16.47,
+      "best_similarity": 16.47,
+      "total_similarity": 16.47,
+      "last_used": "2025-07-11T23:13:49.661660"
     },
-    "강원도": {
+    "발달": {
       "count": 1,
-      "avg_similarity": 0.1116,
-      "best_similarity": 0.1116
+      "avg_similarity": 30.37,
+      "best_similarity": 30.37,
+      "total_similarity": 30.37,
+      "last_used": "2025-07-11T23:13:49.901493"
     },
-    "강의": {
+    "발달하다": {
       "count": 1,
-      "avg_similarity": 0.2488,
-      "best_similarity": 0.2488
+      "avg_similarity": 2.79,
+      "best_similarity": 2.79,
+      "total_similarity": 2.79,
+      "last_used": "2025-07-11T23:13:52.402030"
     },
-    "강의하다": {
+    "발등": {
       "count": 1,
-      "avg_similarity": 0.0278,
-      "best_similarity": 0.0278
+      "avg_similarity": 11.05,
+      "best_similarity": 11.05,
+      "total_similarity": 11.05,
+      "last_used": "2025-07-11T23:13:52.650771"
     },
-    "강제": {
+    "발레": {
       "count": 1,
-      "avg_similarity": 0.15130000000000002,
-      "best_similarity": 0.15130000000000002
+      "avg_similarity": 12.39,
+      "best_similarity": 12.39,
+      "total_similarity": 12.39,
+      "last_used": "2025-07-11T23:13:52.876331"
     },
-    "강조": {
+    "발목": {
       "count": 1,
-      "avg_similarity": 0.11539999999999999,
-      "best_similarity": 0.11539999999999999
+      "avg_similarity": 19.14,
+      "best_similarity": 19.14,
+      "total_similarity": 19.14,
+      "last_used": "2025-07-11T23:13:53.137956"
     },
-    "강조하다": {
+    "발바닥": {
       "count": 1,
-      "avg_similarity": -9.54,
-      "best_similarity": 0
+      "avg_similarity": 5.01,
+      "best_similarity": 5.01,
+      "total_similarity": 5.01,
+      "last_used": "2025-07-11T23:13:53.343850"
     },
-    "강하다": {
+    "발생": {
       "count": 1,
-      "avg_similarity": -5.16,
-      "best_similarity": 0
+      "avg_similarity": 26.47,
+      "best_similarity": 26.47,
+      "total_similarity": 26.47,
+      "last_used": "2025-07-11T23:13:53.593397"
     },
-    "강화하다": {
+    "발생하다": {
       "count": 1,
-      "avg_similarity": 0.058600000000000006,
-      "best_similarity": 0.058600000000000006
+      "avg_similarity": 3.15,
+      "best_similarity": 3.15,
+      "total_similarity": 3.15,
+      "last_used": "2025-07-11T23:13:53.880130"
     },
-    "꾸중": {
+    "발음": {
       "count": 1,
-      "avg_similarity": 0.1886,
-      "best_similarity": 0.1886
+      "avg_similarity": 16.51,
+      "best_similarity": 16.51,
+      "total_similarity": 16.51,
+      "last_used": "2025-07-11T23:13:54.098199"
     },
-    "꾸다": {
+    "발자국": {
       "count": 1,
-      "avg_similarity": 0.159,
-      "best_similarity": 0.159
+      "avg_similarity": 6.5,
+      "best_similarity": 6.5,
+      "total_similarity": 6.5,
+      "last_used": "2025-07-11T23:13:56.584827"
     },
-    "꾸미다": {
+    "발전하다": {
       "count": 1,
-      "avg_similarity": 0.19649999999999998,
-      "best_similarity": 0.19649999999999998
+      "avg_similarity": 10.18,
+      "best_similarity": 10.18,
+      "total_similarity": 10.18,
+      "last_used": "2025-07-11T23:13:59.039466"
     },
-    "꾸준하다": {
+    "발톱": {
       "count": 1,
-      "avg_similarity": 0.12689999999999999,
-      "best_similarity": 0.12689999999999999
+      "avg_similarity": 11.35,
+      "best_similarity": 11.35,
+      "total_similarity": 11.35,
+      "last_used": "2025-07-11T23:13:59.289055"
     },
-    "꾸준히": {
+    "발표": {
       "count": 1,
-      "avg_similarity": 0.04190000000000001,
-      "best_similarity": 0.04190000000000001
+      "avg_similarity": 25.0,
+      "best_similarity": 25.0,
+      "total_similarity": 25.0,
+      "last_used": "2025-07-11T23:13:59.510206"
     },
-    "꽉": {
+    "발표되다": {
       "count": 1,
-      "avg_similarity": 0.0919,
-      "best_similarity": 0.0919
+      "avg_similarity": 3.26,
+      "best_similarity": 3.26,
+      "total_similarity": 3.26,
+      "last_used": "2025-07-11T23:13:59.715731"
     },
-    "고모": {
+    "발표하다": {
       "count": 1,
-      "avg_similarity": 0.24100000000000002,
-      "best_similarity": 0.24100000000000002
+      "avg_similarity": 8.1,
+      "best_similarity": 8.1,
+      "total_similarity": 8.1,
+      "last_used": "2025-07-11T23:13:59.933713"
     },
-    "고객": {
+    "발휘하다": {
       "count": 1,
-      "avg_similarity": 0.1723,
-      "best_similarity": 0.1723
+      "avg_similarity": 7.59,
+      "best_similarity": 7.59,
+      "total_similarity": 7.59,
+      "last_used": "2025-07-11T23:14:00.152412"
     },
-    "고교": {
+    "성격": {
       "count": 1,
-      "avg_similarity": 0.1788,
-      "best_similarity": 0.1788
+      "avg_similarity": 20.73,
+      "best_similarity": 20.73,
+      "total_similarity": 20.73,
+      "last_used": "2025-07-11T23:14:00.400472"
     },
-    "고구마": {
+    "성경": {
       "count": 1,
-      "avg_similarity": 0.0765,
-      "best_similarity": 0.0765
+      "avg_similarity": 15.35,
+      "best_similarity": 15.35,
+      "total_similarity": 15.35,
+      "last_used": "2025-07-11T23:14:00.608180"
     },
-    "고궁": {
+    "성공": {
       "count": 1,
-      "avg_similarity": 1.0,
-      "best_similarity": 1.0
+      "avg_similarity": 100.0,
+      "best_similarity": 100.0,
+      "total_similarity": 100.0,
+      "last_used": "2025-07-11T23:14:00.826584"
     }
   },
-  "best_strategies": []
+  "best_strategies": [],
+  "last_updated": "2025-07-11T23:14:01.965434",
+  "strategy_effectiveness": {
+    "넓은의미탐색": {
+      "usage_count": 4,
+      "total_attempts": 1592,
+      "avg_attempts": 398.0
+    },
+    "의미적경사탐색": {
+      "usage_count": 4,
+      "total_attempts": 1592,
+      "avg_attempts": 398.0
+    },
+    "집중의미탐색": {
+      "usage_count": 2,
+      "total_attempts": 698,
+      "avg_attempts": 349.0
+    }
+  }
 }

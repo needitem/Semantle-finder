@@ -6,12 +6,13 @@
 
 import time
 import os
+import re
 from typing import List, Optional
 
-from models import GuessResult, GameSession
-from strategy_engine import StrategyEngine
-from learning_engine import LearningEngine
-from web_automation import WebAutomation, WebAutomationConfig
+from modules.models import GuessResult, GameSession
+from modules.strategy_engine import StrategyEngine
+from modules.learning_engine import LearningEngine
+from modules.web_automation import WebAutomation, WebAutomationConfig
 
 
 class SemanticSolver:
@@ -22,7 +23,7 @@ class SemanticSolver:
     꼬맨틀 게임을 자동으로 해결하는 솔버입니다.
     """
     
-    def __init__(self, vocab_file: str = 'words.txt', 
+    def __init__(self, vocab_file: str = 'words.xls', 
                  learning_file: str = 'kkomantle_learning.json',
                  word_pairs_file: str = 'word_pairs.json',
                  web_config: WebAutomationConfig = None):
@@ -43,7 +44,7 @@ class SemanticSolver:
         
         # 핵심 구성 요소들 초기화
         self.learning_engine = LearningEngine(learning_file, word_pairs_file)
-        self.strategy_engine = StrategyEngine()
+        self.strategy_engine = StrategyEngine(enable_logging=True)
         self.web_automation = WebAutomation(web_config or WebAutomationConfig())
         
         # 현재 게임 세션
@@ -56,27 +57,82 @@ class SemanticSolver:
         어휘 파일에서 단어 목록을 로드합니다.
         
         Args:
-            vocab_file (str): 어휘 파일 경로
+            vocab_file (str): 어휘 파일 경로 (.txt 또는 .xls/.xlsx)
             
         Returns:
             List[str]: 단어 목록
         """
         try:
-            with open(vocab_file, 'r', encoding='utf-8') as f:
-                # 빈 줄과 주석([로 시작하는 줄) 제외하고 로드
+            if vocab_file.endswith(('.xls', '.xlsx')):
+                # Excel 파일 처리
+                import pandas as pd
+                
+                print(f"📊 Excel 파일에서 어휘 로드 중: {vocab_file}")
+                
+                # Excel 파일 읽기
+                df = pd.read_excel(vocab_file, engine='openpyxl' if vocab_file.endswith('.xlsx') else None)
+                
+                print(f"📋 Excel 파일 구조: {df.shape[0]}행 x {df.shape[1]}열")
+                print(f"📋 컬럼명: {list(df.columns)}")
+                
+                # 단어가 있는 열 찾기 (문자열이 많은 열)
+                word_column_idx = 0
+                max_text_count = 0
+                
+                for col_idx in range(df.shape[1]):
+                    column = df.iloc[:, col_idx]
+                    text_count = 0
+                    
+                    for value in column.head(10):  # 처음 10개만 확인
+                        if pd.notna(value) and isinstance(value, str) and len(value.strip()) > 1:
+                            text_count += 1
+                    
+                    print(f"📊 {col_idx}번 열: 텍스트 {text_count}개 (샘플: {column.dropna().head(3).tolist()})")
+                    
+                    if text_count > max_text_count:
+                        max_text_count = text_count
+                        word_column_idx = col_idx
+                
+                print(f"🎯 단어 열로 선택: {word_column_idx}번째 열")
+                
+                # 선택된 열에서 단어 추출
                 words = []
-                for line in f:
-                    line = line.strip()
-                    if line and not line.startswith('['):
-                        words.append(line)
+                word_column = df.iloc[:, word_column_idx]
                 
-                # 중복 제거 및 정렬
-                unique_words = sorted(list(set(words)))
+                for value in word_column:
+                    if pd.notna(value):  # NaN 값 제외
+                        word = str(value).strip()
+                        
+                        # 단어 뒤의 숫자 제거 (동음이의어 구분용)
+                        # 예: "사위01" -> "사위", "사이99" -> "사이"
+                        word = re.sub(r'\d+$', '', word).strip()
+                        
+                        # 빈 문자열, 주석, 순수 숫자 제외
+                        if (word and not word.startswith('[') and 
+                            not word.replace('.', '').isdigit() and
+                            len(word) > 1):  # 1글자 제외
+                            words.append(word)
                 
-                if not unique_words:
-                    raise ValueError("어휘 파일이 비어있습니다.")
+                print(f"📈 Excel에서 {len(words)}개 단어 추출")
                 
-                return unique_words
+            else:
+                # 텍스트 파일 처리 (기존 로직)
+                print(f"📄 텍스트 파일에서 어휘 로드 중: {vocab_file}")
+                
+                with open(vocab_file, 'r', encoding='utf-8') as f:
+                    words = []
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith('['):
+                            words.append(line)
+            
+            # 중복 제거 및 정렬
+            unique_words = sorted(list(set(words)))
+            
+            if not unique_words:
+                raise ValueError("어휘 파일이 비어있습니다.")
+            
+            return unique_words
                 
         except FileNotFoundError:
             print(f"⚠️ 어휘 파일을 찾을 수 없습니다: {vocab_file}")
@@ -89,18 +145,15 @@ class SemanticSolver:
             print("기본 어휘를 사용합니다.")
             return ["사랑", "시간", "사람", "생각", "마음", "세상", "문제", "사회"]
     
-    def _remove_word_from_vocab(self, word: str) -> None:
-        """
-        어휘에서 실패한 단어를 제거합니다.
-        
-        Args:
-            word (str): 제거할 단어
-        """
-        if word in self.vocab:
-            self.vocab.remove(word)
-            if self.current_session:
-                self.current_session.tried_words.add(word)
-            print(f"  ⚠️ 단어 '{word}' 어휘에서 영구 제거")
+    # def _remove_word_from_vocab(self, word: str) -> None:
+    #     """
+    #     어휘에서 실패한 단어를 제거합니다. (현재 비활성화됨)
+    #     
+    #     Args:
+    #         word (str): 제거할 단어
+    #     """
+    #     # 파싱 실패시 어휘에서 제거하지 않음 - 네트워크나 일시적 문제일 수 있음
+    #     pass
     
     def start_new_session(self) -> GameSession:
         """
@@ -130,6 +183,10 @@ class SemanticSolver:
         # 새 세션 시작
         session = self.start_new_session()
         
+        # 로깅 시작
+        if self.strategy_engine.logger:
+            self.strategy_engine.logger.start_session(str(id(session)))
+        
         print("\n" + "="*60)
         print("🎯 의미 기반 지능형 솔버 게임 시작")
         print(f"📚 사용 가능한 어휘: {len(self.vocab)}개")
@@ -147,33 +204,42 @@ class SemanticSolver:
                 print("⚠️ 더 이상 시도할 단어가 없습니다.")
                 break
             
-            print(f"🎯 시도 {attempt}: '{next_word}'")
+            # 매 10회마다만 시도 출력
+            if attempt % 10 == 1 or attempt <= 10:
+                print(f"🎯 시도 {attempt}: '{next_word}'")
             
             # 단어 제출
             if not self.web_automation.submit_word(next_word):
                 print("❌ 단어 제출 실패. 다음 단어로 계속...")
-                self._remove_word_from_vocab(next_word)
+                # 제출 실패한 단어도 tried_words에 추가하여 재시도 방지
+                session.tried_words.add(next_word)
                 continue
             
             # 결과 파싱
             result = self.web_automation.parse_result(next_word, attempt)
             
             if not result:
-                print(f"❌ 단어 '{next_word}' 결과 파싱 실패 - 어휘에서 제거")
-                self._remove_word_from_vocab(next_word)
+                print(f"❌ 단어 '{next_word}' 결과 파싱 실패 - 다음 단어로 계속")
+                # 파싱 실패한 단어도 tried_words에 추가하여 재시도 방지
+                session.tried_words.add(next_word)
                 continue
             
             # 세션에 결과 추가
             session.add_guess(result)
             
+            # 결과 로깅
+            if self.strategy_engine.logger:
+                self.strategy_engine.logger.log_result(result)
+            
             # 학습 엔진에 관계 학습
             self.learning_engine.learn_word_relationships(result, session.guesses[:-1])
             
-            # 결과 출력
-            print(f"   📊 유사도: {result.similarity:.4f} | 순위: {result.rank}")
+            # 매 10회마다만 결과 출력
+            if attempt % 10 == 1 or attempt <= 10 or result.similarity > 50:
+                print(f"   📊 {next_word}: {result.similarity:.2f} | {result.rank}")
             
-            # 정답 확인 (유사도 1.0)
-            if result.similarity >= 0.9999:  # 부동소수점 오차 고려
+            # 정답 확인 (유사도 100)
+            if result.similarity >= 99.99:  # 부동소수점 오차 고려
                 elapsed_time = time.time() - start_time
                 print(f"\n🎉 정답 발견! '{next_word}'")
                 print(f"📈 총 시도: {attempt}회 | 소요 시간: {elapsed_time:.1f}초")
@@ -182,11 +248,35 @@ class SemanticSolver:
                 self.learning_engine.save_session_results(
                     session, success=True, final_answer=next_word)
                 
+                # 로깅 종료
+                if self.strategy_engine.logger:
+                    self.strategy_engine.logger.end_session(success=True, final_answer=next_word)
+                
                 return next_word
             
             # 진행 상황 표시 (매 10회마다)
             if attempt % 10 == 0:
                 self._show_progress(session, attempt)
+            
+            # 전략 변경 알림 (디버그용)
+            if len(session.strategy_history) > 1 and attempt > 1:
+                if session.strategy_history[-1] != session.strategy_history[-2]:
+                    print(f"\n🔄 전략 변경: {session.strategy_history[-2]} → {session.strategy_history[-1]}")
+                    print(f"   현재 최고 유사도: {session.get_best_similarity():.2f}\n")
+                
+                # 정체 상태 로깅
+                if self.strategy_engine.logger and session.is_stagnant():
+                    # 정체 시작점 찾기
+                    stagnant_start = attempt - 10
+                    for i in range(max(0, attempt - 20), attempt):
+                        if i < len(session.guesses) - 1:
+                            if abs(session.guesses[i].similarity - session.guesses[i+1].similarity) > 0.02:
+                                stagnant_start = i + 1
+                                break
+                    
+                    self.strategy_engine.logger.log_stagnant_period(
+                        stagnant_start, attempt, session.get_best_similarity()
+                    )
         
         # 최대 시도 횟수 도달
         elapsed_time = time.time() - start_time
@@ -195,6 +285,10 @@ class SemanticSolver:
         
         # 실패 결과 저장
         self.learning_engine.save_session_results(session, success=False)
+        
+        # 로깅 종료
+        if self.strategy_engine.logger:
+            self.strategy_engine.logger.end_session(success=False)
         
         return None
     
